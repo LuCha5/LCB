@@ -142,3 +142,13 @@ footer {
     background: #fefefe;
     border-color: #125688;
 }
+/* Styles pour le logo */
+.logo-container {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.logo {
+    height: 100px; /* Ajustez la hauteur selon vos besoins */
+    vertical-align: middle;
+}
