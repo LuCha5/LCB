@@ -1,5 +1,4 @@
-# Ignore the assets directory
-/assets
+
 
 # Node.js
 node_modules/
