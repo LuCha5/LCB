@@ -224,3 +224,125 @@ footer {
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for better readability */
 }
+
+.register-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff5733;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.register-button:hover {
+    background-color: #e04e2a;
+}
+
+
+/* Styles pour le tableau des prix d'adhésion */
+.pricing-table {
+    width: 50%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-table th, .pricing-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.pricing-table th {
+    background-color: #007BFF;
+    color: white;
+}
+
+.pricing-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Styles pour le bouton Google Forms */
+.google-forms-button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.google-forms-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4285F4;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.google-forms-button:hover {
+    background-color: #357ae8;
+}
+
+/* Ajout de la classe pour le conteneur des prix d'adhésion */
+.pricing-container {
+    border: 2px solid; /* Couleur du contour */
+    padding: 20px; /* Espacement interne */
+    border-radius: 10px; /* Coins arrondis */
+    background-color: #fff; /* Couleur de fond */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre portée */
+    margin: 20px auto; /* Espacement externe */
+    width: 60%; /* Largeur du conteneur */
+}
+
+/* Ajout des styles pour le bouton hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 3.1em;
+    right: 1em;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+/* Media queries pour les petits écrans */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul li {
+        margin: 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    header nav ul.active {
+        display: flex;
+    }
+    /* Centrer le contenu de la dropdown en version mobile */
+    .dropdown-content {
+        position: static;
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-content a {
+        display: block;
+        padding: 10px;
+        text-align: center;
+    }
+
+}

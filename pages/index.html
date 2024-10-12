@@ -13,6 +13,7 @@
     <section class="basketball-court">
         <h2>Join Our Basketball Club</h2>
         <p>Experience the thrill of the game on our state-of-the-art court.</p>
+        <a href="recrutement.html" class="register-button">Nous rejoindre</a>
     </section>
     <main>
         <h1>Welcome to the Basketball Club</h1>
@@ -24,6 +25,13 @@
             .then(response => response.text())
             .then(data => {
                 document.getElementById('navbar').innerHTML = data;
+                // Initialiser le script du bouton hamburger après le chargement de la navbar
+                const hamburger = document.querySelector('.hamburger');
+                const nav = document.querySelector('nav ul');
+
+                hamburger.addEventListener('click', function() {
+                    nav.classList.toggle('active');
+                });
             });
 
         fetch('footer.html')
