@@ -4,131 +4,115 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Club de Basket</title>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>  
+  <title>Le Cres Basket</title>
   <!-- Lien vers Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <img src="../Assets/Logo_LCB.png" alt="Club de Basket" height="100">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Accueil</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Équipe</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Galerie</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
+  <div class="d-flex flex-column min-vh-100">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="../Assets/Logo_LCB.png" alt="Le Cres Basket" height="100">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Équipe</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Galerie</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="recrutement.html">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  <!-- Section d'introduction -->
-  <header class="bg-primary text-white text-center py-5">
-    <div class="container">
-      <h1>Bienvenue au Club de Basket</h1>
-      <p class="lead">Rejoignez notre équipe et devenez un champion sur et en dehors du terrain.</p>
-      <a href="#" class="btn btn-light btn-lg">En savoir plus</a>
-    </div>
-  </header>
+    <!-- Section d'introduction -->
+    <header class="bg-primary text-white text-center py-5">
+      <div class="container">
+        <h1>Bienvenue au Club de Basket</h1>
+        <p class="lead">Rejoignez notre équipe et devenez un champion sur et en dehors du terrain.</p>
+        <a href="#" class="btn btn-light btn-lg">En savoir plus</a>
+      </div>
+    </header>
 
-  <!-- Section Galerie -->
-  <section class="py-5">
-    <div class="container text-center">
-      <h2 class="mb-4">Notre Équipe en Action</h2>
-      <div class="row g-4">
-        <div class="col-lg-4 col-md-6">
-          <img src="../Assets/image.png" class="img-fluid" alt="Match 1">
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <img src="../Assets/image copy.png" class="img-fluid" alt="Match 2">
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <img src="../Assets/image copy 2.png" class="img-fluid" alt="Match 3">
+    <!-- Section Galerie -->
+    <section class="py-5">
+      <div class="container text-center">
+        <h2 class="mb-4">Notre Équipe en Action</h2>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <img src="../Assets/image.png" class="img-fluid" alt="Match 1">
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <img src="../Assets/image copy.png" class="img-fluid" alt="Match 2">
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <img src="../Assets/image copy 2.png" class="img-fluid" alt="Match 3">
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Section Contact
-  <section class="bg-light py-5">
-    <div class="container">
-      <h2 class="text-center mb-4">Contactez-nous</h2>
-      <div class="row justify-content-center">
-        <div class="col-lg-6">
-          <form>
-            <div class="mb-3">
-              <label for="name" class="form-label">Nom</label>
-              <input type="text" class="form-control" id="name" placeholder="Votre nom">
-            </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" placeholder="Votre email">
-            </div>
-            <div class="mb-3">
-              <label for="message" class="form-label">Message</label>
-              <textarea class="form-control" id="message" rows="4" placeholder="Votre message"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary w-100">Envoyer</button>
-          </form>
+    <!-- Section Tarifs des Licences -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Tarifs des Licences</h2>
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Catégorie</th>
+                <th>Âge</th>
+                <th>Prix</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>U7-U13</td>
+                <td>7-13 ans</td>
+                <td>50€</td>
+              </tr>
+              <tr>
+                <td>U15-U18</td>
+                <td>15-18 ans</td>
+                <td>70€</td>
+              </tr>
+              <tr>
+                <td>Seniors</td>
+                <td>18+ ans</td>
+                <td>100€</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
-    </div>
-  </section> -->
-  <!-- Section Tarifs des Licences -->
-  <section class="py-5">
-    <div class="container">
-      <h2 class="text-center mb-4">Tarifs des Licences</h2>
-      <div class="table-responsive">
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th>Catégorie</th>
-              <th>Âge</th>
-              <th>Prix</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>U7-U13</td>
-              <td>7-13 ans</td>
-              <td>50€</td>
-            </tr>
-            <tr>
-              <td>U15-U18</td>
-              <td>15-18 ans</td>
-              <td>70€</td>
-            </tr>
-            <tr>
-              <td>Seniors</td>
-              <td>18+ ans</td>
-              <td>100€</td>
-            </tr>
-          </tbody>
-        </table>
+    </section>
+
+    <!-- Pied de page -->
+    <footer class="bg-dark text-white text-center py-3 mt-auto">
+      <div class="container">
+        <div class="rounded-social-buttons">
+            <a class="social-button facebook" href="https://www.facebook.com/p/Le-Crès-Basket-100063464714048/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a class="social-button instagram" href="https://www.instagram.com/le_cres_basket/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p class="mb-0">© 2024 Club de Basket - Tous droits réservés</p>
       </div>
-    </div>
-  </section>
-  <!-- Pied de page -->
-  <footer class="bg-dark text-white text-center py-3">
-    <div class="container">
-      <p class="mb-0">© 2024 Club de Basket - Tous droits réservés</p>
-    </div>
-  </footer>
+    </footer>
+  </div>
 
   <!-- JavaScript de Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
