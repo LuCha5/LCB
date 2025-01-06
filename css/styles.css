@@ -1,349 +1,132 @@
-/* General styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-header {
-    background-color: #333;
-    color: white;
-    padding: 1em 0;
-}
-
-header nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-}
-
-header nav ul li {
-    margin: 0 1em;
-    position: relative;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 0.5em 1em;
-    display: block;
-}
-
-/* Dropdown styles */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #333;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.dropdown-content a:hover {
-    background-color: #575757;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-main {
-    padding: 2em;
-    text-align: center;
-    flex-grow: 1;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
-    width: 100%;
-}
-
-.text {
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    white-space: nowrap;
-}
-
-.svg-inline--fa {
-    vertical-align: -0.200em;
-}
-
-.rounded-social-buttons {
-    text-align: center;
-    margin-bottom: 1em; /* Ajout de marge inférieure */
-}
-
-.rounded-social-buttons .social-button {
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-    width: 3.125rem;
-    height: 3.125rem;
-    border: 0.125rem solid transparent;
-    padding: 0;
-    text-decoration: none;
-    text-align: center;
-    color: #fefefe;
-    font-size: 1.5625rem;
-    font-weight: normal;
-    line-height: 2em;
-    border-radius: 1.6875rem;
-    transition: all 0.5s ease;
-    margin-right: 0.25rem;
-    margin-bottom: 0.25rem;
-}
-
-.rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-}
-
-.rounded-social-buttons, .fa-facebook-f, .fa-instagram {
-    font-size: 25px;
-}
-
-.rounded-social-buttons .social-button.facebook {
-    background: #3b5998;
-}
-
-.rounded-social-buttons .social-button.facebook:hover, .rounded-social-buttons .social-button.facebook:focus {
-    color: #3b5998;
-    background: #fefefe;
-    border-color: #3b5998;
-}
-
-.rounded-social-buttons .social-button.instagram {
-    background: #125688;
-}
-
-.rounded-social-buttons .social-button.instagram:hover, .rounded-social-buttons .social-button.instagram:focus {
-    color: #125688;
-    background: #fefefe;
-    border-color: #125688;
-}
-
-/* Styles pour le logo */
-.logo-container {
-    text-align: center;
-    margin-bottom: 1em;
-}
-
-.logo {
-    height: 100px; /* Ajustez la hauteur selon vos besoins */
-    vertical-align: middle;
-}
-
-/* Styles pour la grille des joueurs */
-#team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
-
-.player-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.player-card img {
-    width: 100%;
-    height: auto;
-}
-
-.player-info {
-    padding: 10px;
-    text-align: center;
-}
-
-.player-info h2 {
-    margin: 10px 0 5px;
-}
-
-.player-info p {
-    margin: 0;
-    color: #666;
-}
-
-.basketball-court {
-    background-image: url('../Assets/bg-basket.jpg');
-    background-size: cover;
-    background-position: center;
-    color: cyan;
-    text-align: center;
-    padding: 50px 0;
-    max-width: 1000px;
-    margin: 0 auto;
-    border: 2px solid white;
-    border-radius: 10px;
-    position: relative;
-    z-index: 0;
-}
-
-.basketball-court::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
-    backdrop-filter: blur(5px); /* Adjust the blur radius as needed */
-    z-index: -1;
-}
-
-.basketball-court h1, .basketball-court p {
-    position: relative;
-    z-index: 1;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for better readability */
-}
-
-.register-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #ff5733;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.register-button:hover {
-    background-color: #e04e2a;
-}
-
-/* Styles pour le tableau des prix d'adhésion */
-.pricing-table {
-    width: 50%;
-    margin: 20px auto;
-    border-collapse: collapse;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.pricing-table th, .pricing-table td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
-}
-
-.pricing-table th {
-    background-color: #007BFF;
-    color: white;
-}
-
-.pricing-table tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-/* Styles pour le bouton Google Forms */
-.google-forms-button-container {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.google-forms-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #4285F4;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.google-forms-button:hover {
-    background-color: #357ae8;
-}
-
-/* Ajout de la classe pour le conteneur des prix d'adhésion */
-.pricing-container {
-    border: 2px solid; /* Couleur du contour */
-    padding: 20px; /* Espacement interne */
-    border-radius: 10px; /* Coins arrondis */
-    background-color: #fff; /* Couleur de fond */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre portée */
-    margin: 20px auto; /* Espacement externe */
-    width: 60%; /* Largeur du conteneur */
-}
-
-/* Ajout des styles pour le bouton hamburger */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    position: absolute;
-    top: 3.1em;
-    right: 1em;
-}
-
-.hamburger div {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 4px 0;
-}
-
-/* Media queries pour les petits écrans */
-@media (max-width: 768px) {
-    header nav ul {
-        flex-direction: column;
-        display: none;
-        width: 100%;
-        text-align: center;
-    }
-
-    header nav ul li {
+    /* General styles */
+    body {
+        font-family: Arial, sans-serif;
         margin: 0;
-    }
-
-    .hamburger {
+        padding: 0;
+        background-color: #f4f4f4;
         display: flex;
+        flex-direction: column;
+        min-height: 100vh;
     }
-
-    header nav ul.active {
+    
+    nav {
+        background-color: #333;
+        color: white;
+        padding: 1em 0;
+    }
+    
+    nav .container {
         display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
-    /* Centrer le contenu de la dropdown en version mobile */
-    .dropdown-content {
-        position: static;
-        width: 100%;
-        text-align: center;
+    
+    nav .logo-container {
+        flex: 1;
     }
-
-    .dropdown-content a {
+    
+    nav .logo {
+        height: 100px; /* Ajustez la hauteur selon vos besoins */
+        vertical-align: middle;
+    }
+    
+    nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        margin: 0;
+        flex: 2;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin: 0 1em;
+        position: relative;
+    }
+    
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        padding: 0.5em 1em;
         display: block;
-        padding: 10px;
-        text-align: center;
     }
-}
+    
+    /* Dropdown styles */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #333;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    
+    .dropdown-content a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+    
+    .dropdown-content a:hover {
+        background-color: #575757;
+    }
+    
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        position: absolute;
+        top: 1em;
+        right: 1em;
+    }
+    
+    .hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 4px 0;
+    }
+    
+    /* Media queries pour les petits écrans */
+    @media (max-width: 768px) {
+        nav .container {
+            flex-direction: column;
+        }
+    
+        nav ul {
+            flex-direction: column;
+            display: none;
+            width: 100%;
+            text-align: center;
+        }
+    
+        nav ul li {
+            margin: 0;
+        }
+    
+        .hamburger {
+            display: flex;
+        }
+    
+        nav ul.active {
+            display: flex;
+        }
+        /* Centrer le contenu de la dropdown en version mobile */
+        .dropdown-content {
+            position: static;
+            width: 100%;
+            text-align: center;
+        }
+    
+        .dropdown-content a {
+            display: block;
+            padding: 10px;
+            text-align: center;
+        }
+    }
