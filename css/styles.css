@@ -17,12 +17,13 @@ nav {
 
 nav .container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 nav .logo-container {
-    margin-right: auto; /* Pousse le logo à gauche */
+    margin-bottom: 1em; /* Ajoute un espace entre le logo et les éléments de la liste */
 }
 
 nav .logo {

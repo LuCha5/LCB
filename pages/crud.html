@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Interface</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <h1>Manage Players</h1>
+    <form id="player-form">
+        <input type="hidden" id="player-id">
+        <input type="text" id="first-name" placeholder="First Name" required>
+        <input type="text" id="last-name" placeholder="Last Name" required>
+        <input type="text" id="position" placeholder="Position" required>
+        <input type="number" id="number" placeholder="Number" required>
+        <input type="text" id="role" placeholder="Role" required>
+        <button type="submit">Save</button>
+    </form>
+    <table id="players-table">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Position</th>
+                <th>Number</th>
+                <th>Role</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Players will be dynamically inserted here -->
+        </tbody>
+    </table>
+    <script src="../js/crud.js"></script>
+</body>
+</html>
