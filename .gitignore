@@ -1,5 +1,3 @@
-
-
 # Node.js
 node_modules/
 npm-debug.log
@@ -52,3 +50,24 @@ $RECYCLE.BIN/
 dist/
 build/
 out/
+
+# Database files
+database/
+
+# Configuration files
+config.php
+
+# Environment variables
+.env
+
+
+# Temporary files and directories
+/tmp
+/temp
+
+# Composer
+/vendor/
+
+# PHPUnit
+.phpunit.result.cache
+
