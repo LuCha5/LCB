@@ -52,7 +52,7 @@ build/
 out/
 
 # Database files
-database/*.sqlite
+database/
 
 # Configuration files
 config.php
