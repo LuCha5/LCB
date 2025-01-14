@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Championnat</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="../assets/icons/Logo.ico" type="image/x-icon">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header id="navbar"></header>
+    <main>
+        <h1 id="championnat-title">Championnat</h1>
+        <p id="championnat-content">Sélectionnez une catégorie pour voir les détails du championnat.</p>
+        <section id="championnat-grid">
+            <!-- Championnat categories will be dynamically inserted here -->
+        </section>
+    </main>
+    <footer id="footer"></footer>
+    <script>
+        // Fetch and insert navbar
+        fetch('../pages/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+
+        // Fetch and insert footer
+        fetch('../pages/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+
+        // Example data for the championnat categories
+        const championnatCategories = [
+            { category: 'U7-U9', url: 'https://example.com/championnat/U7-U9' },
+            { category: 'U11', url: 'https://example.com/championnat/U11' },
+            { category: 'U13', url: 'https://example.com/championnat/U13' },
+            { category: 'U15', url: 'https://example.com/championnat/U15' },
+            { category: 'U17', url: 'https://example.com/championnat/U17' },
+            { category: 'U19', url: 'https://example.com/championnat/U19' },
+            { category: 'Seniors Loisirs', url: 'https://example.com/championnat/Seniors-Loisirs' },
+            { category: 'Seniors Compétition', url: 'https://example.com/championnat/Seniors-Competition' }
+        ];
+
+        // Function to display championnat categories
+        const displayChampionnatCategories = () => {
+            const championnatGrid = document.getElementById('championnat-grid');
+            championnatGrid.innerHTML = '';
+            championnatCategories.forEach(item => {
+                const categoryButton = document.createElement('a');
+                categoryButton.classList.add('category-button');
+                categoryButton.href = item.url;
+                categoryButton.target = '_blank';
+                categoryButton.textContent = item.category;
+                championnatGrid.appendChild(categoryButton);
+            });
+        };
+
+        document.addEventListener('DOMContentLoaded', displayChampionnatCategories);
+    </script>
+</body>
+</html>

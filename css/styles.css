@@ -115,6 +115,43 @@ nav ul li a:hover {
     margin: 4px 0;
 }
 
+/* Championnat styles */
+#championnat-title {
+    text-align: center;
+    margin: 1em 0;
+    color: #333;
+}
+
+#championnat-content {
+    text-align: center;
+    margin: 0 0 2em 0;
+    color: #666;
+}
+
+#championnat-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    padding: 1em;
+}
+
+.category-button {
+    display: inline-block;
+    padding: 1em 2em;
+    margin: 0.5em;
+    background-color: #3f8fd1;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.category-button:hover {
+    background-color: #555;
+}
+
 /* Media queries pour les petits écrans */
 @media (max-width: 768px) {
     nav .container {
