@@ -32,13 +32,13 @@
         <h2 class="mb-4">Notre Équipe en Action</h2>
         <div class="row g-4">
           <div class="col-lg-4 col-md-6">
-            <img src="../assets/images/image.png" class="img-fluid" alt="Match 1">
+            <img src="../assets/images/image.jpg" class="img-fluid" alt="Match 1">
           </div>
           <div class="col-lg-4 col-md-6">
-            <img src="../assets/images/image copy.png" class="img-fluid" alt="Match 2">
+            <img src="../assets/images/image copy.jpg" class="img-fluid" alt="Match 2">
           </div>
           <div class="col-lg-4 col-md-6">
-            <img src="../assets/images/image copy 2.png" class="img-fluid" alt="Match 3">
+            <img src="../assets/images/image copy 2.jpg" class="img-fluid" alt="Match 3">
           </div>
         </div>
       </div>
@@ -123,9 +123,9 @@
     // Example data for the sponsors
     const sponsors = [
         { name: 'Sponsor 1', logo: '../assets/images/sponsor1.png', url: 'https://www.pizzeriacomeprima.com' },
-        { name: 'Sponsor 2', logo: '../assets/images/sponsor2.png', url: 'https://sponsor2.com' },
-        { name: 'Sponsor 3', logo: '../assets/images/sponsor3.png', url: 'https://sponsor3.com' },
-        { name: 'Sponsor 4', logo: '../assets/images/sponsor4.png', url: 'https://sponsor4.com' }
+        { name: 'Sponsor 2', logo: '../assets/images/sponsor2.png', url: 'https://www.acelys.fr' },
+        { name: 'Sponsor 3', logo: '../assets/images/sponsor3.png', url: 'https://www.tamline.fr' },
+        { name: 'Sponsor 4', logo: '../assets/images/sponsor4.png', url: 'https://www.avenue-immobilier-montpellier.fr/' }
     ];
 
     // Function to display sponsor logos
@@ -138,7 +138,7 @@
             sponsorCard.href = sponsor.url;
             sponsorCard.target = '_blank';
             sponsorCard.innerHTML = `
-                <div class="sponsor-name">${sponsor.name}</div>
+                <div class="sponsor-name"><strong>${sponsor.name}</strong></div>
                 <img src="${sponsor.logo}" alt="${sponsor.name}">
             `;
             sponsorGrid.appendChild(sponsorCard);
