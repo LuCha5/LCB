@@ -1,33 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>Contact - Le Crès Basket</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="icon" href="../assets/Logo.ico" type="image/x-icon">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+    <link rel="icon" href="../assets/images/Logo_LCB.png" type="image/png">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
 </head>
 <body>
-    <header id="navbar"></header>
-    <main>
-        <h1>Contact Us</h1>
-        <p>Contact information goes here.</p>
-    </main>
-    <footer id="footer"></footer>
-    <script>
-        fetch('navbar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('navbar').innerHTML = data;
-            });
+    <div id="navbar-container"></div>
+    
+    <main class="container py-5">
+        <h1 class="text-center mb-4">Contactez-nous</h1>
+        <div class="contact-form-container">
+            <form id="contactForm" class="contact-form">
 
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer').innerHTML = data;
-            });
-    </script>
+                
+                <div class="form-group mb-3">
+                    <label for="subject">Objet</label>
+                    <input type="text" class="form-control" id="subject" required>
+                </div>
+                
+                <div class="form-group mb-3">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" rows="6" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+            </form>
+        </div>
+    </main>
+
+    <div id="footer-container"></div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/script.js"></script>
+    <script src="../js/contact.js"></script>
 </body>
 </html>
