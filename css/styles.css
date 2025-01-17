@@ -178,6 +178,7 @@ nav ul li a:hover {
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
+    text-decoration: none; /* Remove underline */
 }
 
 .sponsor-card .sponsor-name {
@@ -185,7 +186,6 @@ nav ul li a:hover {
     color: #000;
     font-weight: bold;
     padding: 10px;
-    border-bottom: 1px solid #ddd;
 }
 
 .sponsor-card img {
