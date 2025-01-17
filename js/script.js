@@ -20,4 +20,11 @@ document.addEventListener('DOMContentLoaded', function() {
             nav.classList.toggle('active');
         });
       });
+
+    // Charger dynamiquement le contenu de footer.html
+    fetch('../pages/footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+      });
 });
