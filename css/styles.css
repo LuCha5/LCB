@@ -10,7 +10,7 @@ body {
 }
 
 nav {
-    background-color: #333;
+    background-color: #1a3955;
     color: white;
     padding: 1em 0;
 }
@@ -73,13 +73,15 @@ nav ul li a:hover {
     color: #ddd;
 }
 
-
+.bg-lcb-primary {
+    background-color: #5ea1d5 !important;
+}
 
 /* Dropdown Menu */
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #333;
+    background-color: #1a3955;
     min-width: 160px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     z-index: 1;
@@ -93,7 +95,7 @@ nav ul li a:hover {
 }
 
 .dropdown-content a:hover {
-    background-color: #555;
+    background-color: #2a4965;
 }
 
 .dropdown:hover .dropdown-content {
