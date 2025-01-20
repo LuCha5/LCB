@@ -31,6 +31,17 @@
     </div>
 </nav>
 
-
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const dropdownBtn = document.querySelector('.dropbtn');
+        const dropdownContent = document.querySelector('.dropdown-content');
+        let isOpen = false;
+    
+        dropdownBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            isOpen = !isOpen;
+            dropdownContent.style.display = isOpen ? 'block' : 'none';
+        });
+    });
 
 <!-- mettre logo club a gauche et 3v3 a droite -->

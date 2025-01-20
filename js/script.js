@@ -28,3 +28,4 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('footer-container').innerHTML = data;
       });
 });
+
