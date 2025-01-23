@@ -2,7 +2,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding-top: 180px; /* Ajout du padding-top */
+    padding-top: 160px; /* Ajout du padding-top */
     background-color: #f4f4f4;
     display: flex;
     flex-direction: column;
@@ -247,18 +247,7 @@ section {
 }
 
 
-/* Hamburger Menu */
-.hamburger {
-    display: none;
-    cursor: pointer;
-}
 
-.hamburger div {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 5px 0;
-}
 
 /* Sponsor Section */
 .sponsor-card {
@@ -467,9 +456,7 @@ footer {
         margin: 1em 0;
     }
 
-    .hamburger {
-        display: block;
-    }
+    
 
     .dropdown-content {
         position: static;
@@ -548,3 +535,121 @@ footer {
         margin: 0 1em 1em;
         font-size: 0.9em;
     }
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+    padding: 10px;
+}
+
+.hamburger .line {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.hamburger.active .line:nth-child(1) {
+    transform: rotate(-45deg) translate(-7px, 6px);
+}
+
+.hamburger.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .line:nth-child(3) {
+    transform: rotate(45deg) translate(-7px, -6px);
+}
+
+/* Menu Mobile */
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+
+    nav {
+        padding: 10px 20px;
+        height: 100px;
+    }
+
+
+    nav .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+    }
+
+    nav .logo {
+        height: 50px;
+    }
+    
+    nav .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+    }
+    nav.scrolled {
+        height: 75px;
+    }
+    nav.scrolled .logo {
+        height: 40px;
+    }
+    nav .logo-container {
+        margin: 0;
+    }
+
+    .hamburger {
+        display: block;
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #1a3955;
+        display: none;
+        padding: 20px 0;
+        margin: 0;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    nav.menu-open ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        padding: 15px;
+        width: 100%;
+        display: block;
+    }
+
+    .dropdown-content {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .dropdown.active .dropdown-content {
+        display: block;
+    }
+}
