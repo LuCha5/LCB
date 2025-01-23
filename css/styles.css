@@ -3,17 +3,30 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    padding-top: 130px;
     background-color: #f4f4f4;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    transition: padding-top 0.3s ease;
+
+}
+body.scrolled {
+    padding-top: 100px;
 }
 
 nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: #1a3955;
     color: white;
     padding: 1em 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
 }
+
 
 nav .container {
     display: flex;
@@ -23,13 +36,26 @@ nav .container {
 }
 
 nav .logo-container {
-    margin-bottom: 1em; /* Ajoute un espace entre le logo et les éléments de la liste */
+    margin-bottom: 1em;
 }
 
+
 nav .logo {
-    height: 120px; /* Ajustez la hauteur selon vos besoins */
-    vertical-align: middle;
+    height: 120px;
+    transition: height 0.3s ease;
 }
+nav.scrolled {
+    padding: 5px 0;
+}
+
+nav.scrolled .logo {
+    height: 50px;
+}
+
+nav.scrolled .logo-container {
+    margin-bottom: 0.5em;
+}
+
 
 nav ul {
     list-style: none;
@@ -72,12 +98,29 @@ nav ul li a:hover::after {
 nav ul li a:hover {
     color: #ddd;
 }
+
+section {
+    scroll-margin-top: 100px;
+}
+
+/* Sections génériques */
+.main-content {
+    padding: 2rem 0;
+}
+/* Pages spécifiques */
+.team-page,
+.contact-page,
+.championnat-page {
+    padding-top: 2rem;
+}
 /* introduction */
 .header-content h1 {
     display: flex;
     flex-direction: column;
     gap: 10px;
     font-size: 2.5em;
+    margin-top: 30px;
+
 }
 
 .header-content h1 .welcome {
@@ -110,9 +153,6 @@ nav ul li a:hover {
     padding: 0 120px;
 }
 
-@media (max-width: 768px) {
-
-}
 
 .bg-lcb-primary {
     background-color: #5ea1d5 !important;
@@ -196,6 +236,18 @@ nav ul li a:hover {
     border-right: 1px solid #dee2e6;
     vertical-align: middle;
 }
+
+.birthday-card {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    margin-bottom: 0;
+}
+
+#birthday-container {
+    min-height: 100px;
+}
+
 
 /* Hamburger Menu */
 .hamburger {
