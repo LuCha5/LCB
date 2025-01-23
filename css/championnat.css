@@ -1,0 +1,67 @@
+.championnat-page {
+    height: 100vh;
+    padding-top: 180px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+}
+
+
+.championnat-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+#championnat-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#championnat-content {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+
+#championnat-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    width: 100%;
+    max-width: 1600px;
+    margin-bottom: 2rem;
+}
+.category-button {
+    background-color: #1a3955;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 1.5rem;
+    font-size: 1.1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.category-button:hover {
+    background-color: #5ea1d5;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(94, 161, 213, 0.3);
+    color: white;
+    text-decoration: none;
+}
+
+#footer-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
