@@ -65,3 +65,12 @@
     width: 100%;
 }
 
+@media (max-width: 768px) {
+    .championnat-page {
+        padding-top: 130px;
+    }
+
+    .championnat-container {
+        max-height: calc(100vh - 230px);
+    }
+}
