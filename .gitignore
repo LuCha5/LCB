@@ -54,6 +54,7 @@ out/
 # Database files
 database/*.sqlite
 database/
+data/
 
 # Configuration files
 config.php
