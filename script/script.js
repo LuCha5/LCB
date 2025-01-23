@@ -149,7 +149,6 @@ function displayTeam(category, players) {
           <tr>
               <td>${player.nom}</td>
               <td>${player.prenom}</td>
-              <td>${player.dateNaissance}</td>
           </tr>
       `).join('');
   }
