@@ -67,10 +67,38 @@
 
 @media (max-width: 768px) {
     .championnat-page {
-        padding-top: 130px;
+        padding-top: 70px;
+        height: auto;
+        min-height: 100vh;
+        overflow: auto;
     }
 
     .championnat-container {
-        max-height: calc(100vh - 230px);
+        padding: 1rem;
+    }
+
+    #championnat-title {
+        font-size: 1.8rem;
+    }
+
+    #championnat-content {
+        font-size: 1rem;
+    }
+
+    #championnat-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 0.8rem;
+    }
+
+    .category-button {
+        height: 60px;
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+
+    #footer-container {
+        position: relative;
+        margin-top: auto;
     }
 }
