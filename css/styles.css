@@ -2,7 +2,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding-top: 160px; /* Ajout du padding-top */
+    padding-top: 150px; /* Réduit pour éviter l'espace blanc */
     background-color: #f4f4f4;
     display: flex;
     flex-direction: column;
@@ -11,7 +11,7 @@ body {
 
 }
 body.scrolled {
-    padding-top: 100px;
+    padding-top: 80px; /* Ajusté pour le scroll */
 }
 
 nav {
@@ -61,6 +61,7 @@ nav ul {
     display: flex;
     margin: 0;
     justify-content: center; /* Centre les boutons de navigation */
+    margin-right: auto; /* Pousse le bouton vers la droite */
 }
 
 nav ul li {
@@ -242,9 +243,11 @@ section {
     background-color: #007bff;
     color: white;
     text-decoration: none;
-    padding: 0.5em 1em;
+    padding: 0.8em 1.5em;
     border-radius: 4px;
     transition: all 0.3s ease;
+    white-space: nowrap;
+    margin-left: 3rem; /* Espace avec les autres boutons */
 }
 
 .btn-blue:hover {
@@ -578,6 +581,7 @@ footer {
         flex-direction: column;
         text-align: center;
         gap: 1em;
+        margin-right: 0;
     }
 
     .btn-blue-container {
@@ -697,14 +701,21 @@ footer {
     }
 
     body {
-        padding-top: 70px;
+        padding-top: 100px;
     }
 
     nav {
         padding: 10px 20px;
-        height: 100px;
+        height: 80px; /* Réduit la hauteur */
     }
 
+    .hamburger {
+        display: block;
+    }
+
+    nav .logo {
+        height: 40px; /* Logo plus petit sur mobile */
+    }
 
     nav .container {
         flex-direction: row;
@@ -735,9 +746,12 @@ footer {
 
     .hamburger {
         display: block;
-        position: relative;
-        top: 0;
-        right: 0;
+        position: absolute; /* Changé de relative à absolute */
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        z-index: 1001;
+        padding: 10px;
     }
 
     nav ul {
@@ -876,5 +890,241 @@ footer {
         font-size: 1.1rem;
         padding: 0.6rem 1.2rem;
         margin-top: 1rem;
+    }
+}
+
+/* Ajustements pour le bouton Nous rejoindre */
+.nav-content {
+    width: 100%;
+}
+
+.nav-content .main-menu {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+}
+
+nav ul {
+    margin-right: 0;
+}
+
+.ms-3 {
+    position: absolute;
+    right: 30px; /* Ajustement de la position */
+}
+
+.btn-blue {
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 0.8em 1.5em;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-content .main-menu {
+        flex-direction: column;
+    }
+
+    .ms-3 {
+        position: static;
+        width: 100%;
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    .btn-blue {
+        display: inline-block;
+        width: auto;
+    }
+}
+
+/* Ajustements pour la navigation et le bouton */
+.nav-content {
+    width: 100%;
+    position: relative;
+}
+
+.nav-content .main-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centre le menu */
+    width: 100%;
+    position: relative;
+}
+
+nav ul {
+    margin: 0;
+    justify-content: center; /* Garde les liens centrés */
+    width: auto; /* Empêche les liens de prendre toute la largeur */
+}
+
+.ms-3 {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.btn-blue {
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 0.8em 1.5em;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-content .main-menu {
+        flex-direction: column;
+    }
+
+    nav ul {
+        width: 100%;
+    }
+
+    .ms-3 {
+        position: static;
+        transform: none;
+        width: 100%;
+        text-align: center;
+        margin: 1rem 0;
+    }
+}
+
+/* Styles pour le calendrier des entraînements */
+.calendar-wrapper {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+    border: 3px solid #333;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.table-schedule {
+    margin-bottom: 0;
+}
+
+.table-schedule th {
+    background-color: #5ea1d5;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 1em;
+    border: none;
+}
+
+.table-schedule td {
+    padding: 0.8em;
+    border: 1px solid #dee2e6;
+    vertical-align: middle;
+}
+
+.calendar-header {
+    display: grid;
+    grid-template-columns: 80px repeat(7, 1fr);
+    background-color: #5ea1d5;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.calendar-body {
+    padding: 10px;
+}
+
+.calendar-row {
+    display: grid;
+    grid-template-columns: 80px repeat(7, 1fr);
+    min-height: 50px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.time-slot {
+    padding: 5px;
+    font-weight: 500;
+    color: #666;
+    border-right: 1px solid #dee2e6;
+}
+
+.slot {
+    padding: 5px;
+    border-right: 1px solid #dee2e6;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Couleurs pour les différentes catégories */
+.slot.u15 { background-color: #ffeb3b; }
+.slot.u13f { background-color: #ff9800; }
+.slot.u13m { background-color: #4caf50; }
+.slot.u17 { background-color: #2196f3; }
+.slot.seniors { background-color: #9c27b0; }
+.slot.u7-u9 { background-color: #e91e63; }
+.slot.u11 { background-color: #673ab7; }
+
+/* Styles pour la scrollbar du calendrier */
+.calendar-wrapper::-webkit-scrollbar {
+    width: 8px;
+}
+
+.calendar-wrapper::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.calendar-wrapper::-webkit-scrollbar-thumb {
+    background: #5ea1d5;
+    border-radius: 4px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .calendar-wrapper {
+        margin-top: 2rem;
+        font-size: 0.8rem;
+    }
+
+    .calendar-header,
+    .calendar-row {
+        grid-template-columns: 60px repeat(7, 1fr);
+    }
+
+    .time-slot {
+        padding: 2px;
+    }
+
+    .slot {
+        padding: 2px;
+        font-size: 0.75rem;
+    }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .calendar-wrapper {
+        margin-top: 2rem;
+    }
+
+    .table-schedule {
+        font-size: 0.9rem;
+    }
+
+    .table-schedule th,
+    .table-schedule td {
+        padding: 0.6em;
     }
 }

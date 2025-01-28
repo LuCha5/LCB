@@ -91,67 +91,104 @@
     <!-- Section Tarifs des Licences -->
     <section id="tarifs" class="py-5">
       <div class="container">
-          <h2 class="text-center mb-4">Tarifs des Licences</h2>
-          <div class="table-responsive">
-              <table class="table table-bordered">
-                  <thead>
-                      <tr>
-                          <th>Catégorie</th>
-                          <th>Année de naissance</th>
-                          <th>Prix</th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                      <tr>
-                          <td>U7</td>
-                          <td>2017-2018</td>
-                          <td>150€</td>
-                      </tr>
-                      <tr>
-                          <td>U9</td>
-                          <td>2015-2016</td>
-                          <td>150€</td>
-                      </tr>
-                      <tr>
-                          <td>U11</td>
-                          <td>2013-2014</td>
-                          <td>165€</td>
-                      </tr>
-                      <tr>
-                          <td>U13</td>
-                          <td>2011-2012</td>
-                          <td>165€</td>
-                      </tr>
-                      <tr>
-                          <td>U15</td>
-                          <td>2009-2010</td>
-                          <td>165€</td>
-                      </tr>
-                      <tr>
-                          <td>U17</td>
-                          <td>2007-2008</td>
-                          <td>165€</td>
-                      </tr>
-                      <tr>
-                          <td>U20</td>
-                          <td>2004-2005-2006</td>
-                          <td>180€</td>
-                      </tr>
-                      <tr>
-                          <td>Séniors (Compétition)</td>
-                          <td>2003 et avant</td>
-                          <td>180€</td>
-                      </tr>
-                      <tr>
-                          <td>Séniors (Loisirs)</td>
-                          <td>2003 et avant</td>
-                          <td>130€</td>
-                      </tr>
-                  </tbody>
-              </table>
-          </div>
-      </div>
-  </section>
+        <div class="row">
+            <!-- Colonne des tarifs -->
+            <div class="col-lg-7">
+                <h2 class="text-center mb-4">Tarifs des Licences</h2>
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Catégorie</th>
+                                <th>Année de naissance</th>
+                                <th>Prix</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>U7</td>
+                                <td>2017-2018</td>
+                                <td>150€</td>
+                            </tr>
+                            <tr>
+                                <td>U9</td>
+                                <td>2015-2016</td>
+                                <td>150€</td>
+                            </tr>
+                            <tr>
+                                <td>U11</td>
+                                <td>2013-2014</td>
+                                <td>165€</td>
+                            </tr>
+                            <tr>
+                                <td>U13</td>
+                                <td>2011-2012</td>
+                                <td>165€</td>
+                            </tr>
+                            <tr>
+                                <td>U15</td>
+                                <td>2009-2010</td>
+                                <td>165€</td>
+                            </tr>
+                            <tr>
+                                <td>U17</td>
+                                <td>2007-2008</td>
+                                <td>165€</td>
+                            </tr>
+                            <tr>
+                                <td>U20</td>
+                                <td>2004-2005-2006</td>
+                                <td>180€</td>
+                            </tr>
+                            <tr>
+                                <td>Séniors (Compétition)</td>
+                                <td>2003 et avant</td>
+                                <td>180€</td>
+                            </tr>
+                            <tr>
+                                <td>Séniors (Loisirs)</td>
+                                <td>2003 et avant</td>
+                                <td>130€</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Colonne du calendrier -->
+            <div class="col-lg-5">
+                <h2 class="text-center mb-4">Planning des entraînements</h2>
+                <div class="calendar-wrapper">
+                    <div class="calendar-header">
+                        <div class="time-column">Horaires</div>
+                        <div>Lun</div>
+                        <div>Mar</div>
+                        <div>Mer</div>
+                        <div>Jeu</div>
+                        <div>Ven</div>
+                        <div>Sam</div>
+                        <div>Dim</div>
+                    </div>
+                    <div class="calendar-body">
+                        <!-- Créneaux de 12h à 23h -->
+                        <div class="calendar-row"><div class="time-slot">12:00</div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div>
+                        <div class="calendar-row"><div class="time-slot">13:00</div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div>
+                        <div class="calendar-row"><div class="time-slot">14:00</div><div class="slot"></div><div class="slot"></div><div class="slot u7-u9">U7-U9</div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div>
+                        <div class="calendar-row"><div class="time-slot">15:00</div><div class="slot"></div><div class="slot"></div><div class="slot u11">U11 M/F</div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div>
+                        <div class="calendar-row"><div class="time-slot">16:00</div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div>
+                        <div class="calendar-row"><div class="time-slot">17:00</div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div>
+                        <div class="calendar-row"><div class="time-slot">18:00</div><div class="slot u15">U15 M</div><div class="slot u13f">U13 F</div><div class="slot"></div><div class="slot u13m">U13 M</div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div>
+                        <div class="calendar-row"><div class="time-slot">19:00</div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot u17">U17 M</div><div class="slot"></div><div class="slot"></div></div>
+                        <div class="calendar-row"><div class="time-slot">20:00</div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div>
+                        <div class="calendar-row"><div class="time-slot">21:00</div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot seniors">Seniors</div><div class="slot"></div><div class="slot"></div></div>
+                        <div class="calendar-row"><div class="time-slot">22:00</div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div>
+                        <div class="calendar-row"><div class="time-slot">23:00</div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- Section Anniversaires -->
 <section class="py-4 bg-light">
