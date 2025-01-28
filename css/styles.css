@@ -533,16 +533,15 @@ footer {
         margin: 1em 0;
     }
 
-    @media (max-width: 768px) {
-        .stat-item h4 {
-            font-size: 1.5rem;
-        }
+    .stat-item h4 {
+        font-size: 1.5rem;
     }
 
     .dropdown-content {
         position: static;
         width: 100%;
     }
+
     .table-responsive {
         max-width: 95%;
         margin: 1em auto;
@@ -555,7 +554,7 @@ footer {
    
     .header-logo-left,
     .header-logo-right {
-        height: 100px; /* Taille réduite pour mobile */
+        height: 100px;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -568,11 +567,12 @@ footer {
     .header-logo-right {
         right: 10px;
     }
-        
+
     .header-content {
-        padding: 20 80px; /* Réduit le padding pour mobile */
+        padding: 0 60px;
+        margin-top: 20px;
     }
-    
+
     .dropdown-content {
         display: none;
     }
