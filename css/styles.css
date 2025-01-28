@@ -695,232 +695,6 @@ footer {
     .rounded-social-buttons .social-button i {
         font-size: 1.2rem;
     }
-}
-    /* Contact Form Responsive */
-    .contact-form-container {
-        max-width: 95%;
-        margin: 1em auto;
-        padding: 1rem;
-    }
-
-    .form-control {
-        padding: 0.5rem;
-    }
-
-    .btn-primary {
-        width: 100%;
-        padding: 0.5rem 1rem;
-    }
-
-    /* Championnat Responsive */
-    #championnat-grid {
-        padding: 0.5em;
-        gap: 0.5em;
-    }
-
-    .category-button {
-        width: calc(100% - 2em);
-        margin: 0.25em 1em;
-        padding: 0.75em 1.5em;
-        font-size: 1em;
-        text-align: center;
-    }
-
-    #championnat-title {
-        font-size: 1.8em;
-        margin: 0.5em 0;
-    }
-
-    #championnat-content {
-        margin: 0 1em 1em;
-        font-size: 0.9em;
-    }
-
-/* Hamburger Menu */
-.hamburger {
-    display: none;
-    cursor: pointer;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1001;
-    padding: 10px;
-}
-
-.hamburger .line {
-    width: 30px;
-    height: 3px;
-    background-color: white;
-    margin: 6px 0;
-    transition: 0.4s;
-}
-
-.hamburger.active .line:nth-child(1) {
-    transform: rotate(-45deg) translate(-7px, 6px);
-}
-
-.hamburger.active .line:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.active .line:nth-child(3) {
-    transform: rotate(45deg) translate(-7px, -6px);
-}
-
-/* Menu Mobile */
-@media screen and (max-width: 768px), 
-       screen and (max-device-width: 768px) {
-    body {
-        padding-top: 100px; /* Augmenté pour donner plus d'espace */
-    }
-
-    nav {
-        height: 80px; /* Réduit la hauteur de la navbar */
-        padding: 10px 20px;
-    }
-
-    nav.scrolled {
-        height: 60px; /* Réduit la hauteur en scroll */
-    }
-
-    .header-content {
-        padding-top: 20px; /* Ajoute un padding supplémentaire en haut */
-    }
-
-    nav .logo {
-        height: 40px; /* Logo plus petit */
-    }
-
-    nav.scrolled .logo {
-        height: 30px;
-    }
-
-    .nav-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-        gap: 1em;
-    }
-
-    .btn-blue-container {
-        margin: 1em 0;
-    }
-
-    .stat-item h4 {
-        font-size: 1.5rem;
-    }
-
-    .dropdown-content {
-        position: static;
-        width: 100%;
-    }
-
-    .table-responsive {
-        max-width: 95%;
-        margin: 1em auto;
-    }
-    
-    .table thead th,
-    .table tbody td {
-        padding: 1em 1.5em;
-    }
-   
-    .header-logo-left,
-    .header-logo-right {
-        height: 100px;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-        
-    .header-logo-left {
-        left: 10px;
-    }
-        
-    .header-logo-right {
-        right: 10px;
-    }
-
-    .header-content {
-        padding: 0 100px; /* Augmenté pour éviter le chevauchement avec les logos */
-        margin: 10px auto;
-        width: 100%;
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .header-content h1 {
-        font-size: 2em;
-        margin-top: 10px;
-        gap: 5px;
-    }
-
-    .header-content h1 .welcome {
-        display: none; /* Cache le "bienvenue" sur mobile */
-    }
-
-    .header-content h1 .club-name {
-        font-size: 1.2em;
-    }
-
-    .header-content .lead {
-        font-size: 1rem;
-        margin-bottom: 1.5rem;
-        padding: 0 20px; /* Ajoute du padding pour éviter le chevauchement */
-        max-width: 200px;
-        margin: 1rem auto;
-    }
-
-    .header-content .btn-light {
-        font-size: 0.9rem;
-        padding: 0.5rem 1rem;
-        white-space: normal; /* Permet au texte de passer à la ligne */
-        max-width: 200px; /* Limite la largeur du bouton */
-        margin: 1rem auto;
-        display: inline-block;
-    }
-
-    .header-logo-left,
-    .header-logo-right {
-        height: 80px;
-    }
-
-    .bg-image-header {
-        height: 350px;
-    }
-    .header-content .lead {
-        font-size: 1.1rem;
-        line-height: 1.4;
-        margin: 1rem auto 1.5rem;
-        max-width: 250px;
-        word-wrap: break-word;
-        hyphens: auto;
-    }
-
-    .stat-item i {
-        font-size: 2rem;
-    }
-    
-    .fa-instagram,
-    .fa-facebook-f {
-        font-size: 1.2rem;
-    }
-
-    .stat-item .fas {
-        font-size: 2rem;
-    }
-    
-    .rounded-social-buttons .fab {
-        font-size: 1.2rem;
-    }
-
-    .rounded-social-buttons .social-button i {
-        font-size: 1.2rem;
-    }
 
     body {
         padding-top: 70px;
@@ -1044,6 +818,30 @@ footer {
     }
     .staff-card {
         padding: 1.5rem;
+    }
+
+    body {
+        padding-top: 120px; /* Augmenté pour donner plus d'espace sous la navbar */
+    }
+
+    .bg-image-header {
+        height: 400px; /* Augmenté pour donner plus d'espace au contenu */
+        padding-top: 2rem; /* Ajout d'un padding en haut */
+    }
+
+    .header-content {
+        padding: 30px 90px 0; /* Ajout de padding en haut */
+        margin-top: 20px;
+    }
+
+    .header-content h1 {
+        margin-top: 30px; /* Augmenté la marge en haut */
+    }
+
+    .header-content h1 .welcome {
+        display: block; /* Rétabli l'affichage */
+        font-size: 0.7em;
+        margin-bottom: 5px;
     }
 }
 
