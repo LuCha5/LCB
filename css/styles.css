@@ -575,6 +575,44 @@ footer {
     .dropdown-content {
         display: none;
     }
+    .header-content {
+        padding: 0 60px;
+        margin-top: 20px;
+    }
+
+    .header-content h1 {
+        font-size: 2em;
+        margin-top: 10px;
+        gap: 5px;
+    }
+
+    .header-content h1 .welcome {
+        font-size: 0.7em;
+    }
+
+    .header-content h1 .club-name {
+        font-size: 1.2em;
+    }
+
+    .header-content .lead {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .header-content .btn-light {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+    }
+
+    .header-logo-left,
+    .header-logo-right {
+        height: 80px;
+    }
+
+    .bg-image-header {
+        height: 350px;
+    }
 }
     /* Contact Form Responsive */
     .contact-form-container {
