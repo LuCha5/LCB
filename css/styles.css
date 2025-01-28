@@ -624,11 +624,9 @@ footer {
         padding: 0;
     }
     nav.scrolled {
-        height: 75px;
+        height: 70px;
     }
-    nav.scrolled .logo {
-        height: 40px;
-    }
+
     nav .logo-container {
         margin: 0;
     }
