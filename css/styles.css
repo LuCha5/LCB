@@ -613,6 +613,14 @@ footer {
     .bg-image-header {
         height: 350px;
     }
+    .header-content .lead {
+        font-size: 1.1rem;
+        line-height: 1.4;
+        margin: 1rem auto 1.5rem;
+        max-width: 250px;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
 }
     /* Contact Form Responsive */
     .contact-form-container {
