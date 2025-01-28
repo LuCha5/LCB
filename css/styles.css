@@ -147,6 +147,10 @@ section {
 .header-content {
     position: relative;
     z-index: 2;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 120px;
+    text-align: center;
 }
 
 .header-logo-left,
@@ -164,13 +168,6 @@ section {
 .header-logo-right {
     right: 0;
 }
-
-.header-content {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 0 120px;
-}
-
 
 .bg-lcb-primary {
     background-color: #5ea1d5 !important;
@@ -197,6 +194,19 @@ section {
     margin: 0.5rem 0;
 }
 
+/* Stats icons */
+.stat-item i {
+    font-size: 2.5rem;
+    color: #5ea1d5;
+    margin-bottom: 1rem;
+}
+
+/* Stats icons */
+.stat-item .fas {
+    font-size: 2.5rem;
+    color: #5ea1d5;
+    margin-bottom: 1rem;
+}
 
 /* Dropdown Menu */
 .dropdown-content {
@@ -493,7 +503,7 @@ footer {
         color: #fefefe;
         font-size: 1.5625rem;
         font-weight: normal;
-        line-height: 2em;
+        line-height: 3.125rem; /* Ajusté pour centrer verticalement les icônes */
         border-radius: 1.6875rem;
         transition: all 0.3s ease;
         margin-right: 0.25rem;
@@ -514,6 +524,34 @@ footer {
     .rounded-social-buttons .social-button.instagram {
         background: #e4405f;
     }
+
+/* Social Media Icons */
+.fa-instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.5rem;
+}
+
+.fa-facebook-f {
+    color: #4267B2;
+    font-size: 1.5rem;
+}
+
+/* Social Media Icons */
+.rounded-social-buttons .fab {
+    font-size: 1.5rem;
+}
+
+.rounded-social-buttons .social-button i {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.rounded-social-buttons .social-button:hover i {
+    color: #333;
+}
 
 /* Media Queries */
 @media screen and (max-width: 768px), 
@@ -569,16 +607,11 @@ footer {
     }
 
     .header-content {
-        padding: 0 60px;
-        margin-top: 20px;
-    }
-
-    .dropdown-content {
-        display: none;
-    }
-    .header-content {
-        padding: 0 60px;
-        margin-top: 20px;
+        padding: 0 100px; /* Augmenté pour éviter le chevauchement avec les logos */
+        margin: 10px auto;
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
     }
 
     .header-content h1 {
@@ -588,7 +621,7 @@ footer {
     }
 
     .header-content h1 .welcome {
-        font-size: 0.7em;
+        display: none; /* Cache le "bienvenue" sur mobile */
     }
 
     .header-content h1 .club-name {
@@ -598,12 +631,18 @@ footer {
     .header-content .lead {
         font-size: 1rem;
         margin-bottom: 1.5rem;
+        padding: 0 20px; /* Ajoute du padding pour éviter le chevauchement */
+        max-width: 200px;
+        margin: 1rem auto;
     }
 
     .header-content .btn-light {
-        font-size: 1rem;
+        font-size: 0.9rem;
         padding: 0.5rem 1rem;
-        white-space: nowrap;
+        white-space: normal; /* Permet au texte de passer à la ligne */
+        max-width: 200px; /* Limite la largeur du bouton */
+        margin: 1rem auto;
+        display: inline-block;
     }
 
     .header-logo-left,
@@ -621,6 +660,23 @@ footer {
         max-width: 250px;
         word-wrap: break-word;
         hyphens: auto;
+    }
+
+    .stat-item i {
+        font-size: 2rem;
+    }
+    
+    .fa-instagram,
+    .fa-facebook-f {
+        font-size: 1.2rem;
+    }
+
+    .stat-item .fas {
+        font-size: 2rem;
+    }
+    
+    .rounded-social-buttons .fab {
+        font-size: 1.2rem;
     }
 }
     /* Contact Form Responsive */
