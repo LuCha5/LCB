@@ -516,7 +516,8 @@ footer {
     }
 
 /* Media Queries */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px), 
+       screen and (max-device-width: 768px) {
     .nav-content {
         flex-direction: column;
         align-items: center;
@@ -818,5 +819,12 @@ footer {
     }
     .staff-card {
         padding: 1.5rem;
+    }
+}
+
+/* Forcer styles mobiles sur petits écrans */
+@media screen and (max-device-width: 480px) {
+    body {
+        -webkit-text-size-adjust: none;
     }
 }
