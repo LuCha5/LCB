@@ -32,7 +32,6 @@
                     </li>
                     <li><a href="championnat.html">Championnat</a></li>
                     <li><a href="contact.html">Contact</a></li>
-
                 </ul>
                 <div class="ms-3">
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdSJGS8JwYYKDXz-RvTj6zqlrhCZkVHqqBBGOf85KPTi5B4vw/viewform?usp=sf_link" target="_blank" class="btn-blue">Nous rejoindre</a>
@@ -74,5 +73,21 @@
                 });
             }
         });
+
+        const nav = document.querySelector('nav');
+        const hamburger = document.querySelector('.hamburger');
+        
+        hamburger.addEventListener('click', function() {
+            nav.classList.toggle('menu-open');
+            hamburger.classList.toggle('active');
+        });
+
+        // Ferme le menu en cliquant en dehors
+        document.addEventListener('click', function(e) {
+            if (!nav.contains(e.target)) {
+                nav.classList.remove('menu-open');
+                hamburger.classList.remove('active');
+            }
+        });
     });
-    </script>
+</script>
