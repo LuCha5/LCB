@@ -23,8 +23,16 @@
                             <a href="team.html?team=seniors-compet">Seniors Compet PRF</a>
                         </div>
                     </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Staff</a>
+                        <div class="dropdown-content">
+                            <a href="coach.html">Coachs</a>
+                            <a href="bureau.html">Bureau</a>
+                        </div>
+                    </li>
                     <li><a href="championnat.html">Championnat</a></li>
                     <li><a href="contact.html">Contact</a></li>
+
                 </ul>
             </div>
         </div>
@@ -33,14 +41,35 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        const dropdownBtn = document.querySelector('.dropbtn');
-        const dropdownContent = document.querySelector('.dropdown-content');
-        let isOpen = false;
-    
-        dropdownBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            isOpen = !isOpen;
-            dropdownContent.style.display = isOpen ? 'block' : 'none';
+        const dropdowns = document.querySelectorAll('.dropdown');
+        
+        dropdowns.forEach(dropdown => {
+            const btn = dropdown.querySelector('.dropbtn');
+            const content = dropdown.querySelector('.dropdown-content');
+            let isOpen = false;
+            
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Fermer tous les autres dropdowns
+                dropdowns.forEach(otherDropdown => {
+                    if (otherDropdown !== dropdown) {
+                        otherDropdown.querySelector('.dropdown-content').style.display = 'none';
+                    }
+                });
+                
+                isOpen = !isOpen;
+                content.style.display = isOpen ? 'block' : 'none';
+            });
+        });
+        
+        // Fermer les dropdowns en cliquant ailleurs
+        document.addEventListener('click', function(e) {
+            if (!e.target.matches('.dropbtn')) {
+                dropdowns.forEach(dropdown => {
+                    dropdown.querySelector('.dropdown-content').style.display = 'none';
+                });
+            }
         });
     });
-
+    </script>

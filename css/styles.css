@@ -128,6 +128,26 @@ section {
 .header-content h1 .club-name {
     font-weight: bold;
 }
+.bg-image-header {
+    position: relative;
+    background: url('../assets/images/image.jpg') center/cover no-repeat;
+    height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(94, 161, 213, 0.85); /* Changé de 0.8 à 0.6 pour moins de transparence */
+}
+.header-content {
+    position: relative;
+    z-index: 2;
+}
 
 .header-logo-left,
 .header-logo-right {
@@ -155,6 +175,28 @@ section {
 .bg-lcb-primary {
     background-color: #5ea1d5 !important;
 }
+
+.stats-container {
+    background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.stat-item {
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+}
+
+.stat-item h4 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1a3955;
+    margin: 0.5rem 0;
+}
+
 
 /* Dropdown Menu */
 .dropdown-content {
@@ -322,6 +364,40 @@ section {
     background-color: #555;
 }
 
+
+/* staff */
+
+.staff-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.staff-card:hover {
+    transform: translateY(-5px);
+}
+
+.staff-card h3 {
+    color: #1a3955;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.staff-card h4 {
+    color: #5ea1d5;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.staff-card p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
 /* Contact */
 
 .contact-form-container {
@@ -456,7 +532,11 @@ footer {
         margin: 1em 0;
     }
 
-    
+    @media (max-width: 768px) {
+        .stat-item h4 {
+            font-size: 1.5rem;
+        }
+    }
 
     .dropdown-content {
         position: static;
@@ -689,5 +769,8 @@ footer {
     .table-responsive::-webkit-scrollbar-thumb {
         background: #888;
         border-radius: 3px;
+    }
+    .staff-card {
+        padding: 1.5rem;
     }
 }

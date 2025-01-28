@@ -169,3 +169,34 @@ function initScrollHandler() {
       }
   });
 }
+
+async function loadClubStats() {
+    try {
+        const response = await fetch('../data/joueurs.json');
+        const data = await response.json();
+        
+        let totalHommes = 0;
+        let totalFemmes = 0;
+        let totaljoueurs = 230;
+
+        Object.keys(data).forEach(category => {
+            if (category.includes('M') || category.includes('Masculins')) {
+                totalHommes += data[category].length;
+            } else if (category.includes('F') || category.includes('Féminines')) {
+                totalFemmes += data[category].length;
+            }
+        });
+
+        document.getElementById('total-hommes').textContent = totalHommes;
+        document.getElementById('total-femmes').textContent = totalFemmes;
+        document.getElementById('total-joueurs').textContent = totaljoueurs;
+    } catch (error) {
+        console.error('Erreur chargement stats:', error);
+    }
+    total
+}
+
+document.addEventListener('DOMContentLoaded', async function() {
+    // ...existing code...
+    await loadClubStats();
+});
