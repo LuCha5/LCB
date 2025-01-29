@@ -1,14 +1,14 @@
 const championnatCategories = [
-    { category: 'U7-U9 Mixtes', url: 'https://resultats.ffbb.com/championnat/...' },
-    { category: 'U11 M', url: 'https://resultats.ffbb.com/championnat/...' },
-    { category: 'U11 F', url: 'https://resultats.ffbb.com/championnat/...' },
-    { category: 'U13 M', url: 'https://resultats.ffbb.com/championnat/...' },
-    { category: 'U13 F', url: 'https://resultats.ffbb.com/championnat/...' },
-    { category: 'U15 M', url: 'https://resultats.ffbb.com/championnat/...' },
-    { category: 'U18 M', url: 'https://resultats.ffbb.com/championnat/...' },
-    { category: '3vs3', url: 'https://resultats.ffbb.com/championnat/...' },
-    { category: 'Seniors Compet DM3', url: 'https://resultats.ffbb.com/championnat/...' },
-    { category: 'Seniors Compet PRF', url: 'https://resultats.ffbb.com/championnat/...' }
+    { category: 'U7-U9 Mixtes', url: 'team.html?team=U7-U9 Mixtes' },
+    { category: 'U11 M', url: 'team.html?team=U11 M' },
+    { category: 'U11 F', url: 'team.html?team=U11 F' },
+    { category: 'U13 M', url: 'team.html?team=U13 M' },
+    { category: 'U13 F', url: 'team.html?team=U13 F' },
+    { category: 'U15 M', url: 'team.html?team=U15 M' },
+    { category: 'U18 M', url: 'team.html?team=U18 M' },
+    { category: '3vs3', url: 'team.html?team=3vs3' },
+    { category: 'Seniors Compet DM3', url: 'team.html?team=Seniors Compet DM3' },
+    { category: 'Seniors Compet PRF', url: 'team.html?team=Seniors Compet PRF' }
 ];
 
 const displayChampionnatCategories = () => {

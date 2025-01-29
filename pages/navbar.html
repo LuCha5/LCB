@@ -6,23 +6,7 @@
         <div class="nav-content">
             <div class="main-menu d-flex align-items-center">
                 <ul>
-                    <li class="dropdown">
-                        <a href="javascript:void(0)" class="dropbtn">Nos équipes</a>
-                        <div class="dropdown-content">
-                            <a href="team.html?team=U7-U9">U7-U9 Mixtes</a>
-                            <a href="team.html?team=U11">U11 M</a>
-                            <a href="team.html?team=U11">U11 F</a>
-                            <a href="team.html?team=U13">U13 M</a>
-                            <a href="team.html?team=U13">U13 F</a>
-                            <a href="team.html?team=U15">U15 M</a>
-                            <a href="team.html?team=U17">U18 M</a>
-                            <a href="team.html?team=3v3">3vs3</a>
-                            <a href="team.html?team=seniors-loisirs">Seniors Loisirs</a>
-                            <a href="team.html?team=seniors-compet">Seniors Compet RM3</a>
-                            <a href="team.html?team=seniors-compet">Seniors Compet DM3</a>
-                            <a href="team.html?team=seniors-compet">Seniors Compet PRF</a>
-                        </div>
-                    </li>
+                    <li><a href="Allteams.html">Nos équipes</a></li>
                     <li class="dropdown">
                         <a href="javascript:void(0)" class="dropbtn">Staff</a>
                         <div class="dropdown-content">
@@ -30,14 +14,13 @@
                             <a href="bureau.html">Bureau</a>
                         </div>
                     </li>
-                    <li><a href="championnat.html">Championnat</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li class="ms-auto"> <!-- Changé de ms-3 à ms-auto -->
+                    <li class="ms-auto boutique"> <!-- Ajout de la classe boutique -->
                         <a href="https://boutique.example.com" target="_blank" class="btn-icon">
                             <i class="fas fa-tshirt"></i>
                         </a>
                     </li>
-                    <li class="ms-3">
+                    <li class="ms-3 nous-rejoindre"> <!-- Ajout de la classe nous-rejoindre -->
                         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdSJGS8JwYYKDXz-RvTj6zqlrhCZkVHqqBBGOf85KPTi5B4vw/viewform?usp=sf_link" target="_blank" class="btn-blue">Nous rejoindre</a>
                     </li>
                 </ul>
@@ -45,54 +28,3 @@
         </div>
     </div>
 </nav>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const dropdowns = document.querySelectorAll('.dropdown');
-        
-        dropdowns.forEach(dropdown => {
-            const btn = dropdown.querySelector('.dropbtn');
-            const content = dropdown.querySelector('.dropdown-content');
-            let isOpen = false;
-            
-            btn.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                // Fermer tous les autres dropdowns
-                dropdowns.forEach(otherDropdown => {
-                    if (otherDropdown !== dropdown) {
-                        otherDropdown.querySelector('.dropdown-content').style.display = 'none';
-                    }
-                });
-                
-                isOpen = !isOpen;
-                content.style.display = isOpen ? 'block' : 'none';
-            });
-        });
-        
-        // Fermer les dropdowns en cliquant ailleurs
-        document.addEventListener('click', function(e) {
-            if (!e.target.matches('.dropbtn')) {
-                dropdowns.forEach(dropdown => {
-                    dropdown.querySelector('.dropdown-content').style.display = 'none';
-                });
-            }
-        });
-
-        const nav = document.querySelector('nav');
-        const hamburger = document.querySelector('.hamburger');
-        
-        hamburger.addEventListener('click', function() {
-            nav.classList.toggle('menu-open');
-            hamburger.classList.toggle('active');
-        });
-
-        // Ferme le menu en cliquant en dehors
-        document.addEventListener('click', function(e) {
-            if (!nav.contains(e.target)) {
-                nav.classList.remove('menu-open');
-                hamburger.classList.remove('active');
-            }
-        });
-    });
-</script>
