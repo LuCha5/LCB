@@ -109,28 +109,15 @@ section {
     scroll-margin-top: 100px;
 }
 
-
 /* Sections génériques */
 .main-content {
     padding: 2rem 0;
 }
 /* Pages spécifiques */
-.allteams-page,
-.bureau-page,
+.team-page,
 .contact-page,
-.championnat-page,
-.staff-page {
-    padding-top: 200px;
-}
-
-@media screen and (max-width: 768px) {
-    .allteams-page,
-    .bureau-page,
-    .contact-page,
-    .championnat-page,
-    .coach-page {
-        padding-top: 90px;
-    }
+.championnat-page {
+    padding-top: 2rem;
 }
 /* introduction */
 .header-content h1 {
@@ -997,62 +984,28 @@ nav ul {
     justify-content: center; /* Garde les liens centrés */
     width: auto; /* Empêche les liens de prendre toute la largeur */
 }
-/* Navigation principale */
-.nav-content .main-menu ul {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: center;
+.ms-3 {
+    position: absolute;
+    right: 20px; /* Position du bouton "Nous rejoindre" */
+    margin-bottom: 0;
+
 }
 
-/* Liens de navigation centrés */
-.nav-content .main-menu ul > li:not(.boutique):not(.nous-rejoindre) {
-    flex: 0 1 auto;
-    margin: 0 10px;  /* Réduit de 2rem à 1rem */
-}
-
-/* Groupe des boutons */
-.nav-buttons {
-    display: flex;
-    gap: 1rem;
-    margin-left: auto;
-    padding-right: 2rem;
-}
-
-/* Style spécifique pour la boutique */
-.boutique {
-    order: 2;
-}
-
-/* Style spécifique pour nous rejoindre */
-.nous-rejoindre {
-    order: 1;
-}
-
-/* Style commun pour les boutons */
-.btn-icon, .btn-blue {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.8em 1.5em;
-    background-color: #007bff;
-    border: 2px solid #007bff;
-    border-radius: 4px;
+/* Positionnement du bouton "Boutique" en absolute sur PC */
+.btn-icon {
+    position: absolute;
+    top: -10px;
+    right: 800px;
     color: white;
-    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0.8em 1.5em;
     transition: all 0.3s ease;
-}
-
-@media screen and (max-width: 768px) {
-    .nav-content .main-menu ul {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    .nav-buttons {
-        display: flex;
-        gap: 1rem;
-        margin: 1rem 0;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #007bff;
+    border-radius: 4px;
+    border: 2px solid #007bff;
 }
 
 .btn-icon i {
@@ -1079,49 +1032,45 @@ nav ul {
         margin: 0;
     }
 
-}
-/* Styles desktop */
-.main-menu ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-.boutique, .nous-rejoindre {
-    display: inline-flex;
-    margin-left: 1rem;
-}
-
-/* Styles communs aux deux boutons */
-.btn-blue, .btn-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.8em 1.5em;
-    background-color: #007bff;
-    color: white;
-    border-radius: 4px;
-    border: 1px solid #007bff;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-/* Media query pour mobile */
-@media screen and (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .boutique, .nous-rejoindre {
-        width: 80%;
-        margin: 5px auto;
-    }
-
-    .btn-blue, .btn-icon {
-        width: 100%;
+        /* Réinitialiser les styles desktop spécifiques pour mobile */
+    .btn-icon {
+        position: static;
+        top: auto;
+        right: auto;
         padding: 12px 0;
     }
+
+    nav ul li {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .ms-3, .btn-icon {
+        position: static;
+        width: 80%;
+        text-align: center;
+        margin: 10px auto;
+        display: flex;
+        justify-content: center;
+    }
+    
+
+    .btn-blue, .btn-icon {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 12px 0;
+        background-color: #007bff;
+        border-radius: 4px;
+        color: white;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
 }
 
 /* Mobile Navigation */
@@ -1133,7 +1082,7 @@ nav ul {
 
     nav {
         height: 70px;
-        padding: 0;
+        padding: 10px 0;
     }
 
     .nav-content {
@@ -1142,17 +1091,13 @@ nav ul {
     }
 
     nav .container {
-        width: 100%;
+        flex-direction: row;
         justify-content: space-between;
-        height: 70px;
-        position: relative;
+        padding: 0 15px;
+        position: relative; /* Ajouté */
     }
 
     nav .logo {
-        position: absolute;
-        left: 15px;
-        top: 15px;
-        transform: none;
         height: 40px;
     }
 
@@ -1160,8 +1105,8 @@ nav ul {
         display: block;
         position: absolute;
         right: 15px;
-        top: 25px;
-        transform: none;
+        top: 50%;
+        transform: translateY(-50%);
         z-index: 1002;
         background: none;
         border: none;
@@ -1228,473 +1173,3 @@ nav ul {
         right: 15px; /* Garde le hamburger à droite */
     }
 }
-
-/* ...existing code... */
-
-.nav-content .main-menu ul {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Centre les items du menu */
-    width: 100%;
-    position: relative;
-}
-
-nav ul {
-    display: flex;
-    justify-content: center; /* Centre les items du menu */
-    margin: 0 auto; /* Centre les items horizontalement */
-    padding: 0;
-    list-style: none;
-}
-
-.nav-content .main-menu ul > li:not(.boutique):not(.nous-rejoindre) {
-    flex: 1; /* Permet aux items de prendre l'espace disponible */
-    text-align: center; /* Centre le texte des items */
-}
-
-/* ...existing code... */
-
-.ms-3 {
-    position: absolute;
-    right: 20px; /* Position du bouton "Nous rejoindre" */
-    margin-bottom: 0;
-}
-
-/* ...existing code... */
-
-nav.menu-closed ul {
-    display: none;
-}
-
-/* ...existing code... */
-
-@media screen and (max-width: 768px) {
-    /* Suppression de .main-menu ul { display: none !important; } qui cachait le menu */
-    
-    nav.menu-open {
-        height: auto;
-        min-height: 100vh;
-    }
-    nav .menu-closed {
-        display: none !important;
-    }
-
-    nav.menu-open .main-menu ul {
-        display: flex !important;
-        flex-direction: column;
-        padding-bottom: 20px;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        background-color: #1a3955;
-        height: auto;
-        min-height: calc(100vh - 80px);
-    }
-
-    nav.menu-open .main-menu ul li {
-        width: 100%;
-        margin: 5px 0;
-    }
-
-    nav.menu-open .dropdown-content {
-        position: static;
-        display: none;
-        width: 100%;
-        background-color: #2a4965;
-    }
-
-    nav.menu-open .dropdown:hover .dropdown-content,
-    nav.menu-open .dropdown.active .dropdown-content {
-        display: block;
-    }
-
-    /* Assurez-vous que tous les éléments du menu sont visibles */
-    .nav-content .main-menu ul li {
-        display: block;
-        width: 100%;
-    }
-
-    .nav-buttons {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .boutique, .nous-rejoindre {
-        width: 80%;
-        margin: 5px auto;
-    }
-}
-
-/* ...existing code... */
-
-@media screen and (max-width: 768px), 
-       screen and (max-device-width: 768px) {
-    body {
-        padding-top: 80px;
-    }
-
-    nav {
-        height: 80px;
-    }
-
-    nav.menu-open {
-        height: 100vh;
-        overflow-y: auto;
-    }
-
-    nav .container {
-        height: 80px;
-    }
-
-    nav .logo {
-        height: 60px;
-        position: absolute;
-        left: 15px;
-        top: 10px;
-        z-index: 1002; /* S'assure que le logo reste visible */
-    }
-
-    nav ul {
-        position: fixed;
-        top: 80px; /* Augmenté pour correspondre à la hauteur de la navbar */
-        left: 0;
-        width: 100%;
-        height: calc(100vh - 80px);
-        background-color: #1a3955;
-        display: none;
-        padding: 20px 0;
-        overflow-y: auto;
-    }
-
-    /* Ajustement du menu déroulant "Nos équipes" */
-    .dropdown-content {
-        position: relative;
-        width: 100%;
-        max-height: none;
-        background-color: #2a4965;
-        padding: 10px 0;
-    }
-
-    .dropdown-content a {
-        padding: 12px 20px;
-        font-size: 1rem;
-    }
-
-    /* Ajustement des boutons dans le menu mobile */
-    .nav-buttons {
-        position: relative;
-        width: 100%;
-        padding: 0 20px;
-        margin-top: 20px;
-    }
-
-    .btn-blue, .btn-icon {
-        width: 100%;
-        margin: 5px 0;
-        padding: 12px 20px;
-        font-size: 1rem;
-    }
-
-    /* Ajustement de la position du hamburger */
-    .hamburger {
-        top: 30px;
-    }
-}
-
-/* ...existing code... */
-
-@media screen and (max-width: 768px) {
-    /* Configuration de base de la navbar */
-    nav {
-        height: 80px !important;
-        padding: 0 !important;
-    }
-
-    nav .container {
-        height: 80px !important;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 15px !important;
-    }
-
-    /* Logo styles */
-    nav .logo-container {
-        display: block !important;
-        margin: 0 !important;
-        height: 80px !important;
-        display: flex !important;
-        align-items: center;
-    }
-
-    nav .logo {
-        height: 40px !important;
-        display: block !important;
-        position: relative !important;
-        left: auto !important;
-        top: auto !important;
-        transform: none !important;
-    }
-
-    /* Hamburger menu */
-    .hamburger {
-        display: block !important;
-        position: absolute;
-        right: 15px;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 1002;
-    }
-
-    /* Cache tous les autres éléments par défaut */
-    nav .main-menu,
-    nav ul,
-    nav ul li,
-    .nav-buttons,
-    .btn-blue,
-    .btn-icon,
-    .boutique,
-    .nous-rejoindre,
-    .dropdown-content {
-        display: none !important;
-    }
-
-    /* Affiche les éléments uniquement quand le menu est ouvert */
-    nav.menu-open .main-menu,
-    nav.menu-open ul,
-    nav.menu-open ul li,
-    nav.menu-open .nav-buttons,
-    nav.menu-open .btn-blue,
-    nav.menu-open .btn-icon,
-    nav.menu-open .boutique,
-    nav.menu-open .nous-rejoindre {
-        display: flex !important;
-    }
-}
-
-/* ...existing code... */
-
-/* ...existing code... */
-
-@media screen and (max-width: 768px) {
-    /* Base navbar styles */
-    body {
-        padding-top: 70px !important;
-    }
-
-    nav {
-        height: 70px !important;
-        padding: 0 !important;
-        border: none !important;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-
-    nav .container {
-        height: 70px !important;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 15px !important;
-        position: relative;
-        border: none;
-    }
-
-    /* Logo styles */
-    nav .logo-container {
-        height: 70px !important;
-        display: flex !important;
-        align-items: center;
-        margin: 0 !important;
-    }
-
-    nav .logo {
-        height: 40px !important;
-        display: block !important;
-    }
-
-    /* Menu déroulant */
-    nav .main-menu {
-        position: fixed;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background-color: #1a3955;
-        display: none;
-    }
-
-    nav.menu-open .main-menu {
-        display: block;
-        border-top: 1px solid rgba(255,255,255,0.1);
-    }
-
-    nav.menu-open {
-        height: 70px !important;
-    }
-
-    nav ul {
-        margin: 0;
-        padding: 0;
-        background-color: #1a3955;
-    }
-
-    /* Retire les bordures et ombres superflues */
-    nav.menu-open ul {
-        box-shadow: none;
-        border: none;
-    }
-
-    .dropdown-content {
-        background-color: #2a4965;
-        border: none;
-        box-shadow: none;
-    }
-
-    /* Ajustement du z-index */
-    nav {
-        z-index: 1000;
-    }
-
-    nav .main-menu {
-        z-index: 999;
-    }
-
-    /* Cache tous les éléments sauf logo et hamburger */
-    nav .main-menu,
-    nav ul,
-    nav ul li,
-    .nav-buttons,
-    .btn-blue,
-    .btn-icon,
-    .boutique,
-    .nous-rejoindre,
-    .dropdown-content {
-        display: none !important;
-    }
-
-    /* Affiche uniquement quand menu ouvert */
-    nav.menu-open .main-menu,
-    nav.menu-open ul,
-    nav.menu-open ul li,
-    nav.menu-open .nav-buttons,
-    nav.menu-open .btn-blue,
-    nav.menu-open .btn-icon,
-    nav.menu-open .boutique,
-    nav.menu-open .nous-rejoindre {
-        display: flex !important;
-    }
-}
-
-/* ...existing code... */
-
-/* ...existing code... */
-
-@media screen and (max-width: 768px) {
-    /* Base navbar styles */
-    nav {
-        height: 70px !important;
-        padding: 0 !important;
-        border: none !important;
-        box-shadow: none !important;
-    }
-
-    nav .container {
-        height: 70px !important;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 15px !important;
-        position: relative;
-        max-width: 100%;
-    }
-
-    /* Logo et hamburger */
-    nav .logo-container {
-        height: 70px !important;
-        display: flex !important;
-        align-items: center;
-        margin: 0 !important;
-    }
-
-    nav .logo {
-        height: 40px !important;
-        display: block !important;
-    }
-
-    .hamburger {
-        display: block !important;
-        position: absolute;
-        right: 15px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    /* Menu déroulant */
-    nav .main-menu {
-        position: fixed;
-        top: 70px;
-        left: 0;
-        width: 100vw;
-        background-color: #1a3955;
-        display: none;
-    }
-
-    /* Ajustements des boutons */
-    .btn-blue, .btn-icon {
-        width: auto !important;
-        min-width: 200px;
-        max-width: 80%;
-        margin: 5px auto !important;
-        padding: 12px 20px !important;
-    }
-
-    nav ul {
-        width: 100%;
-        margin: 0;
-        padding: 20px 0;
-    }
-
-    nav ul li {
-        width: 100%;
-        padding: 0 15px;
-        box-sizing: border-box;
-    }
-
-    /* Suppression de toutes les bordures et ombres */
-    nav, nav.menu-open, nav ul, nav ul li, nav ul li a,
-    .dropdown-content, .btn-blue, .btn-icon {
-        border: none !important;
-        box-shadow: none !important;
-    }
-
-    /* Fix pour éviter le scroll horizontal */
-    .nav-content, nav .main-menu, nav ul {
-        width: 100%;
-        max-width: 100vw;
-        box-sizing: border-box;
-    }
-
-    /* Ajuster le contenu pour éviter le débordement */
-    nav ul li a,
-    .btn-blue,
-    .btn-icon {
-        white-space: normal;
-        text-align: center;
-        box-sizing: border-box;
-    }
-    nav ul li {
-        padding: 0 16px;
-        margin: 2px 0 !important;
-    }
-
-}
-
-/* ...existing code... */
-
-/* ...existing code... */
-

@@ -41,9 +41,15 @@ function initBurgerMenu() {
   const container = nav.querySelector('.container');
   container.appendChild(burger);
   
+  // Masquer la navbar par défaut sur mobile
+  if (window.innerWidth <= 768) {
+      nav.classList.add('menu-closed');
+  }
+
   burger.addEventListener('click', () => {
       burger.classList.toggle('active');
       nav.classList.toggle('menu-open');
+      nav.classList.toggle('menu-closed');
   });
 
   handleMobileDropdowns();
