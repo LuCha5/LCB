@@ -116,7 +116,6 @@ section {
 }
 /* Pages spécifiques */
 .allteams-page,
-.bureau-page,
 .contact-page,
 .championnat-page,
 .staff-page,
@@ -126,21 +125,24 @@ section {
 
 @media screen and (max-width: 768px) {
     .allteams-page,
-    .bureau-page,
     .contact-page,
     .championnat-page,
-    .coach-page {
-        padding-top: 90px;
+    .staff-page,
+    .team-page{
+        padding-top: 80px;
+        height: auto;
     }
 }
-/* introduction */
 .header-content h1 {
     display: flex;
     flex-direction: column;
     gap: 10px;
     font-size: 2.5em;
     margin-top: 30px;
-
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    will-change: transform;
+    transform: translateZ(0);
 }
 
 .header-content h1 .welcome {
@@ -747,7 +749,7 @@ footer {
 @media screen and (max-width: 768px), 
        screen and (max-device-width: 768px) {
     body {
-        padding-top: 70px;
+        padding-top: 50px;
     }
 
     nav {
@@ -1090,7 +1092,18 @@ nav ul {
 }
 
 
+nav ul {
+    display: flex;
+    justify-content: center; /* Centre les items du menu */
+    margin: 0 auto; /* Centre les items horizontalement */
+    padding: 0;
+    list-style: none;
+}
 
+.nav-content .main-menu ul > li:not(.boutique):not(.nous-rejoindre) {
+    flex: 1; /* Permet aux items de prendre l'espace disponible */
+    text-align: center; /* Centre le texte des items */
+}
 
 /* Styles communs aux deux boutons */
 .btn-blue, .btn-icon {
@@ -1144,7 +1157,8 @@ nav ul {
     }
 
     nav .logo {
-        height: 30px !important;
+        height: 45px !important;
+        
     }
 
     .hamburger {
@@ -1167,6 +1181,23 @@ nav ul {
         width: 100% !important;
         padding: 0 !important;
         margin: 0 !important;
+    }
+    .dropdown-content {
+        position: static !important;
+        display: none !important;
+        width: 100% !important;
+        background-color: transparent !important;
+        padding: 0 !important;
+    }
+
+    .dropdown.active .dropdown-content {
+        display: block !important;
+    }
+
+    .dropdown-content a {
+        color: white !important;
+        padding: 15px 0 !important;
+        text-align: center !important;
     }
 
     .btn-blue, .btn-icon {

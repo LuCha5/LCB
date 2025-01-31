@@ -45,6 +45,9 @@ function initBurgerMenu() {
   if (window.innerWidth <= 768) {
       nav.classList.add('menu-closed');
   }
+  document.querySelector('.dropdown').addEventListener('click', function() {
+    this.classList.toggle('active');
+});
 
   burger.addEventListener('click', () => {
       burger.classList.toggle('active');

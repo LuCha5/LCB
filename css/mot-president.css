@@ -1,0 +1,145 @@
+.mot-president-container {
+    max-width: 1000px;
+    margin: 120px auto 40px;
+    padding: 40px;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    position: relative;
+}
+
+.president-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.president-header h1 {
+    color: #1a3955;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.separator {
+    width: 100px;
+    height: 3px;
+    background: #5ea1d5;
+    margin: 0 auto;
+    position: relative;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background: #5ea1d5;
+    top: -8px;
+}
+
+.separator::before {
+    left: 25px;
+}
+
+.separator::after {
+    right: 25px;
+}
+
+.message-content {
+    position: relative;
+    padding: 40px;
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #333;
+}
+
+.quote-symbol {
+    font-size: 120px;
+    color: #5ea1d5;
+    opacity: 0.2;
+    position: absolute;
+    top: -40px;
+    left: -20px;
+    font-family: Georgia, serif;
+}
+
+.quote-symbol.closing {
+    top: auto;
+    bottom: -80px;
+    right: -20px;
+    left: auto;
+}
+
+.intro {
+    font-size: 1.4em;
+    color: #1a3955;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.message-body p {
+    margin-bottom: 20px;
+    text-align: justify;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.message-body p:nth-child(1) { animation-delay: 0.2s; }
+.message-body p:nth-child(2) { animation-delay: 0.4s; }
+.message-body p:nth-child(3) { animation-delay: 0.6s; }
+.message-body p:nth-child(4) { animation-delay: 0.8s; }
+.message-body p:nth-child(5) { animation-delay: 1s; }
+
+.signature {
+    text-align: right;
+    margin-top: 50px;
+    padding-right: 50px;
+}
+
+.signature p {
+    margin: 5px 0;
+}
+
+.president-name {
+    font-weight: bold;
+    color: #1a3955;
+    font-size: 1.2em;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .mot-president-container {
+        margin: 90px auto 20px;
+        padding: 20px;
+    }
+
+    .message-content {
+        padding: 20px;
+    }
+
+    .quote-symbol {
+        font-size: 80px;
+        top: -30px;
+    }
+
+    .quote-symbol.closing {
+        bottom: -60px;
+    }
+
+    .signature {
+        padding-right: 20px;
+    }
+}
