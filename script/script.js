@@ -100,19 +100,27 @@ async function checkBirthdays() {
   }
 }
 
-function displayBirthdays(birthdayPeople) {
-  const container = document.getElementById('birthday-container');
-  if (!container) return;
+function displayBirthdays(birthdays) {
+    const container = document.getElementById('birthday-container');
+    const section = document.querySelector('.birthday-card').closest('section');
 
-  if (birthdayPeople.length > 0) {
-      container.innerHTML = `
-          <h3 class="text-primary mb-3">🎂 Joyeux Anniversaire ! 🎂</h3>
-          <p class="lead">Aujourd'hui, nous fêtons l'anniversaire de :</p>
-          <p class="h4">${birthdayPeople.join(', ')}</p>
-      `;
-  } else {
-      container.style.display = 'none';
-  }
+    if (!birthdays || birthdays.length === 0) {
+        section.style.display = 'none';
+        return;
+    }
+
+    section.style.display = 'block';
+    container.innerHTML = `
+        <h3 class="text-center mb-3">Joyeux Anniversaire !</h3>
+        <div class="birthday-list">
+            ${birthdays.map(birthday => `
+                <div class="birthday-item">
+                    <i class="fas fa-birthday-cake"></i>
+                    <span>${birthday.name}</span>
+                </div>
+            `).join('')}
+        </div>
+    `;
 }
 
 // Gestion Équipes

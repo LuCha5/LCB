@@ -1,0 +1,171 @@
+/* Styles pour la section partenaire institutionnel */
+.institutional-partner {
+    padding: 40px 0;
+    background-color: #f8f9fa;
+}
+
+.partner-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.partner-card:hover {
+    transform: translateY(-5px);
+}
+
+.partner-logo {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.partner-description {
+    color: #666;
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+/* Styles pour la liste des avantages */
+.partner-card ul li {
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: #1a3955;
+}
+
+.partner-card ul li i {
+    color: #5ea1d5;
+    margin-right: 10px;
+}
+
+/* Styles pour les sponsors */
+.sponsor-section {
+    padding: 40px 0;
+}
+
+.sponsor-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Ajout pour centrer verticalement */
+    width: 300px;
+    height: 300px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    padding: 20px;
+}
+
+.sponsor-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.sponsor-card img {
+    max-width: 90%;
+    height: 90%;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+}
+
+/* Styles pour les mécènes */
+.mecene-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.mecene-card:hover {
+    transform: translateY(-5px);
+}
+
+.mecene-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.mecene-card h5 {
+    color: #1a3955;
+    margin: 0;
+    font-size: 1.1em;
+}
+
+/* Styles des titres de section */
+.section-title {
+    color: #1a3955;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+.help-section .btn-blue {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #1a3955;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid #1a3955;
+}
+
+.help-section .btn-blue:hover {
+    background-color: #fff;
+    color: #1a3955;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .partner-card {
+        margin: 15px;
+        padding: 20px;
+    }
+
+    .partner-logo {
+        max-width: 150px;
+    }
+
+    .sponsor-card {
+        width: 250px;
+        height: 250px;
+    }
+
+    .mecene-card {
+        width: 200px;
+    }
+
+    .section-title {
+        font-size: 2em;
+    }
+
+    .partner-description {
+        font-size: 1em;
+    }
+    .btn-blue {
+        display: inline-block;
+        padding: 12px 30px;
+        background-color: #1a3955;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        border: 2px solid #1a3955;
+    }
+}

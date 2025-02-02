@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+        <title>Nos Partenaires</title>
+        <!-- Lien vers Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/partenaire.css">
+        <!-- Lien vers le favicon -->
+        <link rel="icon" href="../assets/images/Logo_LCB.png" type="image/png">
+      </head>
+<body class="partner-page">
+
+    <div id="navbar-container"></div>
+
+    <!--Partenaire institutionnel-->
+<section class="institutional-partner py-4">
+    <div class="container">
+        <h2 class="text-center mb-4">Partenaire Institutionnel</h2>
+        <div class="partner-card text-center">
+            <img src="../assets/images/Lecres.jpg" alt="Ville du Crès" class="partner-logo mb-3">
+            <h3>Ville du Crès</h3>
+            <p class="partner-description">
+                Notre partenaire institutionnel principal qui nous soutient par :
+            </p>
+            <ul class="list-unstyled">
+                <li><i class="fas fa-building"></i> Mise à disposition de 2 salles</li>
+                <li><i class="fas fa-hand-holding-usd"></i> Attribution d'une subvention</li>
+            </ul>
+        </div>
+    </div>
+</section>
+    <!-- Section Sponsors -->
+<section class="py-5">
+  <div class="container text-center">
+    <h2 class="mb-4">Nos Partenaires</h2>
+    <div id="sponsor-grid" class="d-flex flex-wrap justify-content-center gap-4">
+      <!-- Sponsor logos will be dynamically inserted here -->
+     </div>
+    </div>
+</section>
+
+<!-- Section Mécènes -->
+<section class="py-5">
+    <div class="container text-center">
+        <h2 class="mb-4">Nos Mécènes</h2>
+        <div id="mecenes-grid" class="d-flex flex-wrap justify-content-center gap-4">
+            <div class="mecene-card">
+                <img src="../assets/images/mecene1.png" alt="Cars Doctor" class="mb-2">
+                <h5>Cars Doctor</h5>
+            </div>
+            <div class="mecene-card">
+                <img src="../assets/images/mecene2.jpeg" alt="Sos Vaiselle" class="mb-2">
+                <h5>Sos Vaisselle</h5>
+            </div>           
+    </div>
+</section>
+
+<section class="help-section py-5">
+    <div class="container">
+        <div class="help-card text-center">
+            <h2>Nous aider</h2>
+            <p class="mb-4">Vous souhaitez contribuer au développement du LCB ? 
+               Découvrez comment vous pouvez nous soutenir en tant que particulier ou entreprise.</p>
+            <a href="devenir-partner.html" class="btn-blue" id="partner-btn">Devenir partenaire</a>
+        </div>
+    </div>
+</section>
+
+<div id="footer-container"></div>
+
+<script src="../script/script.js"></script>
+
+<script>
+
+    // Example data for the sponsors
+    const sponsors = [
+        { name: 'Acelys', logo: '../assets/images/sponsor2.png', url: 'https://www.acelys.fr' },
+        { name: 'Avenue Immobilier', logo: '../assets/images/sponsor4.png', url: 'https://www.avenue-immobilier-montpellier.fr/' },
+        { name: 'Carrefour', logo: '../assets/images/sponsor5.jpg', url: "https://www.carrefour.fr/magasin/le-cres" },
+        { name: 'Come Prima', logo: '../assets/images/sponsor1.png', url: 'https://www.pizzeriacomeprima.com' },
+        { name: 'Espridyllic', logo: '../assets/images/sponsor6.png'},
+        { name: 'Puig consulting', logo: '../assets/images/sponsor7.png'},
+        { name: 'Tamline', logo: '../assets/images/sponsor3.png', url: 'https://www.tamline.fr' },
+
+
+    ];
+
+    // Function to display sponsor logos
+    const displaySponsors = () => {
+    const sponsorGrid = document.getElementById('sponsor-grid');
+    sponsorGrid.innerHTML = '';
+    sponsors.forEach(sponsor => {
+        let sponsorElement;
+        
+        if (sponsor.url && sponsor.url.trim() !== '') {
+            // Créer un lien si une URL est présente
+            sponsorElement = document.createElement('a');
+            sponsorElement.href = sponsor.url;
+            sponsorElement.target = '_blank';
+        } else {
+            // Créer un div si pas d'URL
+            sponsorElement = document.createElement('div');
+        }
+        
+        sponsorElement.classList.add('sponsor-card');
+        sponsorElement.innerHTML = `
+            <img src="${sponsor.logo}" alt="${sponsor.name}">
+        `;
+        sponsorGrid.appendChild(sponsorElement);
+    });
+};
+
+    document.addEventListener('DOMContentLoaded', displaySponsors);
+  </script>
+</body>
+</html>

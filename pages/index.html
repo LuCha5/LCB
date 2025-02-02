@@ -92,9 +92,9 @@
     <!-- Section Tarifs des Licences -->
     <section id="tarifs" class="py-5">
       <div class="container">
-        <div class="row">
-            <!-- Colonne des tarifs -->
-            <div class="col-lg-7">
+        <div class="row justify-content-center">
+            <!-- Colonne des tarifs centrée -->
+            <div class="col-lg-8">
                 <h2 class="text-center mb-4">Tarifs des Licences</h2>
                 <div class="table-responsive">
                     <table class="table table-bordered">
@@ -155,38 +155,6 @@
                     </table>
                 </div>
             </div>
-            
-            <!-- Colonne du calendrier -->
-            <div class="col-lg-5">
-                <h2 class="text-center mb-4">Planning des entraînements</h2>
-                <div class="calendar-wrapper">
-                    <div class="calendar-header">
-                        <div class="time-column">Horaires</div>
-                        <div>Lun</div>
-                        <div>Mar</div>
-                        <div>Mer</div>
-                        <div>Jeu</div>
-                        <div>Ven</div>
-                        <div>Sam</div>
-                        <div>Dim</div>
-                    </div>
-                    <div class="calendar-body">
-                        <!-- Créneaux de 12h à 23h -->
-                        <div class="calendar-row"><div class="time-slot">12:00</div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div>
-                        <div class="calendar-row"><div class="time-slot">13:00</div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div>
-                        <div class="calendar-row"><div class="time-slot">14:00</div><div class="slot"></div><div class="slot"></div><div class="slot u7-u9">U7-U9</div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div>
-                        <div class="calendar-row"><div class="time-slot">15:00</div><div class="slot"></div><div class="slot"></div><div class="slot u11">U11 M/F</div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div>
-                        <div class="calendar-row"><div class="time-slot">16:00</div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div>
-                        <div class="calendar-row"><div class="time-slot">17:00</div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div>
-                        <div class="calendar-row"><div class="time-slot">18:00</div><div class="slot u15">U15 M</div><div class="slot u13f">U13 F</div><div class="slot"></div><div class="slot u13m">U13 M</div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div>
-                        <div class="calendar-row"><div class="time-slot">19:00</div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot u17">U17 M</div><div class="slot"></div><div class="slot"></div></div>
-                        <div class="calendar-row"><div class="time-slot">20:00</div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div>
-                        <div class="calendar-row"><div class="time-slot">21:00</div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot seniors">Seniors</div><div class="slot"></div><div class="slot"></div></div>
-                        <div class="calendar-row"><div class="time-slot">22:00</div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div>
-                        <div class="calendar-row"><div class="time-slot">23:00</div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </section>
@@ -201,15 +169,8 @@
       </div>
   </div>
 </section>
-    <!-- Section Sponsors -->
-    <section class="py-5 bg-light">
-      <div class="container text-center">
-        <h2 class="mb-4">Nos Partenaires</h2>
-        <div id="sponsor-grid" class="d-flex flex-wrap justify-content-center gap-4">
-          <!-- Sponsor logos will be dynamically inserted here -->
-        </div>
-      </div>
-    </section>
+
+
 
     <!-- Pied de page -->
     <div id="footer-container"></div>
@@ -219,46 +180,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Lien vers le fichier JavaScript -->
   <script src="../script/script.js"></script>
-  <script>
-    // Fetch and insert navbar
-    fetch('navbar.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('navbar-container').innerHTML = data;
-        });
-
-    // Fetch and insert footer
-    fetch('footer.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer-container').innerHTML = data;
-        });
-
-    // Example data for the sponsors
-    const sponsors = [
-        { name: 'Sponsor 1', logo: '../assets/images/sponsor1.png', url: 'https://www.pizzeriacomeprima.com' },
-        { name: 'Sponsor 2', logo: '../assets/images/sponsor2.png', url: 'https://www.acelys.fr' },
-        { name: 'Sponsor 3', logo: '../assets/images/sponsor3.png', url: 'https://www.tamline.fr' },
-        { name: 'Sponsor 4', logo: '../assets/images/sponsor4.png', url: 'https://www.avenue-immobilier-montpellier.fr/' }
-    ];
-
-    // Function to display sponsor logos
-    const displaySponsors = () => {
-        const sponsorGrid = document.getElementById('sponsor-grid');
-        sponsorGrid.innerHTML = '';
-        sponsors.forEach(sponsor => {
-            const sponsorCard = document.createElement('a');
-            sponsorCard.classList.add('sponsor-card');
-            sponsorCard.href = sponsor.url;
-            sponsorCard.target = '_blank';
-            sponsorCard.innerHTML = `
-                <img src="${sponsor.logo}" alt="${sponsor.name}">
-            `;
-            sponsorGrid.appendChild(sponsorCard);
-        });
-    };
-
-    document.addEventListener('DOMContentLoaded', displaySponsors);
-  </script>
+ 
 </body>
 </html>

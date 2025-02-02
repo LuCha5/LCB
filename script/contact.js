@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const message = document.getElementById('message').value;
 
         // Création du lien mailto
-        const mailtoLink = `mailto:luonin.chatenet@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}%0A%0AFrom: ${encodeURIComponent(name)} (${encodeURIComponent(email)})`;
+        const mailtoLink = `mailto:lecresbasket@yahoo.fr?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}%0A%0AFrom: ${encodeURIComponent(name)} (${encodeURIComponent(email)})`;
 
         // Ouvrir le client mail par défaut
         window.location.href = mailtoLink;

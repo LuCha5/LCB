@@ -119,8 +119,9 @@ section {
 .contact-page,
 .championnat-page,
 .staff-page,
+.partner-page,
 .team-page{
-    padding-top: 200px;
+    padding-top: 220px;
 }
 
 @media screen and (max-width: 768px) {
@@ -128,6 +129,7 @@ section {
     .contact-page,
     .championnat-page,
     .staff-page,
+    .partner-page,
     .team-page{
         padding-top: 80px;
         height: auto;
@@ -362,9 +364,22 @@ section {
     max-width: 100%;
     height: calc(100% - 40px);
     object-fit: contain;
-    padding: 20px;
+    padding: 10px;
+}
+/* Mecenes */
+.mecene-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 10px;
+    max-width: 200px;
 }
 
+.mecene-card img {
+    max-width: 100%;
+    height: auto;
+}
 /* Championnat styles */
 #championnat-title {
     text-align: center;
@@ -451,6 +466,50 @@ section {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+.help-section {
+    margin-top: 1rem !important;
+    text-align: center !important;
+    margin: 3rem 0;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+}
+
+.help-section .help-card {
+    background: transparent;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+.help-section .btn-blue {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #1a3955;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid #1a3955;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.help-section .btn-blue:hover {
+    background-color: #fff;
+    color: #1a3955;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .form-group label {
@@ -873,84 +932,7 @@ footer {
     }
 }
 
-/* Styles pour le calendrier des entraînements */
-.calendar-wrapper {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    overflow: hidden;
-    border: 3px solid #333;
-    max-height: 600px;
-    overflow-y: auto;
-}
-.table-schedule {
-    margin-bottom: 0;
-}
-.table-schedule th {
-    background-color: #5ea1d5;
-    color: white;
-    font-weight: 600;
-    text-transform: uppercase;
-    padding: 1em;
-    border: none;
-}
-.table-schedule td {
-    padding: 0.8em;
-    border: 1px solid #dee2e6;
-    vertical-align: middle;
-}
-.calendar-header {
-    display: grid;
-    grid-template-columns: 80px repeat(7, 1fr);
-    background-color: #5ea1d5;
-    color: white;
-    font-weight: 600;
-    text-align: center;
-    padding: 10px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1;
-}
-.calendar-body {
-    padding: 10px;
-}
-.calendar-row {
-    display: grid;
-    grid-template-columns: 80px repeat(7, 1fr);
-    min-height: 50px;
-    border-bottom: 1px solid #dee2e6;
-}
-.time-slot {
-    padding: 5px;
-    font-weight: 500;
-    color: #666;
-    border-right: 1px solid #dee2e6;
-}
-.slot {
-    padding: 5px;
-    border-right: 1px solid #dee2e6;
-    font-size: 0.9rem;
-    text-align: center;
-}
-/* Couleurs pour les différentes catégories */
-.slot.u15 { background-color: #ffeb3b; }
-.slot.u13f { background-color: #ff9800; }
-.slot.u13m { background-color: #4caf50; }
-.slot.u17 { background-color: #2196f3; }
-.slot.seniors { background-color: #9c27b0; }
-.slot.u7-u9 { background-color: #e91e63; }
-.slot.u11 { background-color: #673ab7; }
-/* Styles pour la scrollbar du calendrier */
-.calendar-wrapper::-webkit-scrollbar {
-    width: 8px;
-}
-.calendar-wrapper::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-.calendar-wrapper::-webkit-scrollbar-thumb {
-    background: #5ea1d5;
-    border-radius: 4px;
-}
+
 @media screen and (max-width: 768px) {
     /* État fermé par défaut */
     nav {
