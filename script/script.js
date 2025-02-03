@@ -116,7 +116,7 @@ function displayBirthdays(birthdays) {
             ${birthdays.map(birthday => `
                 <div class="birthday-item">
                     <i class="fas fa-birthday-cake"></i>
-                    <span>${birthday.name}</span>
+                    <span>${birthday}</span>
                 </div>
             `).join('')}
         </div>
