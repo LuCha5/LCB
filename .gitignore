@@ -74,6 +74,5 @@ config.php
 .phpunit.result.cache
 
 # File for Dev 
-script/count.py
-scrpit/ExcelToJson.py
-script/normalizeData.py
+
+script/*.py

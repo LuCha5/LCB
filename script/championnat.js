@@ -1,14 +1,16 @@
 const championnatCategories = [
-    { category: 'U7-U9 Mixtes', url: 'team.html?team=U7-U9 Mixtes' },
-    { category: 'U11 M', url: 'team.html?team=U11 M' },
-    { category: 'U11 F', url: 'team.html?team=U11 F' },
-    { category: 'U13 M', url: 'team.html?team=U13 M' },
-    { category: 'U13 F', url: 'team.html?team=U13 F' },
-    { category: 'U15 M', url: 'team.html?team=U15 M' },
-    { category: 'U18 M', url: 'team.html?team=U18 M' },
+    { category: 'U7-U9 Mixtes', url: 'team.html?team=U7-U9Mi' },
+    { category: 'U11 M', url: 'team.html?team=U11M' },
+    { category: 'U11 F', url: 'team.html?team=U11F' },
+    { category: 'U13 M', url: 'team.html?team=U13M' },
+    { category: 'U13 F', url: 'team.html?team=U13F' },
+    { category: 'U15 M', url: 'team.html?team=U15M' },
+    { category: 'U18 M', url: 'team.html?team=U18M' },
     { category: '3vs3', url: 'team.html?team=3vs3' },
-    { category: 'Seniors Compet DM3', url: 'team.html?team=Seniors Compet DM3' },
-    { category: 'Seniors Compet PRF', url: 'team.html?team=Seniors Compet PRF' }
+    { category: 'Seniors Compet DM3', url: 'team.html?team=Seniors_Compet DM3' },
+    { category: 'Seniors Compet RM3', url: 'team.html?team=Seniors_Compet_RM3' },
+    { category: 'Seniors Compet PRF', url: 'team.html?team=Seniors_Compet_PRF' }
+
 ];
 
 const displayChampionnatCategories = () => {
