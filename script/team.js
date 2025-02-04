@@ -14,7 +14,8 @@ document.addEventListener('DOMContentLoaded', async function() {
         'U18M': ['U18 Masculins'],
         'Seniors_Compet_PRF': ['SENIORS FEMININES'],
         'Seniors_Compet_DM3': ['SENIORS DM3'],
-        'Seniors_Compet_RM3': ['SENIORS RM3']
+        'Seniors_Compet_RM3': ['SENIORS RM3'],
+        '3vs3': ['BASKET 3X3 ']  // Ajout de l'espace après '3X3'
     };
 
     if (teamId) {

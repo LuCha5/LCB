@@ -6,11 +6,10 @@ const championnatCategories = [
     { category: 'U13 F', url: 'team.html?team=U13F' },
     { category: 'U15 M', url: 'team.html?team=U15M' },
     { category: 'U18 M', url: 'team.html?team=U18M' },
-    { category: '3vs3', url: 'team.html?team=3vs3' },
-    { category: 'Seniors Compet DM3', url: 'team.html?team=Seniors_Compet DM3' },
+    { category: '3x3', url: 'team.html?team=3vs3' },  // Modifier l'URL pour correspondre à la clé dans categoryMapping
+    { category: 'Seniors Compet DM3', url: 'team.html?team=Seniors_Compet_DM3' },
     { category: 'Seniors Compet RM3', url: 'team.html?team=Seniors_Compet_RM3' },
     { category: 'Seniors Compet PRF', url: 'team.html?team=Seniors_Compet_PRF' }
-
 ];
 
 const displayChampionnatCategories = () => {
