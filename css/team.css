@@ -37,3 +37,25 @@
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+
+@media screen and (max-width: 480px) {
+    .team-image-container {
+        height: auto;
+        margin: 10px -15px; /* Marges négatives pour dépasser le conteneur parent */
+        max-width: calc(100% + 30px); /* Compensation pour les marges négatives */
+        width: calc(100% + 30px);
+    }
+
+    .team-image {
+        aspect-ratio: 4/3;
+        height: auto;
+        max-height: none;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 0; /* Suppression des bords arrondis sur mobile */
+    }
+
+    .table-players tr.coach-row td {
+        padding: 8px 4px;
+    }
+}
