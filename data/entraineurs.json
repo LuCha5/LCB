@@ -1,90 +1,54 @@
 {
-    "coaches": [
-      {
-        "nom": "BOULAY",
-        "prenom": "Arnaud",
-        "categories": ["Seniors_Compet_PRF"]
-      },
-      {
-        "nom": "GASPARD",
-        "prenom": "Timothee",
-        "categories": ["Seniors_Compet_DM3"]
-      },
-      {
-        "nom": "BARRAU-RAVAGE",
-        "prenom": "Dorian",
-        "categories": ["Seniors_Compet_DM3"]
-      },
-      {
-        "nom": "SORIANO",
-        "prenom": "Joseph",
-        "categories": ["Seniors_Compet_PRF", "U18M"]
-      },
-      {
-        "nom": "ROUVIER",
-        "prenom": "Vital",
-        "categories": ["Seniors_Compet_RM3"]
-      },
-      {
-        "nom": "ANDOUARD",
-        "prenom": "Guillaume",
-        "categories": ["U11F"]
-      },
-      {
-        "nom": "MESANGE",
-        "prenom": "Clément",
-        "categories": ["U11F"]
-      },
-      {
-        "nom": "MOURIER",
-        "prenom": "Quentin",
-        "categories": ["U13F"]
-      },
-      {
-        "nom": "GROUSSET",
-        "prenom": "Loic",
-        "categories": ["U13M"]
-      },
-      {
-        "nom": "GROUSSET",
-        "prenom": "Nicolas",
-        "categories": ["U13M"]
-      },
-      {
-        "nom": "DOUMERGUE",
-        "prenom": "Floriane",
-        "categories": ["U13M"]
-      },
-      {
-        "nom": "GRICOURT",
-        "prenom": "Jérémie",
-        "categories": ["U15M"]
-      },
-      {
-        "nom": "CAMILLERI",
-        "prenom": "Alexandre",
-        "categories": ["U18M"]
-      },
-      {
-        "nom": "HAYET",
-        "prenom": "Kevin",
-        "categories": ["U7-U9Mi", "U15M", "U11M", "3vs3"]
-      },
-      {
-        "nom": "JOUANNE",
-        "prenom": "Marine",
-        "categories": ["U7-U9Mi"]
-      },
-      {
-        "nom": "ZENAGUI",
-        "prenom": "Réda",
-        "categories": ["U7-U9Mi"]
-      },
-      {
-        "nom": "CAMBON",
-        "prenom": "Mathieu",
-        "categories": ["U7-U9Mi", "U13F"]
-      }
-    ]
+  "PRF": {
+    "Coach": ["Joseph SORIANO"],
+    "Assistant": ["Arnaud BOULAY"]
+  },
+  "DM3": {
+    "Coach": ["Timothee GASPARD", "Dorian BARRAU-RAVAGE"],
+    "Assistant": [],
+    "Players": ["Timothee GASPARD", "Dorian BARRAU-RAVAGE", "Vital ROUVIER"]
+  },
+  "RM3": {
+    "Coach": ["Vital ROUVIER"],
+    "Assistant": []
+  },
+  "U18M": {
+    "Coach": ["Alexandre CAMILLERI"],
+    "Assistant": ["Joseph SORIANO"]
+  },
+  "U15M": {
+    "Coach": ["Jérémie GRICOURT"],
+    "Assistant": ["Kevin HAYET"]
+  },
+  "U13F": {
+    "Coach": ["Quentin MOURIER"],
+    "Assistant": ["Mathieu CAMBON"]
+  },
+  "U13M": {
+    "Coach": ["Loic GROUSSET", "Nicolas GROUSSET", "Floriane DOUMERGUE"],
+    "Assistant": []
+  },
+  "U11F": {
+    "Coach": ["Guillaume ANDOUARD", "Clément MESANGE"],
+    "Assistant": []
+  },
+  "U11M": {
+    "Coach": ["Kevin HAYET"],
+    "Assistant": []
+  },
+  "U7 U9": {
+    "Coach": ["Kevin HAYET", "Marine JOUANNE", "Réda ZENAGUI", "Mathieu CAMBON"],
+    "Assistant": []
+  },
+  "3x3": {
+    "Coach": ["Kevin HAYET"],
+    "Assistant": []
+  },
+  "Basket santé": {
+    "Coach": ["Kevin HAYET"],
+    "Assistant": []
+  },
+  "Loisirs": {
+    "Players": ["Quentin MOURIER", "Loic GROUSSET", "Nicolas GROUSSET", "Jérémie GRICOURT", "Alexandre CAMILLERI", "Kevin HAYET"]
   }
-  
+}

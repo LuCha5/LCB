@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', async function() {
                 cell.textContent = `${coach.prenom} ${coach.nom}`;
                 const coachLabel = document.createElement('span');
                 coachLabel.className = 'coach-label';
-                coachLabel.textContent = ' (Coach)';
+                coachLabel.textContent = ` (${coach.role})`;
                 cell.appendChild(coachLabel);
                 row.appendChild(cell);
                 tbody.appendChild(row);
@@ -69,10 +69,27 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     // Nouvelle fonction de filtrage des entraîneurs
     function getCoachesForCategory(entraineurs, categoryId) {
-        if (!entraineurs.coaches) return [];
-        return entraineurs.coaches.filter(coach => 
-            coach.categories.includes(categoryId)
-        );
+        // Conversion des IDs spéciaux
+        const mappedId = categoryId === 'U7-U9Mi' ? 'U7 U9' : 
+                        categoryId === 'Seniors_Compet_PRF' ? 'PRF' :
+                        categoryId === 'Seniors_Compet_DM3' ? 'DM3' :
+                        categoryId === 'Seniors_Compet_RM3' ? 'RM3' :
+                        categoryId;
+
+        const category = entraineurs[mappedId];
+        if (!category) return [];
+
+        const mainCoaches = (category.Coach || []).map(name => {
+            const [prenom, nom] = name.split(' ');
+            return { prenom, nom, role: 'Coach' };
+        });
+
+        const assistants = (category.Assistant || []).map(name => {
+            const [prenom, nom] = name.split(' ');
+            return { prenom, nom, role: 'Assistant' };
+        });
+
+        return [...mainCoaches, ...assistants];
     }
 
     async function init() {
