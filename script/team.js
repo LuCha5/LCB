@@ -1,74 +1,130 @@
 document.addEventListener('DOMContentLoaded', async function() {
     console.log("Team.js chargé");
-    const params = new URLSearchParams(window.location.search);
-    const teamId = params.get('team');
-    console.log("Team ID:", teamId);
 
     const categoryMapping = {
         'U7-U9Mi': ['U7 /U9 M(2)', 'U9 M(1)', 'U7 /U9 Filles'],
         'U11M': ['U11 Masculins'],
         'U11F': ['U11 Féminines'],
-        'U13M': ['   U13 MASCULINS'],
+        'U13M': ['U13 MASCULINS'],
         'U13F': ['U13 Féminines'],
         'U15M': ['U15 Masculins'],
         'U18M': ['U18 Masculins'],
         'Seniors_Compet_PRF': ['SENIORS FEMININES'],
         'Seniors_Compet_DM3': ['SENIORS DM3'],
         'Seniors_Compet_RM3': ['SENIORS RM3'],
-        '3vs3': ['BASKET 3X3 ']  // Ajout de l'espace après '3X3'
+        '3vs3': ['BASKET 3X3']
     };
 
-    if (teamId) {
+    async function fetchData(url) {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return await response.json();
+    }
+
+    function createSection(title, isCoach = false) {
+        const section = document.createElement('tr');
+        section.className = isCoach ? 'coach-row' : (title.toLowerCase().replace(' ', '-') + '-row');
+        const cell = document.createElement('td');
+        const titleElement = document.createElement('h3');
+        titleElement.textContent = title;
+        cell.appendChild(titleElement);
+        section.appendChild(cell);
+        return { section, cell };
+    }
+
+    function displayMember(member, container) {
+        const row = document.createElement('tr');
+        const cell = document.createElement('td');
+        cell.textContent = `${member.prenom} ${member.nom}`;
+        row.appendChild(cell);
+        container.appendChild(row);
+    }
+
+    function displayTeamMembers(tbody, coaches, players) {
+        // Afficher les entraîneurs
+        if (coaches.length > 0) {
+            coaches.forEach(coach => {
+                const row = document.createElement('tr');
+                row.className = 'coach-row';
+                const cell = document.createElement('td');
+                cell.textContent = `${coach.prenom} ${coach.nom}`;
+                const coachLabel = document.createElement('span');
+                coachLabel.className = 'coach-label';
+                coachLabel.textContent = ' (Coach)';
+                cell.appendChild(coachLabel);
+                row.appendChild(cell);
+                tbody.appendChild(row);
+            });
+        }
+
+        // Afficher les joueurs
+        if (players.length > 0) {
+            const { section: playerSection } = createSection('Joueurs');
+            tbody.appendChild(playerSection);
+            players.forEach(player => displayMember(player, tbody));
+        }
+    }
+
+    async function init() {
         try {
-            const response = await fetch('../data/joueurs.json');
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            const data = await response.json();
-            console.log("Données chargées:", data);
+            const params = new URLSearchParams(window.location.search);
+            const teamId = params.get('team');
+            console.log("Team ID:", teamId);
+
+            if (!teamId) return;
+
+            const [dataJoueurs, dataEntraineurs] = await Promise.all([
+                fetchData('../data/joueurs.json'),
+                fetchData('../data/entraineurs.json')
+            ]);
 
             const categories = categoryMapping[teamId] || [];
-            if (categories.length > 0) {
-                document.getElementById('team-title').textContent = `Équipe ${teamId.replace(/_/g, ' ')}`;
-                
-                let allPlayers = [];
+            if (categories.length === 0) return;
+
+            // Mise à jour du titre
+            document.getElementById('team-title').textContent = `Équipe ${teamId.replace(/_/g, ' ')}`;
+            
+            const tbody = document.getElementById('player-list');
+            tbody.innerHTML = '';
+
+            // Traitement spécial pour U7-U9Mi
+            if (teamId === 'U7-U9Mi') {
+                const allCoaches = new Set();
+                const allPlayers = new Set();
+
                 categories.forEach(category => {
-                    if (data[category]) {
-                        allPlayers = allPlayers.concat(data[category]);
+                    // Collecter les entraîneurs
+                    dataEntraineurs
+                        .filter(e => e.categorie === category)
+                        .forEach(coach => allCoaches.add(JSON.stringify(coach)));
+
+                    // Collecter les joueurs
+                    if (dataJoueurs[category]) {
+                        dataJoueurs[category].forEach(player => 
+                            allPlayers.add(JSON.stringify(player)));
                     }
                 });
 
-                // Trier les joueurs par nom
-                allPlayers.sort((a, b) => a.nom.localeCompare(b.nom));
-
-                // Créer le tableau
-                const table = document.createElement('table');
-                table.className = 'player-table';
-
-                // En-tête du tableau
-                const thead = document.createElement('thead');
-                const headerRow = document.createElement('tr');
-                const headerCell = document.createElement('th');
-                headerCell.textContent = 'Joueur';
-                headerRow.appendChild(headerCell);
-                thead.appendChild(headerRow);
-                table.appendChild(thead);
-
-                const tbody = document.getElementById('player-list');
-                tbody.innerHTML = ''; // Vider avant d'ajouter les nouvelles lignes
-                allPlayers.forEach(player => {
-                    const row = document.createElement('tr');
-                    const cell = document.createElement('td');
-                    cell.textContent = `${player.prenom} ${player.nom}`;
-                    row.appendChild(cell);
-                    tbody.appendChild(row);
+                displayTeamMembers(
+                    tbody,
+                    Array.from(allCoaches).map(c => JSON.parse(c)),
+                    Array.from(allPlayers).map(p => JSON.parse(p))
+                );
+            } else {
+                // Traitement normal pour les autres catégories
+                categories.forEach(category => {
+                    const coaches = dataEntraineurs.filter(e => e.categorie === category);
+                    const players = dataJoueurs[category] || [];
+                    displayTeamMembers(tbody, coaches, players);
                 });
-                
             }
+
         } catch (error) {
             console.error('Erreur lors du chargement des données:', error);
         }
     }
+
+    init();
 });
-
-
