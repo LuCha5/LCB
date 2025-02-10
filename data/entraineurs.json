@@ -1,124 +1,90 @@
-[
-    {
+{
+    "coaches": [
+      {
         "nom": "BOULAY",
         "prenom": "Arnaud",
-        "dateNaissance": "2003-05-20",
-        "categorie": "SENIORS FEMININES",
-        "role": "Assistant Entraîneur PRF"
-    },
-    {
+        "categories": ["Seniors_Compet_PRF"]
+      },
+      {
         "nom": "GASPARD",
         "prenom": "Timothee",
-        "dateNaissance": "1992-02-13",
-        "categorie": "SENIORS DM3",
-        "role": "Entraîneur DM3"
-    },
-    {
+        "categories": ["Seniors_Compet_DM3"]
+      },
+      {
         "nom": "BARRAU-RAVAGE",
         "prenom": "Dorian",
-        "dateNaissance": "1992-12-22",
-        "categorie": "SENIORS DM3",
-        "role": "Entraîneur DM3"
-    },
-    {
+        "categories": ["Seniors_Compet_DM3"]
+      },
+      {
         "nom": "SORIANO",
         "prenom": "Joseph",
-        "dateNaissance": "1973-05-23",
-        "categorie": "SENIORS FEMININES",
-        "role": "Entraîneur PRF"
-    },
-    {
+        "categories": ["Seniors_Compet_PRF", "U18M"]
+      },
+      {
         "nom": "ROUVIER",
         "prenom": "Vital",
-        "dateNaissance": "1978-01-30",
-        "categorie": "SENIORS RM3",
-        "role": "Entraîneur RM3"
-    },
-    {
+        "categories": ["Seniors_Compet_RM3"]
+      },
+      {
         "nom": "ANDOUARD",
         "prenom": "Guillaume",
-        "dateNaissance": "1985-01-10",
-        "categorie": "U11 Féminines",
-        "role": "Entraîneur U11F"
-    },
-    {
+        "categories": ["U11F"]
+      },
+      {
         "nom": "MESANGE",
         "prenom": "Clément",
-        "dateNaissance": "1984-02-12",
-        "categorie": "U11 Féminines",
-        "role": "Entraîneur U11F"
-    },
-    {
+        "categories": ["U11F"]
+      },
+      {
         "nom": "MOURIER",
         "prenom": "Quentin",
-        "dateNaissance": "1995-03-17",
-        "categorie": "U13 Féminines",
-        "role": "Entraîneur U13F"
-    },
-    {
+        "categories": ["U13F"]
+      },
+      {
         "nom": "GROUSSET",
         "prenom": "Loic",
-        "dateNaissance": "1992-03-12",
-        "categorie": "U13 MASCULINS",
-        "role": "Entraîneur U13M"
-    },
-    {
+        "categories": ["U13M"]
+      },
+      {
         "nom": "GROUSSET",
         "prenom": "Nicolas",
-        "dateNaissance": "1988-01-19",
-        "categorie": "U13 MASCULINS",
-        "role": "Entraîneur U13M"
-    },
-    {
+        "categories": ["U13M"]
+      },
+      {
         "nom": "DOUMERGUE",
         "prenom": "Floriane",
-        "dateNaissance": "1983-05-20",
-        "categorie": "U13 MASCULINS",
-        "role": "Entraîneur U13M"
-    },
-    {
+        "categories": ["U13M"]
+      },
+      {
         "nom": "GRICOURT",
         "prenom": "Jérémie",
-        "dateNaissance": "1972-03-16",
-        "categorie": "U15 Masculins",
-        "role": "Entraîneur U15M",
-        "fonctions": ["Président"]
-    },
-    {
+        "categories": ["U15M"]
+      },
+      {
         "nom": "CAMILLERI",
         "prenom": "Alexandre",
-        "dateNaissance": "1988-08-09",
-        "categorie": "U18 Masculins",
-        "role": "Entraîneur U18M"
-    },
-    {
+        "categories": ["U18M"]
+      },
+      {
         "nom": "HAYET",
         "prenom": "Kevin",
-        "dateNaissance": "1996-03-09",
-        "categorie": "U7 /U9 M(2)",
-        "role": "Entraîneur U7 U9",
-        "fonctions": ["Salarié", "Assistant U15M", "Entraîneur U11M", "Entraîneur 3x3", "Entraîneur Basket santé"]
-    },
-    {
+        "categories": ["U7-U9Mi", "U15M", "U11M", "3vs3"]
+      },
+      {
         "nom": "JOUANNE",
         "prenom": "Marine",
-        "dateNaissance": "1987-11-24",
-        "categorie": "U7 /U9 M(2)",
-        "role": "Entraîneur U7 U9"
-    },
-    {
+        "categories": ["U7-U9Mi"]
+      },
+      {
         "nom": "ZENAGUI",
         "prenom": "Réda",
-        "dateNaissance": "1981-11-13",
-        "categorie": "U7 /U9 M(2)",
-        "role": "Entraîneur U7 U9"
-    },
-    {
+        "categories": ["U7-U9Mi"]
+      },
+      {
         "nom": "CAMBON",
         "prenom": "Mathieu",
-        "dateNaissance": "1981-05-01",
-        "categorie": "U7 /U9 M(2)",
-        "role": "Entraîneur U7 U9",
-        "fonctions": ["Assistant Entraîneur U13F"]
-    }
-]
+        "categories": ["U7-U9Mi", "U13F"]
+      }
+    ]
+  }
+  

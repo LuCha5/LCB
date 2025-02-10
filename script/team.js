@@ -67,6 +67,14 @@ document.addEventListener('DOMContentLoaded', async function() {
         }
     }
 
+    // Nouvelle fonction de filtrage des entraîneurs
+    function getCoachesForCategory(entraineurs, categoryId) {
+        if (!entraineurs.coaches) return [];
+        return entraineurs.coaches.filter(coach => 
+            coach.categories.includes(categoryId)
+        );
+    }
+
     async function init() {
         try {
             const params = new URLSearchParams(window.location.search);
@@ -118,9 +126,8 @@ document.addEventListener('DOMContentLoaded', async function() {
                 const allPlayers = new Set();
 
                 categories.forEach(category => {
-                    // Collecter les entraîneurs
-                    dataEntraineurs
-                        .filter(e => e.categorie === category)
+                    // Utilisation de la nouvelle fonction pour les entraîneurs
+                    getCoachesForCategory(dataEntraineurs, teamId)
                         .forEach(coach => allCoaches.add(JSON.stringify(coach)));
 
                     // Collecter les joueurs
@@ -137,8 +144,8 @@ document.addEventListener('DOMContentLoaded', async function() {
                 );
             } else {
                 // Traitement normal pour les autres catégories
+                const coaches = getCoachesForCategory(dataEntraineurs, teamId);
                 categories.forEach(category => {
-                    const coaches = dataEntraineurs.filter(e => e.categorie === category);
                     const players = dataJoueurs[category] || [];
                     displayTeamMembers(tbody, coaches, players);
                 });
