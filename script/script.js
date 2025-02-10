@@ -27,51 +27,34 @@ async function loadNavAndFooter() {
   }
 }
 
+// Modification de la fonction initBurgerMenu
 function initBurgerMenu() {
-  const nav = document.querySelector('nav');
+    const nav = document.querySelector('nav');
+    
+    const burger = document.createElement('div');
+    burger.className = 'hamburger';
+    burger.innerHTML = `
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    `;
+    
+    const container = nav.querySelector('.container');
+    container.appendChild(burger);
+    
+    // Masquer la navbar par défaut sur mobile
+    if (window.innerWidth <= 768) {
+        nav.classList.add('menu-closed');
+    }
   
-  const burger = document.createElement('div');
-  burger.className = 'hamburger';
-  burger.innerHTML = `
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-  `;
-  
-  const container = nav.querySelector('.container');
-  container.appendChild(burger);
-  
-  // Masquer la navbar par défaut sur mobile
-  if (window.innerWidth <= 768) {
-      nav.classList.add('menu-closed');
+    burger.addEventListener('click', () => {
+        burger.classList.toggle('active');
+        nav.classList.toggle('menu-open');
+        nav.classList.toggle('menu-closed');
+    });
   }
-  document.querySelector('.dropdown').addEventListener('click', function() {
-    this.classList.toggle('active');
-});
 
-  burger.addEventListener('click', () => {
-      burger.classList.toggle('active');
-      nav.classList.toggle('menu-open');
-      nav.classList.toggle('menu-closed');
-  });
 
-  handleMobileDropdowns();
-}
-
-function handleMobileDropdowns() {
-  const dropdowns = document.querySelectorAll('.dropdown');
-  dropdowns.forEach(dropdown => {
-      const link = dropdown.querySelector('a');
-      const content = dropdown.querySelector('.dropdown-content');
-      
-      link.addEventListener('click', (e) => {
-          if (window.innerWidth <= 768) {
-              e.preventDefault();
-              content.style.display = content.style.display === 'block' ? 'none' : 'block';
-          }
-      });
-  });
-}
 
 // Gestion Anniversaires
 async function checkBirthdays() {

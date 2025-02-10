@@ -75,6 +75,29 @@ document.addEventListener('DOMContentLoaded', async function() {
 
             if (!teamId) return;
 
+            // Vérifier et afficher l'image de l'équipe
+            const imageContainer = document.createElement('div');
+            imageContainer.className = 'team-image-container';
+            const imagePath = `../assets/equipes/${teamId}.jpg`;
+
+            // Vérifier si l'image existe
+            try {
+                const imageResponse = await fetch(imagePath);
+                if (imageResponse.ok) {
+                    const teamImage = document.createElement('img');
+                    teamImage.src = imagePath;
+                    teamImage.alt = `Photo équipe ${teamId}`;
+                    teamImage.className = 'team-image';
+                    imageContainer.appendChild(teamImage);
+                    
+                    // Insérer l'image avant la section qui contient le tableau
+                    const mainSection = document.querySelector('.team-section');
+                    mainSection.parentNode.insertBefore(imageContainer, mainSection);
+                }
+            } catch (error) {
+                console.log('Pas d\'image pour cette équipe');
+            }
+
             const [dataJoueurs, dataEntraineurs] = await Promise.all([
                 fetchData('../data/joueurs.json'),
                 fetchData('../data/entraineurs.json')

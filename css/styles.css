@@ -236,31 +236,6 @@ section {
 }
 
 
-/* Dropdown Menu */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #1a3955;
-    min-width: 160px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #2a4965;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
 /* Bouton Bleu */
 .btn-blue-container {
     margin-right: -5%;
@@ -488,6 +463,15 @@ section {
     margin: 0;
 }
 
+.staff-card .staff-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #1a3955;
+}
+
 /* Contact */
 
 .contact-form-container {
@@ -697,10 +681,6 @@ footer {
         }
     }
 
-    .dropdown-content {
-        position: static;
-        width: 100%;
-    }
     .table-responsive {
         max-width: 95%;
         margin: 1em auto;
@@ -740,9 +720,6 @@ footer {
         padding: 20 80px; /* Réduit le padding pour mobile */
     }
     
-    .dropdown-content {
-        display: none;
-    }
     .header-content {
         padding: 0 60px;
         margin-top: 20px;
@@ -951,16 +928,6 @@ footer {
         display: block;
     }
 
-    .dropdown-content {
-        position: static;
-        width: 100%;
-        box-shadow: none;
-        padding: 0;
-    }
-
-    .dropdown.active .dropdown-content {
-        display: block;
-    }
     .table-responsive {
         border-radius: 10px;
         overflow-x: auto;
@@ -1014,8 +981,7 @@ footer {
     }
 
     nav .main-menu,
-    nav .nav-buttons,
-    nav .dropdown-content {
+    nav .nav-buttons {
         display: none !important;
     }
 
@@ -1175,7 +1141,7 @@ nav ul {
 @media screen and (max-width: 768px) {
     /* Supprimer les bordures et ombres */
     nav, nav.menu-open, nav ul, nav ul li, nav ul li a,
-    .dropdown-content, .btn-blue, .btn-icon {
+   .btn-blue, .btn-icon {
         border: none !important;
         box-shadow: none !important;
     }
@@ -1235,23 +1201,7 @@ nav ul {
         padding: 0 !important;
         margin: 0 !important;
     }
-    .dropdown-content {
-        position: static !important;
-        display: none !important;
-        width: 100% !important;
-        background-color: transparent !important;
-        padding: 0 !important;
-    }
 
-    .dropdown.active .dropdown-content {
-        display: block !important;
-    }
-
-    .dropdown-content a {
-        color: white !important;
-        padding: 15px 0 !important;
-        text-align: center !important;
-    }
 
     .btn-blue, .btn-icon {
         width: 100% !important;

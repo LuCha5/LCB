@@ -19,3 +19,21 @@
     font-style: italic;
     margin-left: 5px;
 }
+
+.team-image-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    height: 500px; /* Hauteur fixe pour le conteneur */
+    overflow: hidden; /* Cache tout débordement */
+}
+
+.team-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garde les proportions tout en remplissant l'espace */
+    object-position: center; /* Centre l'image */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
