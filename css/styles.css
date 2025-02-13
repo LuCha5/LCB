@@ -462,6 +462,13 @@ section {
     font-size: 0.9rem;
     margin: 0;
 }
+.staff-page {
+    height: 100vh;
+    padding-top: 180px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
 
 
 
