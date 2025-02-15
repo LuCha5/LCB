@@ -156,7 +156,7 @@ section {
 }
 .bg-image-header {
     position: relative;
-    background: url('../assets/images/image.jpg') center/cover no-repeat;
+    background: url('../assets/images/diapo3.jpg') center 60%/cover no-repeat; /* Changé pour 40% de la hauteur au lieu de bottom */
     height: 400px;
     display: flex;
     align-items: center;
@@ -168,7 +168,7 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(94, 161, 213, 0.85); /* Changé de 0.8 à 0.6 pour moins de transparence */
+    background: rgba(116, 173, 217, 0.85); /* Couleur #74add9 avec opacité */
 }
 .header-content {
     position: relative;
@@ -463,14 +463,22 @@ section {
     margin: 0;
 }
 .staff-page {
-    height: 100vh;
+    height: auto; /* Changé de 100vh à auto */
+    min-height: 100vh; /* Ajout de min-height pour garder la hauteur minimale */
     padding-top: 180px;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow-y: hidden; /* Permet le défilement vertical */
+    -webkit-overflow-scrolling: touch; /* Pour un défilement fluide sur iOS */
 }
 
-
+@media screen and (max-width: 768px) {
+    .staff-page {
+        padding-top: 80px;
+        height: auto;
+        overflow-y: auto;
+    }
+}
 
 /* Contact */
 
@@ -744,12 +752,6 @@ footer {
         margin-bottom: 1.5rem;
     }
 
-    .header-content .btn-light {
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
-        white-space: nowrap;
-    }
-
     .header-logo-left,
     .header-logo-right {
         height: 80px;
@@ -765,6 +767,30 @@ footer {
         max-width: 250px;
         word-wrap: break-word;
         hyphens: auto;
+    }
+
+    .table-tarifs thead th:nth-child(2),
+    .table-tarifs tbody td:nth-child(2) {
+        display: none;
+    }
+
+    .table-tarifs thead th:first-child,
+    .table-tarifs tbody td:first-child {
+        width: 60%;
+    }
+
+    .table-tarifs thead th:last-child,
+    .table-tarifs tbody td:last-child {
+        width: 40%;
+    }
+
+    .table-tarifs {
+        font-size: 1rem;
+    }
+
+    .table-tarifs thead th,
+    .table-tarifs tbody td {
+        padding: 0.8em;
     }
 }
     /* Contact Form Responsive */
@@ -1233,5 +1259,44 @@ nav ul {
         transition: none !important;
     }
     
+}
+
+/* Styles du carrousel */
+#homeCarousel {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin: 0 auto;
+    max-width: 1200px;
+    background-color: #f4f4f4; /* Changé pour correspondre au fond de la page */
+}
+
+#homeCarousel .carousel-item img {
+    width: 100%;
+    max-height: 600px;
+    object-fit: contain;
+}
+
+#homeCarousel .carousel-control-prev,
+#homeCarousel .carousel-control-next {
+    opacity: 0.7;
+}
+
+#homeCarousel .carousel-indicators button {
+    background-color: rgba(0,0,0,0.3);
+    height: 3px;
+    width: 30px;
+    margin: 0 4px;
+}
+
+@media (max-width: 768px) {
+    #homeCarousel {
+        border-radius: 6px;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+    }
+    
+    #homeCarousel .carousel-item img {
+        max-height: 400px;
+    }
 }
 

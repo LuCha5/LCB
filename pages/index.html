@@ -39,23 +39,46 @@
         <img src="../assets/images/LOGO_3v3.png" alt="Logo 3v3" class="header-logo-right">
     </div>
 </header>
-    <!-- Section Galerie -->
+    <!-- Nouveau titre -->
+    <div class="container">
+        <h2 class="text-center mt-5 mb-4">Test</h2>
+    </div>
+    <!-- Carrousel Bootstrap -->
     <section class="py-5">
-      <div class="container text-center">
-        <h2 class="mb-4">Nos Équipes en Action</h2>
-        <div class="row g-4">
-          <div class="col-lg-4 col-md-6">
-            <img src="../assets/images/image.jpg" class="img-fluid" alt="Match 1">
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <img src="../assets/images/image copy.jpg" class="img-fluid" alt="Match 2">
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <img src="../assets/images/image copy 2.jpg" class="img-fluid" alt="Match 3">
-          </div>
+        <div class="container">
+            <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../assets/images/diapo1.jpg" class="d-block w-100" alt="Diapo 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../assets/images/diapo2.jpg" class="d-block w-100" alt="Diapo 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../assets/images/diapo3.jpg" class="d-block w-100" alt="Diapo 3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../assets/images/diapo4.jpg" class="d-block w-100" alt="Diapo 4">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                    <span class="visually-hidden">Précédent</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    <span class="visually-hidden">Suivant</span>
+                </button>
+            </div>
         </div>
-      </div>
     </section>
+
 <!-- Après la section "nos équipes en action" -->
 <section class="py-4">
   <div class="container">
