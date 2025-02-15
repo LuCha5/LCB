@@ -15,6 +15,16 @@ document.addEventListener('DOMContentLoaded', async function() {
         '3vs3': ['BASKET 3X3']
     };
 
+    const ffbbLinks = {
+        'U11M': 'https://resultats.ffbb.com/championnat/equipe/div/b5b6212074440.html',
+        'U13M': 'https://resultats.ffbb.com/championnat/equipe/div/b5b6212074442.html',
+        'U15M': 'https://resultats.ffbb.com/championnat/equipe/div/b5b6212074444.html',
+        'U18M': 'https://resultats.ffbb.com/championnat/equipe/div/b5b6212074446.html',
+        'Seniors_Compet_PRF': 'https://resultats.ffbb.com/championnat/equipe/div/b5b6212074450.html',
+        'Seniors_Compet_DM3': 'https://resultats.ffbb.com/championnat/equipe/div/b5b6212074452.html',
+        'Seniors_Compet_RM3': 'https://resultats.ffbb.com/championnat/equipe/div/b5b6212074454.html'
+    };
+
     async function fetchData(url) {
         const response = await fetch(url);
         if (!response.ok) {
@@ -100,12 +110,25 @@ document.addEventListener('DOMContentLoaded', async function() {
 
             if (!teamId) return;
 
+            // Création du conteneur pour le bouton FFBB
+            const ffbbContainer = document.createElement('div');
+            ffbbContainer.className = 'text-center mb-4';
+            const ffbbLink = document.createElement('a');
+            ffbbLink.id = 'ffbb-link';
+            ffbbLink.href = '#';
+            ffbbLink.className = 'btn btn-success';
+            ffbbLink.target = '_blank';
+            ffbbLink.textContent = 'Voir le classement FFBB';
+            ffbbContainer.appendChild(ffbbLink);
+
             // Vérifier et afficher l'image de l'équipe
             const imageContainer = document.createElement('div');
             imageContainer.className = 'team-image-container';
             const imagePath = `../assets/equipes/${teamId}.jpg`;
 
-            // Vérifier si l'image existe
+            // Obtenir la référence du conteneur principal
+            const teamContent = document.getElementById('team-content');
+
             try {
                 const imageResponse = await fetch(imagePath);
                 if (imageResponse.ok) {
@@ -115,13 +138,15 @@ document.addEventListener('DOMContentLoaded', async function() {
                     teamImage.className = 'team-image';
                     imageContainer.appendChild(teamImage);
                     
-                    // Insérer l'image avant la section qui contient le tableau
-                    const mainSection = document.querySelector('.team-section');
-                    mainSection.parentNode.insertBefore(imageContainer, mainSection);
+                    // Insérer l'image avant le conteneur principal
+                    teamContent.parentNode.insertBefore(imageContainer, teamContent);
                 }
             } catch (error) {
                 console.log('Pas d\'image pour cette équipe');
             }
+
+            // Insérer le bouton FFBB au début de teamContent
+            teamContent.insertBefore(ffbbContainer, teamContent.firstChild);
 
             const [dataJoueurs, dataEntraineurs] = await Promise.all([
                 fetchData('../data/joueurs.json'),
@@ -136,6 +161,13 @@ document.addEventListener('DOMContentLoaded', async function() {
             
             const tbody = document.getElementById('player-list');
             tbody.innerHTML = '';
+
+            // Gestion du lien FFBB
+            if (ffbbLinks[teamId]) {
+                ffbbLink.href = ffbbLinks[teamId];
+            } else {
+                ffbbContainer.style.display = 'none'; // Cache le bouton si pas de lien FFBB
+            }
 
             // Traitement spécial pour U7-U9Mi
             if (teamId === 'U7-U9Mi') {
