@@ -1,0 +1,38 @@
+@media (resolution: 1.25dppx) {
+    .staff-page {
+        height: auto;
+        min-height: 100vh;
+        padding-top: 110px; /* Réduit le padding-top pour la navbar plus petite */
+        overflow: hidden;
+    }
+
+    .staff-card {
+        padding: 1.5rem;
+        transform: scale(0.9);
+    }
+
+    .staff-card h3 {
+        font-size: 1rem;
+    }
+
+    .staff-card h4 {
+        font-size: 0.9rem;
+    }
+
+    .staff-card p {
+        font-size: 0.8rem;
+    }
+
+    .container {
+        max-width: 90%;
+    }
+}
+
+#footer-container {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 10;
+    height: 120px;
+}

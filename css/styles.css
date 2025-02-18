@@ -1300,3 +1300,46 @@ nav ul {
     }
 }
 
+@media (resolution: 1.25dppx) {
+    .staff-page{
+        overflow-y: auto;
+    }
+    .staff-page {
+        overflow-y: auto;
+    }
+
+    /* Réduction de la navbar */
+    nav {
+        padding: 0.5em 0;
+    }
+
+    nav .logo {
+        height: 80px; /* Réduit de 120px à 80px */
+    }
+
+    nav.scrolled .logo {
+        height: 40px; /* Réduit de 50px à 40px */
+    }
+
+    nav .logo-container {
+        margin-bottom: 0.5em; /* Réduit de 1em à 0.5em */
+    }
+
+    body {
+        padding-top: 120px; /* Réduit de 160px à 120px */
+    }
+
+    body.scrolled {
+        padding-top: 80px; /* Réduit de 100px à 80px */
+    }
+
+    /* Ajustement des pages spécifiques */
+    .allteams-page,
+    .contact-page,
+    .championnat-page,
+    .staff-page,
+    .partner-page,
+    .team-page {
+        padding-top: 160px; /* Réduit de 220px à 160px */
+    }
+}

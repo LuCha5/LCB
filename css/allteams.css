@@ -110,3 +110,12 @@
         margin-top: auto;
     }
 }
+@media (resolution: 1.25dppx) {
+    .staff-page, .allteams-page {
+        height: auto;
+        min-height: 100vh;
+        padding-top: 130px;
+    }
+
+
+}
