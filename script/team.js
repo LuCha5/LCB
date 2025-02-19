@@ -16,13 +16,13 @@ document.addEventListener('DOMContentLoaded', async function() {
     };
 
     const ffbbLinks = {
-        'U11M': 'https://resultats.ffbb.com/championnat/equipe/div/b5b6212074440.html', //y a 2x sur ffbb
-        'U11F': 'https://resultats.ffbb.com/championnat/b5e621202411.html?r=200000002860049&d=200000002995899', //y a 2x sur ffbb
+        'U11M': 'https://resultats.ffbb.com/championnat/b5e621202bc9.html?r=200000002862025&d=200000003000144', //y a 2x sur ffbb
+        'U11F': 'https://resultats.ffbb.com/championnat/b5e621202411.html?r=200000002866380&d=200000003010707', //y a 2x sur ffbb
         'U13M': 'https://resultats.ffbb.com/championnat/b5e621202bcb.html?r=200000002862027&d=200000003000149',
         'U13F': 'https://resultats.ffbb.com/championnat/b5e621202bbc.html?r=200000002862012&d=200000003000122',
         'U15M': 'https://resultats.ffbb.com/championnat/b5e621202d0b.html?r=200000002862347&d=200000003001045',
         'U18M': 'https://resultats.ffbb.com/championnat/b5e621202bcf.html?r=200000002862031&d=200000003000156',
-        'Seniors_Compet_PRF': 'https://resultats.ffbb.com/championnat/equipe/div/b5b6212074450.html',  //y a 2x sur ffbb
+        'Seniors_Compet_PRF': 'https://resultats.ffbb.com/championnat/b5e621202256.html?r=200000002866876&d=200000003011313',  //y a 2x sur ffbb
         'Seniors_Compet_DM3': 'https://resultats.ffbb.com/championnat/b5e621202257.html?r=200000002859607&d=200000002994901',
         'Seniors_Compet_RM3': 'https://resultats.ffbb.com/championnat/b5e621201b02.html?r=200000002857730&d=200000002990285&p=14'
     };
