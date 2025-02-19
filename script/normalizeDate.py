@@ -1,49 +1,74 @@
+import pandas as pd
 import json
 from datetime import datetime
 import os
 
-def normalize_date(date_str):
+def format_date(date_str):
+    if pd.isna(date_str):
+        return None
     try:
-        if isinstance(date_str, str):
-            if 'nan' in date_str.lower():
-                return 'N/A'
-            try:
-                date_obj = datetime.strptime(date_str, '%Y-%m-%d')
-            except ValueError:
-                try:
-                    date_obj = datetime.strptime(date_str, '%d/%m/%Y')
-                except ValueError:
-                    try:
-                        date_obj = datetime.strptime(date_str.replace('-', ''), '%d/%m/%Y')
-                    except ValueError:
-                        return 'N/A'
-            return date_obj.strftime('%d/%m/%Y')  # Changé de %y à %Y
-        return 'N/A'
-    except:
-        return 'N/A'
-
-def normalize_json_dates():
-    try:
-        current_dir = os.path.dirname(os.path.abspath(__file__))
-        input_path = os.path.join(current_dir, '..', 'data', 'joueurs.json')
+        # Si la date est déjà au format datetime
+        if isinstance(date_str, datetime):
+            return date_str.strftime('%d/%m/%Y')
         
-        if not os.path.exists(input_path):
-            raise FileNotFoundError(f"Fichier non trouvé: {input_path}")
+        date_str = str(date_str).strip()
+        
+        # Essayer différents formats de date
+        for fmt in ['%Y-%m-%d %H:%M:%S', '%d/%m/%Y', '%Y-%m-%d']:
+            try:
+                date_obj = datetime.strptime(date_str, fmt)
+                return date_obj.strftime('%d/%m/%Y')
+            except ValueError:
+                continue
+        
+        return date_str
+    except:
+        return None
 
-        with open(input_path, 'r', encoding='utf-8') as f:
-            data = json.load(f)
+file_path = os.path.join(os.path.dirname(__file__), '../data/LICENSES.xlsx')
 
-        for categorie in data:
-            for joueur in data[categorie]:
-                joueur['dateNaissance'] = normalize_date(joueur['dateNaissance'])
+try:
+    # Lire le fichier Excel
+    df = pd.read_excel(file_path)
+    print("Colonnes disponibles:", df.columns.tolist())
+    
+    joueurs_par_equipe = {}
 
-        with open(input_path, 'w', encoding='utf-8') as f:
-            json.dump(data, f, ensure_ascii=False, indent=2)
+    for index, row in df.iterrows():
+        # Ignorer les lignes où le nom est vide
+        if pd.isna(row['NOM']) or str(row['NOM']).strip() == '':
+            continue
+            
+        # Extraire la catégorie depuis la colonne 'Unnamed: 4'
+        categorie = str(row['Unnamed: 4']).strip() if not pd.isna(row['Unnamed: 4']) else None
+        
+        if categorie is None or categorie == '':
+            continue
+        
+        if categorie not in joueurs_par_equipe:
+            joueurs_par_equipe[categorie] = []
+        
+        date_naissance = format_date(row['NAISSANCE'])
+        
+        joueur = {
+            "nom": str(row['NOM']).strip(),
+            "prenom": str(row['PRENOM']).strip(),
+            "dateNaissance": date_naissance if date_naissance else "N/A"
+        }
+        
+        joueurs_par_equipe[categorie].append(joueur)
 
-        print("Dates normalisées avec succès")
+    # Trier les catégories
+    joueurs_par_equipe = dict(sorted(joueurs_par_equipe.items()))
 
-    except Exception as e:
-        print(f"Erreur: {str(e)}")
+    data_path = os.path.join(os.path.dirname(__file__), '..', 'data')
+    os.makedirs(data_path, exist_ok=True)
 
-if __name__ == "__main__":
-    normalize_json_dates()
+    json_path = os.path.join(data_path, 'joueurs.json')
+    with open(json_path, 'w', encoding='utf-8') as f:
+        json.dump(joueurs_par_equipe, f, ensure_ascii=False, indent=2)
+
+    print(f"Fichier JSON créé avec succès: {json_path}")
+
+except Exception as e:
+    print(f"Erreur: {str(e)}")

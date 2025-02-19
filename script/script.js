@@ -169,31 +169,40 @@ function initScrollHandler() {
       }
   });
 }
+let totalHommes = 153; let totalFemmes = 73; let totaljoueurs = totalHommes + totalFemmes;
 
 async function loadClubStats() {
     try {
-        const response = await fetch('../data/joueurs.json');
-        const data = await response.json();
-        
-        let totalHommes = 0;
-        let totalFemmes = 0;
-        let totaljoueurs = 230;
-
-        Object.keys(data).forEach(category => {
-            if (category.includes('M') || category.includes('Masculins')) {
-                totalHommes += data[category].length;
-            } else if (category.includes('F') || category.includes('Féminines')) {
-                totalFemmes += data[category].length;
-            }
-        });
-
+        // Mettre à jour les éléments HTML avec les statistiques
         document.getElementById('total-hommes').textContent = totalHommes;
         document.getElementById('total-femmes').textContent = totalFemmes;
         document.getElementById('total-joueurs').textContent = totaljoueurs;
+
+        // Animation des compteurs
+        animateValue('total-hommes', 0, totalHommes, 2000);
+        animateValue('total-femmes', 0, totalFemmes, 2000);
+        animateValue('total-joueurs', 0, totaljoueurs, 2000);
     } catch (error) {
-        console.error('Erreur chargement stats:', error);
+        console.error('Erreur lors du chargement des statistiques:', error);
     }
-    total
+}
+
+// Fonction d'animation des compteurs
+function animateValue(id, start, end, duration) {
+    const element = document.getElementById(id);
+    if (!element) return;
+
+    let startTimestamp = null;
+    const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        const value = Math.floor(progress * (end - start) + start);
+        element.textContent = value;
+        if (progress < 1) {
+            window.requestAnimationFrame(step);
+        }
+    };
+    window.requestAnimationFrame(step);
 }
 
 document.addEventListener('DOMContentLoaded', async function() {

@@ -55,6 +55,7 @@ out/
 database/*.sqlite
 database/
 data/Joueurs.ods
+data/LICENSES.xlsx
 
 # Configuration files
 config.php
