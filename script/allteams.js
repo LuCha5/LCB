@@ -17,11 +17,14 @@ const displayChampionnatCategories = () => {
     championnatGrid.innerHTML = '';
     
     championnatCategories.forEach(item => {
-        const categoryButton = document.createElement('a');
+        const categoryButton = document.createElement('button'); // Changé en button
         categoryButton.classList.add('category-button');
-        categoryButton.href = item.url;
-        categoryButton.target = '_blank';
         categoryButton.textContent = item.category;
+        categoryButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            const teamId = item.url.split('=')[1]; // Récupère l'ID de l'équipe depuis l'URL
+            window.location.href = `team.html?team=${teamId}`; // Navigation simple vers la page de l'équipe
+        });
         championnatGrid.appendChild(categoryButton);
     });
 };
