@@ -1113,7 +1113,11 @@ nav ul {
     text-decoration: none;
     transition: all 0.3s ease;
 }
-
+.icon-shop {
+    width: 32px;  /* Ajustez la taille selon vos besoins */
+    height: 24px;
+    vertical-align: middle;
+}
 .btn-icon i {
     margin-bottom: 0;
 }
