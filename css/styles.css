@@ -135,24 +135,63 @@ section {
         height: auto;
     }
 }
+.header-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+    max-width: 800px; /* Ajusté pour plus d'espace */
+    margin: 0 auto;
+    padding: 0 20px; /* Réduit le padding */
+}
+
 .header-content h1 {
     display: flex;
     flex-direction: column;
+    align-items: center; /* Centre le contenu */
     gap: 10px;
-    font-size: 2.5em;
+    font-size: 3em;
     margin-top: 30px;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-    will-change: transform;
-    transform: translateZ(0);
-}
-
-.header-content h1 .welcome {
-    font-size: 0.8em;
+    text-align: center;
 }
 
 .header-content h1 .club-name {
     font-weight: bold;
+    font-size: 2em; /* Augmenté pour plus de visibilité */
+    white-space: nowrap;
+    text-align: center;
+    text-transform: none;
+}
+
+/* Style pour les valeurs */
+.values-line {
+    font-size: 1.8rem;
+    margin: 1.5rem auto; /* Ajout de auto pour centrer */
+    white-space: nowrap;
+    text-align: center;
+    display: block;
+}
+
+/* Ajustement pour mobile */
+@media (max-width: 768px) {
+    .header-content {
+        padding: 0 15px;
+    }
+
+    .header-content h1 .club-name {
+        font-size: 1.6em;
+    }
+
+    .values-line {
+        font-size: 1.2rem;
+        white-space: normal;
+        margin: 1rem auto;
+        max-width: 280px;
+    }
+}
+.header-content h1 .highlight {
+    color: #1a3955;
+    text-transform: uppercase; /* Met L, C et B en majuscules */
 }
 .bg-image-header {
     position: relative;
