@@ -174,15 +174,22 @@ section {
 
 /* Ajustement pour mobile */
 @media (max-width: 768px) {
+    .header-logo-left {
+        padding-left: 20px;
+    }
+    .header-logo-right {
+        padding-right: 20px;
+    }
     .header-content {
         padding: 0 15px;
     }
 
     .header-content h1 .club-name {
         font-size: 1.6em;
+        padding-bottom: 15px;
     }
 
-    .values-line {
+    .values-line {  
         font-size: 1.2rem;
         white-space: normal;
         margin: 1rem auto;
