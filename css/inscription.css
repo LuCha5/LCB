@@ -103,6 +103,60 @@ h1, h2 {
     font-size: 16px;
 }
 
+.payment-section {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.inscriptions-ouvertes,
+.inscriptions-fermees {
+    display: none;
+    margin: 20px 0;
+}
+
+/* Quand les inscriptions sont ouvertes (1) */
+:root[style*="--inscriptions-ouvertes:1"] .inscriptions-ouvertes {
+    display: block;
+}
+:root[style*="--inscriptions-ouvertes:1"] .inscriptions-fermees {
+    display: none;
+}
+
+/* Quand les inscriptions sont fermées (0) */
+:root[style*="--inscriptions-ouvertes:0"] .inscriptions-ouvertes {
+    display: none;
+}
+:root[style*="--inscriptions-ouvertes:0"] .inscriptions-fermees {
+    display: block;
+}
+
+.payment-button {
+    background-color: #1a3955;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 0;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.payment-button:hover {
+    background-color: #5ea1d5;
+}
+
+.message-ferme {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
 @media (max-width: 768px) {
     .back-home {
         top: 10px;

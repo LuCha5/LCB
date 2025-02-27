@@ -10,7 +10,11 @@
     <link rel="stylesheet" href="../css/inscription.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" href="../assets/icons/Logo.ico" type="image/x-icon">
-
+    <style>
+        :root {
+            --inscriptions-ouvertes: 0; /* Changez en 1 pour ouvrir les inscriptions */
+        }
+    </style>
 </head>
 <body>
     <a href="index.html" class="back-home">
@@ -45,8 +49,28 @@
         </a>
 
         <p>Une fois le règlement signé, nous pourrons procéder à la finalisation de votre inscription au club. Pour toute question, n'hésitez pas à nous contacter! 💬</p>
-    </div>
+    
+        <div class="payment-section">
+            <h2>Paiement de la licence 💳</h2>
+            
+            <div class="inscriptions-ouvertes">
+                <p>Les inscriptions sont ouvertes ! Rejoignez-nous dès maintenant en procédant au paiement de votre licence.</p>
+                <a href="https://www.payasso.fr/le-cres-basket/licence" 
+                   class="payment-button"
+                   target="_blank">
+                    Payer ma licence en ligne
+                </a>
+            </div>
 
-    <!-- ajouter lien page paiement -->
+            <div class="inscriptions-fermees">
+                <div class="message-ferme">
+                    <h3>⚠️ Inscriptions temporairement fermées</h3>
+                    <p>Nous ne prenons plus de nouveaux adhérents pour le moment. Les inscriptions reprendront à la prochaine saison.</p>
+                    <p>Merci de votre compréhension.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../script/inscription.js"></script>
 </body>
 </html>
