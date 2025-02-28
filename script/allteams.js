@@ -9,7 +9,9 @@ const championnatCategories = [
     { category: '3x3', url: 'team.html?team=3vs3' },  // Modifier l'URL pour correspondre à la clé dans categoryMapping
     { category: 'Seniors Compet DM3', url: 'team.html?team=Seniors_Compet_DM3' },
     { category: 'Seniors Compet RM3', url: 'team.html?team=Seniors_Compet_RM3' },
-    { category: 'Seniors Compet PRF', url: 'team.html?team=Seniors_Compet_PRF' }
+    { category: 'Seniors Compet PRF', url: 'team.html?team=Seniors_Compet_PRF' },
+    { category: 'Loisirs mixtes', url: 'team.html?team=Loisirs' },
+    { category: 'Remise en forme', url: 'team.html?team=Remise_en_forme' }
 ];
 
 const displayChampionnatCategories = () => {

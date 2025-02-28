@@ -12,7 +12,10 @@ document.addEventListener('DOMContentLoaded', async function() {
         'Seniors_Compet_PRF': ['SENIORS FEMININES'],
         'Seniors_Compet_DM3': ['SENIORS DM3'],
         'Seniors_Compet_RM3': ['SENIORS RM3'],
-        '3vs3': ['BASKET 3X3']
+        '3vs3': ['BASKET 3X3'],
+        'Loisirs': ['LOISIRS MIXTE'],
+        'Remise_en_forme': ['BASKET REMISE EN FORME']
+
     };
 
     const ffbbLinks = {
