@@ -7,7 +7,7 @@
     }
 
     .staff-card {
-        padding: 1.5rem;
+        padding: 1rem;
         transform: scale(0.9);
     }
 
@@ -34,5 +34,5 @@
     width: 100%;
     background-color: white;
     z-index: 10;
-    height: 120px;
+    height: 130px;
 }
