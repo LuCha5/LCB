@@ -4,9 +4,8 @@
     "Assistant": ["Arnaud BOULAY"]
   },
   "DM3": {
-    "Coach": ["Timothee GASPARD", "Dorian BARRAU-RAVAGE"],
-    "Assistant": [],
-    "Players": ["Timothee GASPARD", "Dorian BARRAU-RAVAGE", "Vital ROUVIER"]
+    "Coach": ["Alexis NOTTA"],
+    "Assistant": []
   },
   "RM3": {
     "Coach": ["Vital ROUVIER"],
@@ -14,11 +13,11 @@
   },
   "U18M": {
     "Coach": ["Alexandre CAMILLERI"],
-    "Assistant": ["Joseph SORIANO"]
+    "Assistant": []
   },
   "U15M": {
     "Coach": ["Jérémie GRICOURT"],
-    "Assistant": ["Kevin HAYET"]
+    "Assistant": []
   },
   "U13F": {
     "Coach": ["Quentin MOURIER"],
@@ -47,8 +46,5 @@
   "Basket santé": {
     "Coach": ["Kevin HAYET"],
     "Assistant": []
-  },
-  "Loisirs": {
-    "Players": ["Quentin MOURIER", "Loic GROUSSET", "Nicolas GROUSSET", "Jérémie GRICOURT", "Alexandre CAMILLERI", "Kevin HAYET"]
   }
 }
