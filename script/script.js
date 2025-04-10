@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', async function() {
 async function loadNavAndFooter() {
   try {
       const [navResponse, footerResponse] = await Promise.all([
-          fetch('../pages/navbar.html'),
-          fetch('../pages/footer.html')
+          fetch('../navbar.html'),
+          fetch('../footer.html')
       ]);
 
       const [navHtml, footerHtml] = await Promise.all([
