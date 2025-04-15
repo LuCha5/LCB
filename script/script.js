@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', async function() {
 async function loadNavAndFooter() {
   try {
       const [navResponse, footerResponse] = await Promise.all([
-          fetch('../navbar.html'),
-          fetch('../footer.html')
+          fetch('navbar.html'),
+          fetch('footer.html')
       ]);
 
       const [navHtml, footerHtml] = await Promise.all([
@@ -59,7 +59,7 @@ function initBurgerMenu() {
 // Gestion Anniversaires
 async function checkBirthdays() {
   try {
-      const response = await fetch('../data/joueurs.json');
+      const response = await fetch('data/joueurs.json');
       const data = await response.json();
       const today = new Date();
       const todayString = today.toLocaleDateString('fr-FR').split('/').slice(0, 2).join('/');
@@ -118,7 +118,7 @@ function handleTeamDisplay() {
 
 async function loadTeamData(teamId) {
   try {
-      const response = await fetch('../data/joueurs.json');
+      const response = await fetch('data/joueurs.json');
       const data = await response.json();
 
       const categoryMap = {

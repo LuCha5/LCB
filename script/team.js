@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', async function() {
             // Vérifier et afficher l'image de l'équipe
             const imageContainer = document.createElement('div');
             imageContainer.className = 'team-image-container';
-            const imagePath = `../assets/equipes/${teamId}.jpg`;
+            const imagePath = `assets/equipes/${teamId}.jpg`;
 
             // Obtenir la référence du conteneur principal
             const teamContent = document.getElementById('team-content');
@@ -154,8 +154,8 @@ document.addEventListener('DOMContentLoaded', async function() {
             teamContent.insertBefore(ffbbContainer, teamContent.firstChild);
 
             const [dataJoueurs, dataEntraineurs] = await Promise.all([
-                fetchData('../data/joueurs.json'),
-                fetchData('../data/entraineurs.json')
+                fetchData('data/joueurs.json'),
+                fetchData('data/entraineurs.json')
             ]);
 
             const categories = categoryMapping[teamId] || [];
