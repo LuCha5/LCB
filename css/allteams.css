@@ -73,6 +73,14 @@
     width: 100%;
 }
 
+/* Footer compact spécifique page allteams */
+.allteams-page footer {
+    padding: 0.6rem 0 !important; /* réduit */
+}
+.allteams-page footer .rounded-social-buttons { margin: 0.4rem 0; }
+.allteams-page footer p { margin: 0.2rem 0; line-height: 1.1; }
+.allteams-page footer .social-button { width: 2.4rem; height: 2.4rem; line-height: 2.4rem; font-size: 1rem; }
+
 @media (max-width: 768px) {
     .championnat-page {
         padding-top: 70px;

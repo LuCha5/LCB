@@ -2,14 +2,16 @@ document.addEventListener('DOMContentLoaded', async function() {
     console.log("Team.js chargé");
 
     const categoryMapping = {
-        'U7-U9Mi': ['U7 /U9 M(2)', 'U9 M(1)', 'U7 /U9 Filles'],
+        'U9Mi': ['U7 /U9 M(2)', 'U9 M(1)', 'U7 /U9 Filles'],
         'U11M': ['U11 Masculins'],
         'U11F': ['U11 Féminines'],
         'U13M': ['U13 MASCULINS'],
         'U13F': ['U13 Féminines'],
         'U15M': ['U15 Masculins'],
+        'U15F': ['U15 Féminines'],
         'U18M': ['U18 Masculins'],
         'Seniors_Compet_PRF': ['SENIORS FEMININES'],
+        'Seniors_Compet_DM3': ['SENIORS DM2'],
         'Seniors_Compet_DM3': ['SENIORS DM3'],
         'Seniors_Compet_RM3': ['SENIORS RM3'],
         '3vs3': ['BASKET 3X3'],
@@ -18,6 +20,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     };
 
+    //lien a update plus tard
     const ffbbLinks = {
         'U11M': 'https://competitions.ffbb.com/ligues/occ/comites/0034/clubs/occ0034025/equipes/200000005013406', //y a 2x sur ffbb
         'U11F': 'https://competitions.ffbb.com/ligues/occ/comites/0034/clubs/occ0034025/equipes/200000005096801', //y a 2x sur ffbb
@@ -85,8 +88,9 @@ document.addEventListener('DOMContentLoaded', async function() {
     // Nouvelle fonction de filtrage des entraîneurs
     function getCoachesForCategory(entraineurs, categoryId) {
         // Conversion des IDs spéciaux
-        const mappedId = categoryId === 'U7-U9Mi' ? 'U7 U9' : 
+        const mappedId = categoryId === 'U9Mi' ? 'U7 U9' : 
                         categoryId === 'Seniors_Compet_PRF' ? 'PRF' :
+                        categoryId === 'Seniors_Compet_DM2' ? 'DM2' :
                         categoryId === 'Seniors_Compet_DM3' ? 'DM3' :
                         categoryId === 'Seniors_Compet_RM3' ? 'RM3' :
                         categoryId;
@@ -175,7 +179,7 @@ document.addEventListener('DOMContentLoaded', async function() {
             }
 
             // Traitement spécial pour U7-U9Mi
-            if (teamId === 'U7-U9Mi') {
+            if (teamId === 'U9Mi') {
                 const allCoaches = new Set();
                 const allPlayers = new Set();
 
