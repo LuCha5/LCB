@@ -77,3 +77,4 @@ config.php
 # File for Dev 
 
 script/*.py
+data/LICENSES_2025.xlsx
