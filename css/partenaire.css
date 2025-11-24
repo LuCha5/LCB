@@ -76,33 +76,6 @@
     margin: auto;
 }
 
-/* Styles pour les mécènes */
-.mecene-card {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 250px;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.mecene-card:hover {
-    transform: translateY(-5px);
-}
-
-.mecene-card img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 15px;
-}
-
-.mecene-card h5 {
-    color: #1a3955;
-    margin: 0;
-    font-size: 1.1em;
-}
-
 /* Styles des titres de section */
 .section-title {
     color: #1a3955;
