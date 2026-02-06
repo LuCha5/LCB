@@ -1,5 +1,5 @@
 const championnatCategories = [
-    { category: 'U9 Mixtes', url: 'team.html?team=U9Mi' },
+    { category: 'U9 Mixtes', url: 'team.html?team=U9' },
     { category: 'U11 M', url: 'team.html?team=U11M' },
     { category: 'U11 F', url: 'team.html?team=U11F' },
     { category: 'U13 M', url: 'team.html?team=U13M' },

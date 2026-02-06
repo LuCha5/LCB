@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', async function() {
   await checkBirthdays();
   handleTeamDisplay();
   initScrollHandler();
+  await loadClubStats();
 });
 
 // Gestion Navbar et Footer
@@ -239,8 +240,3 @@ function animateValue(id, start, end, duration) {
     };
     window.requestAnimationFrame(step);
 }
-
-document.addEventListener('DOMContentLoaded', async function() {
-    // ...existing code...
-    await loadClubStats();
-});

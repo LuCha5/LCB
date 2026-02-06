@@ -509,13 +509,7 @@ section {
     margin: 0;
 }
 .staff-page {
-    height: auto; /* Changé de 100vh à auto */
-    min-height: 100vh; /* Ajout de min-height pour garder la hauteur minimale */
-    padding-top: 180px;
-    display: flex;
-    flex-direction: column;
-    overflow-y: hidden; /* Permet le défilement vertical */
-    -webkit-overflow-scrolling: touch; /* Pour un défilement fluide sur iOS */
+    padding-top: 0;
 }
 
 @media screen and (max-width: 768px) {

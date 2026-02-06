@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     console.log("Team.js chargé");
 
     const categoryMapping = {
-        'U9Mi': ['U9'],
+        'U9': ['U9'],
         'U11M': ['U11M'],
         'U11F': ['U11F'],
         'U13M': ['U13M'],
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     // Nouvelle fonction de filtrage des entraîneurs
     function getCoachesForCategory(entraineurs, categoryId) {
         // Conversion des IDs spéciaux
-        const mappedId = categoryId === 'U9Mi' ? 'U7 U9' : 
+        const mappedId = categoryId === 'U9' ? 'U9' : 
                         categoryId === 'Seniors_Compet_DF2' ? 'DF2' :
                         categoryId === 'Seniors_Compet_DM2' ? 'DM2' :
                         categoryId === 'Seniors_Compet_DM3' ? 'DM3' :
@@ -99,12 +99,16 @@ document.addEventListener('DOMContentLoaded', async function() {
         if (!category) return [];
 
         const mainCoaches = (category.Coach || []).map(name => {
-            const [prenom, nom] = name.split(' ');
+            const parts = name.split(' ');
+            const prenom = parts[0];
+            const nom = parts.slice(1).join(' ');
             return { prenom, nom, role: 'Coach' };
         });
 
         const assistants = (category.Assistant || []).map(name => {
-            const [prenom, nom] = name.split(' ');
+            const parts = name.split(' ');
+            const prenom = parts[0];
+            const nom = parts.slice(1).join(' ');
             return { prenom, nom, role: 'Assistant' };
         });
 
@@ -132,7 +136,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
             // Mapping des teamId vers les noms de fichiers d'images
             const imageMapping = {
-                'U9Mi': 'U9',
+                'U9': 'U9',
                 'U11M': 'U11M',
                 'U11F': 'U11F',
                 'U13M': 'U13M',
@@ -204,8 +208,8 @@ document.addEventListener('DOMContentLoaded', async function() {
                 ffbbContainer.style.display = 'none'; // Cache le bouton si pas de lien FFBB
             }
 
-            // Traitement spécial pour U7-U9Mi
-            if (teamId === 'U9Mi') {
+            // Traitement spécial pour U7-U9
+            if (teamId === 'U9') {
                 const allCoaches = new Set();
                 const allPlayers = new Set();
 
