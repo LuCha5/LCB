@@ -14,7 +14,8 @@ document.addEventListener('DOMContentLoaded', async function() {
         'Seniors_Compet_DM2': ['DM2'],
         'Seniors_Compet_DM3': ['DM3'],
         'Seniors_Compet_RM3': ['RM3'],
-        'Loisirs': ['Loisirs-']
+        'Loisirs': ['Loisirs'],
+        'Basket_decouverte': ['Basket découverte']
     };
 
     //lien a update plus tard
@@ -90,6 +91,8 @@ document.addEventListener('DOMContentLoaded', async function() {
                         categoryId === 'Seniors_Compet_DM2' ? 'DM2' :
                         categoryId === 'Seniors_Compet_DM3' ? 'DM3' :
                         categoryId === 'Seniors_Compet_RM3' ? 'RM3' :
+                        categoryId === 'Basket_decouverte' ? 'Basket découverte' :
+                        categoryId === 'Loisirs' ? 'Loisirs' :
                         categoryId;
 
         const category = entraineurs[mappedId];

@@ -1,4 +1,10 @@
 {
+  "Basket découverte": {
+    "Coach": [
+      "Damien SERRA"
+    ],
+    "Assistant": []
+  },
   "DF2": {
     "Coach": [
       "Loic GROUSSET",
@@ -18,7 +24,7 @@
     ],
     "Assistant": []
   },
-  "Loisirs-": {
+  "Loisirs": {
     "Coach": [
       "Patrick BARRAL"
     ],

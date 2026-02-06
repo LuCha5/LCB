@@ -11,8 +11,8 @@ const championnatCategories = [
     { category: 'Seniors Compet DM3', url: 'team.html?team=Seniors_Compet_DM3' },
     { category: 'Seniors Compet RM3', url: 'team.html?team=Seniors_Compet_RM3' },
     { category: 'Seniors Compet DF2', url: 'team.html?team=Seniors_Compet_DF2' },
-    { category: 'Loisirs mixtes', url: 'team.html?team=Loisirs' },
-    { category: 'Remise en forme', url: 'team.html?team=Remise_en_forme' }
+    { category: 'Loisirs', url: 'team.html?team=Loisirs' },
+    { category: 'Basket découverte', url: 'team.html?team=Basket_decouverte' }
 ];
 
 const displayChampionnatCategories = () => {

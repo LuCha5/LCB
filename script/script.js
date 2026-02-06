@@ -126,8 +126,8 @@ async function loadTeamData(teamId) {
           'U11': 'U11M',
           'U13': 'U13M',
           'U18': 'U18M',
-          '3v3': 'BASKET 3X3',
-          'loisirs': 'Loisirs-'
+          'loisirs': 'Loisirs',
+          'basket_decouverte': 'Basket découverte'
       };
 
       const category = categoryMap[teamId];

@@ -1,51 +1,4 @@
 {
-  "Basket découverte": [
-    {
-      "nom": "A.",
-      "prenom": "Alexandra",
-      "dateNaissance": "01/05/1988"
-    },
-    {
-      "nom": "B.",
-      "prenom": "Charline",
-      "dateNaissance": "21/04/1992"
-    },
-    {
-      "nom": "C.",
-      "prenom": "Lucie",
-      "dateNaissance": "05/06/1999"
-    },
-    {
-      "nom": "G.",
-      "prenom": "Laura",
-      "dateNaissance": "10/07/1986"
-    },
-    {
-      "nom": "G.",
-      "prenom": "Cannelle",
-      "dateNaissance": "18/09/1993"
-    },
-    {
-      "nom": "J.",
-      "prenom": "Melissa",
-      "dateNaissance": "04/09/1989"
-    },
-    {
-      "nom": "M.",
-      "prenom": "Meriam",
-      "dateNaissance": "12/11/1989"
-    },
-    {
-      "nom": "S.",
-      "prenom": "Emilie",
-      "dateNaissance": "14/07/1982"
-    },
-    {
-      "nom": "T.",
-      "prenom": "Marianne",
-      "dateNaissance": "14/02/1976"
-    }
-  ],
   "DF2": [
     {
       "nom": "B.",
@@ -277,7 +230,57 @@
       "dateNaissance": "26/02/2002"
     }
   ],
-  "Loisirs": [
+  "Loisirs-": [
+    {
+      "nom": "R.",
+      "prenom": "Vital",
+      "dateNaissance": "30/01/1978"
+    },
+    {
+      "nom": "A.",
+      "prenom": "Alexandra",
+      "dateNaissance": "01/05/1988"
+    },
+    {
+      "nom": "B.",
+      "prenom": "Charline",
+      "dateNaissance": "21/04/1992"
+    },
+    {
+      "nom": "C.",
+      "prenom": "Lucie",
+      "dateNaissance": "05/06/1999"
+    },
+    {
+      "nom": "G.",
+      "prenom": "Laura",
+      "dateNaissance": "10/07/1986"
+    },
+    {
+      "nom": "G.",
+      "prenom": "Cannelle",
+      "dateNaissance": "18/09/1993"
+    },
+    {
+      "nom": "J.",
+      "prenom": "Melissa",
+      "dateNaissance": "04/09/1989"
+    },
+    {
+      "nom": "M.",
+      "prenom": "Meriam",
+      "dateNaissance": "12/11/1989"
+    },
+    {
+      "nom": "S.",
+      "prenom": "Emilie",
+      "dateNaissance": "14/07/1982"
+    },
+    {
+      "nom": "T.",
+      "prenom": "Marianne",
+      "dateNaissance": "14/02/1976"
+    },
     {
       "nom": "A.",
       "prenom": "Jesse",
@@ -702,7 +705,7 @@
     {
       "nom": "D.",
       "prenom": "Milan",
-      "dateNaissance": "03/05/2013"
+       "dateNaissance": "03/05/2013"
     },
     {
       "nom": "G.",
