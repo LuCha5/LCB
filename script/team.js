@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         'U15M': ['U15 Masculins'],
         'U15F': ['U15 Féminines'],
         'U18M': ['U18 Masculins'],
-        'Seniors_Compet_PRF': ['SENIORS FEMININES'],
+        'Seniors_Compet_DF2': ['SENIORS FEMININES'],
         'Seniors_Compet_DM3': ['SENIORS DM2'],
         'Seniors_Compet_DM3': ['SENIORS DM3'],
         'Seniors_Compet_RM3': ['SENIORS RM3'],
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         'U13F': 'https://competitions.ffbb.com/ligues/occ/comites/0034/clubs/occ0034025/equipes/200000005013267',
         'U15M': 'https://competitions.ffbb.com/ligues/occ/comites/0034/clubs/occ0034025/equipes/200000005019242',
         'U18M': 'https://competitions.ffbb.com/ligues/occ/comites/0034/clubs/occ0034025/equipes/200000005013481',
-        'Seniors_Compet_PRF': 'https://competitions.ffbb.com/ligues/occ/comites/0034/clubs/occ0034025/equipes/200000005101608',  //y a 2x sur ffbb
+        'Seniors_Compet_DF2': 'https://competitions.ffbb.com/ligues/occ/comites/0034/clubs/occ0034025/equipes/200000005101608',  //y a 2x sur ffbb
         'Seniors_Compet_DM3': 'https://competitions.ffbb.com/ligues/occ/comites/0034/clubs/occ0034025/equipes/200000004969233',
         'Seniors_Compet_RM3': 'https://competitions.ffbb.com/ligues/occ/comites/0034/clubs/occ0034025/equipes/200000005101897'
     };
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     function getCoachesForCategory(entraineurs, categoryId) {
         // Conversion des IDs spéciaux
         const mappedId = categoryId === 'U9Mi' ? 'U7 U9' : 
-                        categoryId === 'Seniors_Compet_PRF' ? 'PRF' :
+                        categoryId === 'Seniors_Compet_DF2' ? 'DF2' :
                         categoryId === 'Seniors_Compet_DM2' ? 'DM2' :
                         categoryId === 'Seniors_Compet_DM3' ? 'DM3' :
                         categoryId === 'Seniors_Compet_RM3' ? 'RM3' :

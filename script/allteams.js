@@ -10,7 +10,7 @@ const championnatCategories = [
     { category: 'Seniors Compet DM2', url: 'team.html?team=Seniors_Compet_DM2' },
     { category: 'Seniors Compet DM3', url: 'team.html?team=Seniors_Compet_DM3' },
     { category: 'Seniors Compet RM3', url: 'team.html?team=Seniors_Compet_RM3' },
-    { category: 'Seniors Compet PRF', url: 'team.html?team=Seniors_Compet_PRF' },
+    { category: 'Seniors Compet DF2', url: 'team.html?team=Seniors_Compet_DF2' },
     { category: 'Loisirs mixtes', url: 'team.html?team=Loisirs' },
     { category: 'Remise en forme', url: 'team.html?team=Remise_en_forme' }
 ];
