@@ -1,50 +1,85 @@
 {
   "DF2": {
-    "Coach": ["Joseph SORIANO"],
-    "Assistant": ["Arnaud BOULAY"]
+    "Coach": [
+      "Loic GROUSSET",
+      "Quentin MOURIER"
+    ],
+    "Assistant": []
+  },
+  "DM2": {
+    "Coach": [
+      "Alexis NOTTA"
+    ],
+    "Assistant": []
   },
   "DM3": {
-    "Coach": ["Alexis NOTTA"],
+    "Coach": [
+      "Cédric LORIC"
+    ],
+    "Assistant": []
+  },
+  "Loisirs-": {
+    "Coach": [
+      "Patrick BARRAL"
+    ],
     "Assistant": []
   },
   "RM3": {
-    "Coach": ["Vital ROUVIER"],
-    "Assistant": []
-  },
-  "U18M": {
-    "Coach": ["Alexandre CAMILLERI"],
-    "Assistant": []
-  },
-  "U15M": {
-    "Coach": ["Jérémie GRICOURT"],
-    "Assistant": []
-  },
-  "U13F": {
-    "Coach": ["Quentin MOURIER"],
-    "Assistant": ["Mathieu CAMBON"]
-  },
-  "U13M": {
-    "Coach": ["Loic GROUSSET", "Nicolas GROUSSET", "Floriane DOUMERGUE"],
+    "Coach": [
+      "Vital ROUVIER"
+    ],
     "Assistant": []
   },
   "U11F": {
-    "Coach": ["Guillaume ANDOUARD", "Clément MESANGE"],
+    "Coach": [
+      "Marine JOUANNE",
+      "Loic GROUSSET"
+    ],
     "Assistant": []
   },
   "U11M": {
-    "Coach": ["Kevin HAYET"],
+    "Coach": [
+      "Alexandre CAMILLERI"
+    ],
     "Assistant": []
   },
-  "U7 U9": {
-    "Coach": ["Kevin HAYET", "Marine JOUANNE", "Réda ZENAGUI", "Mathieu CAMBON"],
+  "U13F": {
+    "Coach": [
+      "Mathieu CAMBON",
+      "Thomas QUATREHOMME"
+    ],
     "Assistant": []
   },
-  "3x3": {
-    "Coach": ["Kevin HAYET"],
+  "U13M": {
+    "Coach": [
+      "Nicolas GROUSSET",
+      "Floriane DOMERGUE"
+    ],
     "Assistant": []
   },
-  "Basket santé": {
-    "Coach": ["Kevin HAYET"],
+  "U15F": {
+    "Coach": [
+      "Quentin MOURIER"
+    ],
+    "Assistant": []
+  },
+  "U15M": {
+    "Coach": [
+      "Jérémie GRICOURT"
+    ],
+    "Assistant": []
+  },
+  "U18M": {
+    "Coach": [
+      "Bachir Mohamed Hassan",
+      "Nicolas CANUEL"
+    ],
+    "Assistant": []
+  },
+  "U9": {
+    "Coach": [
+      "Bachir MOHAMMED HASSAN"
+    ],
     "Assistant": []
   }
 }

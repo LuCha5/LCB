@@ -1,1093 +1,1104 @@
 {
+  "DF2": [
+    {
+      "nom": "B.",
+      "prenom": "Adeline",
+      "dateNaissance": "04/08/1990"
+    },
+    {
+      "nom": "B.",
+      "prenom": "Melanie",
+      "dateNaissance": "10/10/1985"
+    },
+    {
+      "nom": "C.",
+      "prenom": "CAROLINE",
+      "dateNaissance": "23/12/1984"
+    },
+    {
+      "nom": "D.",
+      "prenom": "Méryl",
+      "dateNaissance": "15/09/1995"
+    },
+    {
+      "nom": "D.",
+      "prenom": "Emma",
+      "dateNaissance": "08/02/2008"
+    },
+    {
+      "nom": "D.",
+      "prenom": "Floriane",
+      "dateNaissance": "20/05/1983"
+    },
+    {
+      "nom": "G.",
+      "prenom": "Laura",
+      "dateNaissance": "10/07/1986"
+    },
+    {
+      "nom": "J.",
+      "prenom": "CHESLY ANN",
+      "dateNaissance": "21/01/1998"
+    },
+    {
+      "nom": "J.",
+      "prenom": "Marine",
+      "dateNaissance": "24/11/1987"
+    },
+    {
+      "nom": "M.",
+      "prenom": "Marion",
+      "dateNaissance": "25/05/1981"
+    },
+    {
+      "nom": "M.",
+      "prenom": "Silvana",
+      "dateNaissance": "10/11/1987"
+    },
+    {
+      "nom": "M.",
+      "prenom": "Marie",
+      "dateNaissance": "20/05/1985"
+    },
+    {
+      "nom": "R.",
+      "prenom": "Axelle",
+      "dateNaissance": "07/09/2002"
+    },
+    {
+      "nom": "S.",
+      "prenom": "Alizé",
+      "dateNaissance": "26/06/1997"
+    }
+  ],
   "DM2": [
     {
-      "nom": "Pryjma",
-      "prenom": "Janusz",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "Mauzole",
-      "prenom": "Jimmy",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "ALLERON",
+      "nom": "A.",
       "prenom": "JULIEN",
       "dateNaissance": "N/A"
     },
     {
-      "nom": "PHILIP",
-      "prenom": "Sebastien",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "Perich",
-      "prenom": "Valentin",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "Benault",
-      "prenom": "Bastien",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "POIROT",
-      "prenom": "Jérôme",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "PRATLONG",
-      "prenom": "Christophe",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "Notta",
-      "prenom": "Alexis",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "FRAU",
-      "prenom": "Julien",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "Barraud",
+      "nom": "B.",
       "prenom": "Yvann",
       "dateNaissance": "N/A"
     },
     {
-      "nom": "Mihindou",
-      "prenom": "Karl",
+      "nom": "B.",
+      "prenom": "Bastien",
       "dateNaissance": "N/A"
     },
     {
-      "nom": "GAMO",
+      "nom": "F.",
+      "prenom": "Julien",
+      "dateNaissance": "N/A"
+    },
+    {
+      "nom": "G.",
       "prenom": "Robinson",
       "dateNaissance": "N/A"
     },
     {
-      "nom": "MARTIN",
+      "nom": "K.",
+      "prenom": "Abdelmajid",
+      "dateNaissance": "N/A"
+    },
+    {
+      "nom": "M.",
       "prenom": "Cédric",
       "dateNaissance": "N/A"
     },
     {
-      "nom": "KARDI",
-      "prenom": "Abdelmajid",
+      "nom": "M.",
+      "prenom": "Jimmy",
+      "dateNaissance": "N/A"
+    },
+    {
+      "nom": "M.",
+      "prenom": "Karl",
+      "dateNaissance": "N/A"
+    },
+    {
+      "nom": "N.",
+      "prenom": "Alexis",
+      "dateNaissance": "N/A"
+    },
+    {
+      "nom": "P.",
+      "prenom": "Valentin",
+      "dateNaissance": "N/A"
+    },
+    {
+      "nom": "P.",
+      "prenom": "Sebastien",
+      "dateNaissance": "N/A"
+    },
+    {
+      "nom": "P.",
+      "prenom": "Jérôme",
+      "dateNaissance": "N/A"
+    },
+    {
+      "nom": "P.",
+      "prenom": "Christophe",
+      "dateNaissance": "N/A"
+    },
+    {
+      "nom": "P.",
+      "prenom": "Janusz",
       "dateNaissance": "N/A"
     }
   ],
   "DM3": [
     {
-      "nom": "Salas",
-      "prenom": "Louka",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "Chatenet",
-      "prenom": "Naélien",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "Gallofre",
-      "prenom": "Louis",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "Alvarez",
-      "prenom": "Gabin",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "Mourier",
-      "prenom": "Quentin",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "Grousset",
-      "prenom": "Loic",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "ALONSO",
+      "nom": "A.",
       "prenom": "Léo",
-      "dateNaissance": "N/A"
+      "dateNaissance": "16/07/2007"
     },
     {
-      "nom": "TEIXEIRA",
-      "prenom": "Thomas",
-      "dateNaissance": "N/A"
+      "nom": "A.",
+      "prenom": "Gabin",
+      "dateNaissance": "06/06/2008"
     },
     {
-      "nom": "LORIC",
-      "prenom": "Quentin",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "LUCIEN",
-      "prenom": "Mathieu",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "AOUAD",
+      "nom": "A.",
       "prenom": "Mehdi",
-      "dateNaissance": "N/A"
+      "dateNaissance": "24/02/1992"
     },
     {
-      "nom": "BENGOUA",
+      "nom": "B.",
       "prenom": "Elias",
-      "dateNaissance": "N/A"
+      "dateNaissance": "01/12/2007"
     },
     {
-      "nom": "GROUSSET",
-      "prenom": "Nicolas",
-      "dateNaissance": "N/A"
+      "nom": "B.",
+      "prenom": "Clément",
+      "dateNaissance": "06/09/2007"
     },
     {
-      "nom": "CALLAY",
-      "prenom": "Raphael",
-      "dateNaissance": "N/A"
+      "nom": "C.",
+      "prenom": "Raphaël",
+      "dateNaissance": "29/12/2007"
     },
     {
-      "nom": "Canuel",
-      "prenom": "Nicolas",
-      "dateNaissance": "N/A"
+      "nom": "C.",
+      "prenom": "Naélien",
+      "dateNaissance": "14/08/2008"
     },
     {
-      "nom": "Clément",
-      "prenom": "BRAS-CESARI",
-      "dateNaissance": "N/A"
+      "nom": "G.",
+      "prenom": "Louis",
+      "dateNaissance": "04/12/2008"
     },
     {
-      "nom": "RODRIGUEZ",
-      "prenom": "Tinoê",
-      "dateNaissance": "N/A"
+      "nom": "G.",
+      "prenom": "Loïc",
+      "dateNaissance": "12/03/1992"
+    },
+    {
+      "nom": "L.",
+      "prenom": "Quentin",
+      "dateNaissance": "11/12/2002"
+    },
+    {
+      "nom": "L.",
+      "prenom": "Cedric",
+      "dateNaissance": "08/10/1975"
+    },
+    {
+      "nom": "L.",
+      "prenom": "Mathieu",
+      "dateNaissance": "07/12/2006"
+    },
+    {
+      "nom": "M.",
+      "prenom": "Quentin",
+      "dateNaissance": "17/03/1995"
+    },
+    {
+      "nom": "R.",
+      "prenom": "Tinoé",
+      "dateNaissance": "12/11/2007"
+    },
+    {
+      "nom": "S.",
+      "prenom": "Louka",
+      "dateNaissance": "18/03/2007"
+    },
+    {
+      "nom": "T.",
+      "prenom": "Thomas",
+      "dateNaissance": "26/02/2002"
     }
   ],
   "Loisirs-": [
     {
-      "nom": "ROUVIER",
+      "nom": "R.",
       "prenom": "Vital",
       "dateNaissance": "30/01/1978"
     },
     {
-      "nom": "Tovo",
+      "nom": "A.",
+      "prenom": "Alexandra",
+      "dateNaissance": "01/05/1988"
+    },
+    {
+      "nom": "B.",
+      "prenom": "Charline",
+      "dateNaissance": "21/04/1992"
+    },
+    {
+      "nom": "C.",
+      "prenom": "Lucie",
+      "dateNaissance": "05/06/1999"
+    },
+    {
+      "nom": "G.",
+      "prenom": "Laura",
+      "dateNaissance": "10/07/1986"
+    },
+    {
+      "nom": "G.",
+      "prenom": "Cannelle",
+      "dateNaissance": "18/09/1993"
+    },
+    {
+      "nom": "J.",
+      "prenom": "Melissa",
+      "dateNaissance": "04/09/1989"
+    },
+    {
+      "nom": "M.",
+      "prenom": "Meriam",
+      "dateNaissance": "12/11/1989"
+    },
+    {
+      "nom": "S.",
+      "prenom": "Emilie",
+      "dateNaissance": "14/07/1982"
+    },
+    {
+      "nom": "T.",
       "prenom": "Marianne",
       "dateNaissance": "14/02/1976"
     },
     {
-      "nom": "Rochette",
-      "prenom": "Thomas",
-      "dateNaissance": "08/01/1986"
+      "nom": "A.",
+      "prenom": "Jesse",
+      "dateNaissance": "31/08/1978"
     },
     {
-      "nom": "Dadi",
-      "prenom": "Grégory",
-      "dateNaissance": "08/10/1978"
+      "nom": "B.",
+      "prenom": "Patrick",
+      "dateNaissance": "21/02/1978"
     },
     {
-      "nom": "Laget",
-      "prenom": "Elisa",
-      "dateNaissance": "29/05/1984"
+      "nom": "B.",
+      "prenom": "Nicolas",
+      "dateNaissance": "30/04/1987"
     },
     {
-      "nom": "Bourrier",
+      "nom": "B.",
       "prenom": "Alexandre",
       "dateNaissance": "24/08/1979"
     },
     {
-      "nom": "Romieu",
-      "prenom": "Sylvain",
-      "dateNaissance": "25/04/1985"
+      "nom": "C.",
+      "prenom": "Mathieu",
+      "dateNaissance": "18/12/1981"
     },
     {
-      "nom": "GIMENEZ",
-      "prenom": "Loic",
-      "dateNaissance": "10/02/1987"
+      "nom": "D.",
+      "prenom": "Grégory",
+      "dateNaissance": "08/10/1978"
     },
     {
-      "nom": "Gricourt",
-      "prenom": "Jérémie",
-      "dateNaissance": "16/03/1972"
-    },
-    {
-      "nom": "DAVENNE",
+      "nom": "D.",
       "prenom": "Jean-Paul",
       "dateNaissance": "04/05/1974"
     },
     {
-      "nom": "BECHE",
-      "prenom": "Nicolas",
-      "dateNaissance": "N/A"
+      "nom": "G.",
+      "prenom": "Loic",
+      "dateNaissance": "10/02/1987"
     },
     {
-      "nom": "BARRAL",
-      "prenom": "Patrick",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "CHIAVASSA",
+      "nom": "G.",
       "prenom": "Mathieu",
-      "dateNaissance": "N/A"
+      "dateNaissance": "10/06/1986"
     },
     {
-      "nom": "MEZEN",
-      "prenom": "Mickael",
-      "dateNaissance": "N/A"
+      "nom": "G.",
+      "prenom": "Jérémie",
+      "dateNaissance": "16/03/1972"
     },
     {
-      "nom": "VASQUEZ",
-      "prenom": "Samuel",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "BORIES",
-      "prenom": "Charline",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "GROUSSET",
+      "nom": "G.",
       "prenom": "Nicolas",
-      "dateNaissance": "N/A"
+      "dateNaissance": "19/01/1988"
     },
     {
-      "nom": "ARRENDEL",
-      "prenom": "Jesse",
-      "dateNaissance": "N/A"
+      "nom": "L.",
+      "prenom": "Elisa",
+      "dateNaissance": "29/05/1984"
     },
     {
-      "nom": "MAUREL",
-      "prenom": "Pascal",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "SILVEIRA",
-      "prenom": "DANIEL",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "MARCO",
+      "nom": "M.",
       "prenom": "MAXENCE",
-      "dateNaissance": "N/A"
+      "dateNaissance": "16/08/1996"
     },
     {
-      "nom": "SANCHEZ",
-      "prenom": "ALexandre",
-      "dateNaissance": "N/A"
+      "nom": "M.",
+      "prenom": "Pascal",
+      "dateNaissance": "10/08/1986"
     },
     {
-      "nom": "JACOB",
-      "prenom": "Melissa",
-      "dateNaissance": "N/A"
+      "nom": "M.",
+      "prenom": "Mickaël",
+      "dateNaissance": "06/10/1984"
     },
     {
-      "nom": "PETITFOUR",
-      "prenom": "Justine",
-      "dateNaissance": "N/A"
+      "nom": "R.",
+      "prenom": "Thomas",
+      "dateNaissance": "08/01/1986"
     },
     {
-      "nom": "MOKRANI",
-      "prenom": "Meriam",
-      "dateNaissance": "N/A"
+      "nom": "R.",
+      "prenom": "Sylvain",
+      "dateNaissance": "25/04/1985"
     },
     {
-      "nom": "GALOIS",
-      "prenom": "Laura",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "ACHETTE",
-      "prenom": "Alexandra",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "MADIN",
-      "prenom": "Wendy",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "SERVAT",
-      "prenom": "Emilie",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "GUAIANA",
-      "prenom": "Cannelle",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "ROSSO",
-      "prenom": "Célia",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "RUIZ",
+      "nom": "R.",
       "prenom": "Sergio",
-      "dateNaissance": "N/A"
+      "dateNaissance": "15/09/1988"
     },
     {
-      "nom": "GIORDANO",
-      "prenom": "Mathieu",
-      "dateNaissance": "N/A"
-    }
-  ],
-  "DF2": [
-    {
-      "nom": "JOUANNE",
-      "prenom": "Marine",
-      "dateNaissance": "N/A"
+      "nom": "S.",
+      "prenom": "ALexandre",
+      "dateNaissance": "19/05/1998"
     },
     {
-      "nom": "BLAIS",
-      "prenom": "Adeline",
-      "dateNaissance": "N/A"
+      "nom": "S.",
+      "prenom": "DANIEL",
+      "dateNaissance": "08/07/1981"
     },
     {
-      "nom": "SAURON",
-      "prenom": "Alizé",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "JAUNEAU",
-      "prenom": "CHESLY ANN",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "CHAMBRIN",
-      "prenom": "Céline",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "MORLAT",
-      "prenom": "Marie",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "DOMERGUE",
-      "prenom": "Floriane",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "DEFIEUX",
-      "prenom": "Méryl",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "MONTICCIOLO",
-      "prenom": "Silvana",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "RIERA",
-      "prenom": "Axelle",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "COICADIN",
-      "prenom": "CAROLINE",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "DEVOS",
-      "prenom": "Emma",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "Meyzindi",
-      "prenom": "Marion",
-      "dateNaissance": "N/A"
+      "nom": "V.",
+      "prenom": "Samuel",
+      "dateNaissance": "16/04/1984"
     }
   ],
   "RM3": [
     {
-      "nom": "ALHAMIDI",
+      "nom": "A.",
       "prenom": "Mohamed Ali",
       "dateNaissance": "23/06/1989"
     },
     {
-      "nom": "JACQUELIN",
-      "prenom": "Nolhann",
-      "dateNaissance": "13/03/2006"
-    },
-    {
-      "nom": "Degert",
-      "prenom": "Tarzannot",
-      "dateNaissance": "19/02/1993"
-    },
-    {
-      "nom": "Serra",
-      "prenom": "Damien",
-      "dateNaissance": "15/07/1976"
-    },
-    {
-      "nom": "Degert",
-      "prenom": "Marion",
-      "dateNaissance": "13/09/1998"
-    },
-    {
-      "nom": "NOEL-PIERRE",
-      "prenom": "Gerard",
-      "dateNaissance": "12/10/1977"
-    },
-    {
-      "nom": "Kanda",
-      "prenom": "Steve",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "MONDESIR",
-      "prenom": "Markinson",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "JOUBERT",
-      "prenom": "Abel",
-      "dateNaissance": "18/06/1985"
-    },
-    {
-      "nom": "RATONISON",
-      "prenom": "Nicaise",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "MOUTSINGA",
-      "prenom": "Anasky",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "Belkasmi",
-      "prenom": "Adil",
-      "dateNaissance": "20/06/2000"
-    },
-    {
-      "nom": "Amoussou",
+      "nom": "A.",
       "prenom": "Jayden",
       "dateNaissance": "12/10/2003"
     },
     {
-      "nom": "SIDIBE",
-      "prenom": "",
-      "dateNaissance": "N/A"
+      "nom": "B.",
+      "prenom": "Adil",
+      "dateNaissance": "20/06/2000"
     },
     {
-      "nom": "Ben yahyA",
+      "nom": "B.",
       "prenom": "Yahya",
-      "dateNaissance": "N/A"
+      "dateNaissance": "01/01/1998"
     },
     {
-      "nom": "IVOULA",
+      "nom": "D.",
+      "prenom": "Tarzannot",
+      "dateNaissance": "19/02/1993"
+    },
+    {
+      "nom": "D.",
+      "prenom": "Marion",
+      "dateNaissance": "13/09/1998"
+    },
+    {
+      "nom": "I.",
       "prenom": "Gwandal",
-      "dateNaissance": "N/A"
+      "dateNaissance": "11/06/2000"
+    },
+    {
+      "nom": "J.",
+      "prenom": "Nolhann",
+      "dateNaissance": "13/03/2006"
+    },
+    {
+      "nom": "J.",
+      "prenom": "Abel",
+      "dateNaissance": "18/06/1985"
+    },
+    {
+      "nom": "K.",
+      "prenom": "Steve",
+      "dateNaissance": "12/02/2003"
+    },
+    {
+      "nom": "M.",
+      "prenom": "François",
+      "dateNaissance": "26/11/1984"
+    },
+    {
+      "nom": "M.",
+      "prenom": "Markinson",
+      "dateNaissance": "21/08/1994"
+    },
+    {
+      "nom": "M.",
+      "prenom": "Anasky",
+      "dateNaissance": "05/04/2000"
+    },
+    {
+      "nom": "N.",
+      "prenom": "Gerard",
+      "dateNaissance": "12/10/1977"
+    },
+    {
+      "nom": "R.",
+      "prenom": "Nicaise",
+      "dateNaissance": "19/05/2005"
+    },
+    {
+      "nom": "S.",
+      "prenom": "Damien",
+      "dateNaissance": "15/07/1976"
+    },
+    {
+      "nom": "S.",
+      "prenom": "Ibrahim",
+      "dateNaissance": "18/05/2004"
+    },
+    {
+      "nom": "S.",
+      "prenom": "Adam",
+      "dateNaissance": "10/05/1999"
     }
   ],
+  "STAFF et BUREAU": [],
   "U11F": [
     {
-      "nom": "Grousset",
-      "prenom": "Maëlys",
-      "dateNaissance": "31/01/2016"
-    },
-    {
-      "nom": "Morel Rivat",
-      "prenom": "Lucie",
-      "dateNaissance": "15/07/2016"
-    },
-    {
-      "nom": "Barry",
+      "nom": "B.",
       "prenom": "Maëlle",
       "dateNaissance": "23/01/2016"
     },
     {
-      "nom": "ESMOUNI",
-      "prenom": "JIHANE",
-      "dateNaissance": "05/02/2016"
-    },
-    {
-      "nom": "MIOLLANY",
-      "prenom": "Leya",
-      "dateNaissance": "25/04/2016"
-    },
-    {
-      "nom": "Devletian",
-      "prenom": "Solène",
-      "dateNaissance": "01/05/2016"
-    },
-    {
-      "nom": "Canuel",
+      "nom": "C.",
       "prenom": "Elisa",
       "dateNaissance": "24/06/2015"
     },
     {
-      "nom": "Sauvaire Darnault",
-      "prenom": "Zia",
-      "dateNaissance": "04/10/2016"
+      "nom": "D.",
+      "prenom": "Solène",
+      "dateNaissance": "01/05/2016"
     },
     {
-      "nom": "GROUSSET",
+      "nom": "E.",
+      "prenom": "JIHANE",
+      "dateNaissance": "05/02/2016"
+    },
+    {
+      "nom": "G.",
+      "prenom": "Maëlys",
+      "dateNaissance": "31/01/2016"
+    },
+    {
+      "nom": "G.",
       "prenom": "Lena",
       "dateNaissance": "26/03/2015"
     },
     {
-      "nom": "MESANGE",
-      "prenom": "June",
-      "dateNaissance": "27/06/2015"
-    },
-    {
-      "nom": "LEMONCHE",
+      "nom": "L.",
       "prenom": "Cyana",
       "dateNaissance": "04/11/2015"
     },
     {
-      "nom": "SOLAS BEAUMONT",
+      "nom": "M.",
+      "prenom": "June",
+      "dateNaissance": "27/06/2015"
+    },
+    {
+      "nom": "M.",
+      "prenom": "Leya",
+      "dateNaissance": "25/04/2016"
+    },
+    {
+      "nom": "M.",
+      "prenom": "Lucie",
+      "dateNaissance": "15/07/2016"
+    },
+    {
+      "nom": "S.",
+      "prenom": "Zia",
+      "dateNaissance": "04/10/2016"
+    },
+    {
+      "nom": "S.",
       "prenom": "Audrey",
       "dateNaissance": "11/09/2015"
     }
   ],
   "U11M": [
     {
-      "nom": "Veyrac",
-      "prenom": "Ruben",
-      "dateNaissance": "03/02/2015"
-    },
-    {
-      "nom": "GOULOU GOBVIELET",
-      "prenom": "Yoan",
-      "dateNaissance": "17/10/2015"
-    },
-    {
-      "nom": "Cambon",
-      "prenom": "Nathan",
-      "dateNaissance": "03/10/2016"
-    },
-    {
-      "nom": "Lopez",
-      "prenom": "Oliver",
-      "dateNaissance": "31/05/2016"
-    },
-    {
-      "nom": "Saint-Jours",
-      "prenom": "Basile",
-      "dateNaissance": "25/03/2016"
-    },
-    {
-      "nom": "SNOECK",
-      "prenom": "SACHA",
-      "dateNaissance": "08/07/2015"
-    },
-    {
-      "nom": "TAMAGNA",
-      "prenom": "Alex",
-      "dateNaissance": "12/09/2015"
-    },
-    {
-      "nom": "LUCILE",
-      "prenom": "Clément",
-      "dateNaissance": "19/03/2016"
-    },
-    {
-      "nom": "MAUREL",
-      "prenom": "Jamie",
-      "dateNaissance": "22/06/2015"
-    },
-    {
-      "nom": "DAVID",
-      "prenom": "Luka",
-      "dateNaissance": "08/04/2016"
-    },
-    {
-      "nom": "BHOURI",
+      "nom": "B.",
       "prenom": "NOAH",
       "dateNaissance": "30/08/2015"
     },
     {
-      "nom": "SILVEIRA",
-      "prenom": "Leo",
-      "dateNaissance": "12/01/2015"
+      "nom": "C.",
+      "prenom": "Nathan",
+      "dateNaissance": "03/10/2016"
     },
     {
-      "nom": "ARRENDEL",
-      "prenom": "Jayden",
-      "dateNaissance": "N/A"
+      "nom": "D.",
+      "prenom": "Luka",
+      "dateNaissance": "08/04/2016"
     },
     {
-      "nom": "ZUE-EYI",
-      "prenom": "Eyo",
-      "dateNaissance": "07/06/2016"
+      "nom": "D.",
+      "prenom": "Shady Eric",
+      "dateNaissance": "09/05/2016"
     },
     {
-      "nom": "PLATHIER",
+      "nom": "G.",
+      "prenom": "Yoan",
+      "dateNaissance": "17/10/2015"
+    },
+    {
+      "nom": "L.",
+      "prenom": "Oliver",
+      "dateNaissance": "31/05/2016"
+    },
+    {
+      "nom": "L.",
+      "prenom": "Clément",
+      "dateNaissance": "19/03/2016"
+    },
+    {
+      "nom": "M.",
+      "prenom": "Jamie",
+      "dateNaissance": "22/06/2015"
+    },
+    {
+      "nom": "P.",
       "prenom": "Mathis",
       "dateNaissance": "06/12/2015"
     },
     {
-      "nom": "ROUSSELOT",
+      "nom": "R.",
       "prenom": "Nolan",
       "dateNaissance": "04/07/2016"
     },
     {
-      "nom": "DIOUF",
-      "prenom": "Shady Eric",
-      "dateNaissance": "09/05/2016"
+      "nom": "S.",
+      "prenom": "Basile",
+      "dateNaissance": "25/03/2016"
+    },
+    {
+      "nom": "S.",
+      "prenom": "Leo",
+      "dateNaissance": "12/01/2015"
+    },
+    {
+      "nom": "S.",
+      "prenom": "SACHA",
+      "dateNaissance": "08/07/2015"
+    },
+    {
+      "nom": "T.",
+      "prenom": "Alex",
+      "dateNaissance": "12/09/2015"
+    },
+    {
+      "nom": "V.",
+      "prenom": "Ruben",
+      "dateNaissance": "03/02/2015"
+    },
+    {
+      "nom": "Z.",
+      "prenom": "Eyo",
+      "dateNaissance": "07/06/2016"
     }
   ],
   "U13F": [
     {
-      "nom": "Moulard",
-      "prenom": "Chloe",
-      "dateNaissance": "19/11/2013"
-    },
-    {
-      "nom": "Blaquiere",
-      "prenom": "Jade",
-      "dateNaissance": "29/11/2014"
-    },
-    {
-      "nom": "Hernandez Castaneda",
-      "prenom": "Coline",
-      "dateNaissance": "12/12/2014"
-    },
-    {
-      "nom": "Cambon",
-      "prenom": "Norah",
-      "dateNaissance": "14/05/2013"
-    },
-    {
-      "nom": "MOLODOV",
-      "prenom": "Alice",
-      "dateNaissance": "08/12/2014"
-    },
-    {
-      "nom": "Quatrehomme Bruneau",
-      "prenom": "Zoé",
-      "dateNaissance": "25/04/2014"
-    },
-    {
-      "nom": "Bonazzi",
-      "prenom": "Olivia",
-      "dateNaissance": "16/07/2013"
-    },
-    {
-      "nom": "Valentin Sampa",
-      "prenom": "Yaël",
-      "dateNaissance": "05/05/2014"
-    },
-    {
-      "nom": "Le Marec",
-      "prenom": "Anaëlle",
-      "dateNaissance": "02/07/2013"
-    },
-    {
-      "nom": "ANDOUARD",
+      "nom": "A.",
       "prenom": "THEA",
       "dateNaissance": "14/06/2014"
     },
     {
-      "nom": "PEREZ",
-      "prenom": "Lilia",
-      "dateNaissance": "N/A"
+      "nom": "B.",
+      "prenom": "Jade",
+      "dateNaissance": "29/11/2014"
     },
     {
-      "nom": "SAVEY",
+      "nom": "B.",
+      "prenom": "Olivia",
+      "dateNaissance": "16/07/2013"
+    },
+    {
+      "nom": "C.",
+      "prenom": "Norah",
+      "dateNaissance": "14/05/2013"
+    },
+    {
+      "nom": "F.",
+      "prenom": "Eloïse",
+      "dateNaissance": "11/02/2014"
+    },
+    {
+      "nom": "H.",
+      "prenom": "Coline",
+      "dateNaissance": "12/12/2014"
+    },
+    {
+      "nom": "L.",
+      "prenom": "Anaëlle",
+      "dateNaissance": "02/07/2013"
+    },
+    {
+      "nom": "M.",
+      "prenom": "Alice",
+      "dateNaissance": "08/12/2014"
+    },
+    {
+      "nom": "M.",
+      "prenom": "Chloe",
+      "dateNaissance": "19/11/2013"
+    },
+    {
+      "nom": "P.",
+      "prenom": "Lilia",
+      "dateNaissance": "03/10/2013"
+    },
+    {
+      "nom": "Q.",
+      "prenom": "Zoé",
+      "dateNaissance": "25/04/2014"
+    },
+    {
+      "nom": "S.",
       "prenom": "Mathilde",
-      "dateNaissance": "N/A"
+      "dateNaissance": "01/11/2014"
+    },
+    {
+      "nom": "V.",
+      "prenom": "Yaël",
+      "dateNaissance": "05/05/2014"
     }
   ],
   "U13M": [
     {
-      "nom": "TOURRENC",
-      "prenom": "Sacha",
-      "dateNaissance": "03/01/2014"
+      "nom": "A.",
+      "prenom": "Jayden",
+      "dateNaissance": "18/02/2015"
     },
     {
-      "nom": "BOUKEBBOUS",
+      "nom": "B.",
       "prenom": "Jawed",
-      "dateNaissance": "N/A"
+      "dateNaissance": "08/01/2014"
     },
     {
-      "nom": "HARTMANN",
+      "nom": "D.",
+      "prenom": "Milan",
+       "dateNaissance": "03/05/2013"
+    },
+    {
+      "nom": "G.",
+      "prenom": "Jordan",
+      "dateNaissance": "19/07/2013"
+    },
+    {
+      "nom": "H.",
       "prenom": "Gauthier",
       "dateNaissance": "03/06/2014"
     },
     {
-      "nom": "NICOT",
-      "prenom": "Jean",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "Grousset",
-      "prenom": "Jordan",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "VASSEUR",
-      "prenom": "Ruben",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "Zagui Mongue",
-      "prenom": "Uriel",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "MOULARD",
-      "prenom": "Aurelien",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "Montes",
-      "prenom": "Noa",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "MAUZOLE",
+      "nom": "M.",
       "prenom": "Nohan",
-      "dateNaissance": "N/A"
+      "dateNaissance": "20/06/2014"
     },
     {
-      "nom": "PONS",
+      "nom": "M.",
+      "prenom": "Noa",
+      "dateNaissance": "03/07/2013"
+    },
+    {
+      "nom": "M.",
+      "prenom": "Aurelien",
+      "dateNaissance": "19/11/2013"
+    },
+    {
+      "nom": "N.",
+      "prenom": "Jean",
+      "dateNaissance": "02/09/2013"
+    },
+    {
+      "nom": "P.",
       "prenom": "Baptiste",
-      "dateNaissance": "N/A"
+      "dateNaissance": "21/09/2013"
     },
     {
-      "nom": "RICQ VILALTA",
+      "nom": "R.",
       "prenom": "Jéhan",
-      "dateNaissance": "N/A"
+      "dateNaissance": "27/05/2014"
     },
     {
-      "nom": "DURIS",
-      "prenom": "Milan",
-      "dateNaissance": "N/A"
+      "nom": "T.",
+      "prenom": "Sacha",
+      "dateNaissance": "03/01/2014"
+    },
+    {
+      "nom": "V.",
+      "prenom": "Ruben",
+      "dateNaissance": "05/04/2013"
+    },
+    {
+      "nom": "Z.",
+      "prenom": "Uriel",
+      "dateNaissance": "12/10/2013"
     }
   ],
   "U15F": [
     {
-      "nom": "ROS",
-      "prenom": "Maëlia",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "Champay",
-      "prenom": "Marie",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "ZENAGUI",
-      "prenom": "Mayssane",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "ATIS",
-      "prenom": "Lina",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "Boujlilat",
-      "prenom": "Safaa",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "VASQUEZ",
-      "prenom": "Giulietta",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "AMRAM",
+      "nom": "A.",
       "prenom": "Lana",
-      "dateNaissance": "N/A"
+      "dateNaissance": "18/04/2012"
     },
     {
-      "nom": "Lakbail",
-      "prenom": "Jenna",
-      "dateNaissance": "N/A"
+      "nom": "A.",
+      "prenom": "Lina",
+      "dateNaissance": "26/02/2012"
     },
     {
-      "nom": "PETITJEAN",
-      "prenom": "Sira",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "BARA",
+      "nom": "B.",
       "prenom": "Cléa",
-      "dateNaissance": "N/A"
+      "dateNaissance": "03/08/2012"
     },
     {
-      "nom": "MENARD",
+      "nom": "B.",
+      "prenom": "Safaa",
+      "dateNaissance": "07/04/2012"
+    },
+    {
+      "nom": "C.",
+      "prenom": "Marie",
+      "dateNaissance": "14/06/2012"
+    },
+    {
+      "nom": "L.",
+      "prenom": "Jenna",
+      "dateNaissance": "24/12/2013"
+    },
+    {
+      "nom": "M.",
       "prenom": "Camille",
-      "dateNaissance": "N/A"
+      "dateNaissance": "25/10/2012"
+    },
+    {
+      "nom": "P.",
+      "prenom": "Sira",
+      "dateNaissance": "03/12/2011"
+    },
+    {
+      "nom": "R.",
+      "prenom": "Maëlia",
+      "dateNaissance": "04/02/2012"
+    },
+    {
+      "nom": "V.",
+      "prenom": "Giulietta",
+      "dateNaissance": "08/06/2012"
+    },
+    {
+      "nom": "Z.",
+      "prenom": "Mayssane",
+      "dateNaissance": "07/01/2012"
     }
   ],
   "U15M": [
     {
-      "nom": "DEVLETIAN",
-      "prenom": "BAPTISTE",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "ROUVIER",
-      "prenom": "LIAM",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "JAUNIER",
-      "prenom": "LISSANDRE",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "BOUKEBBOUS",
+      "nom": "B.",
       "prenom": "MARWEN",
-      "dateNaissance": "N/A"
+      "dateNaissance": "20/06/2011"
     },
     {
-      "nom": "EVARISTE",
-      "prenom": "THOMAS",
-      "dateNaissance": "22/07/2011"
-    },
-    {
-      "nom": "GARCIN",
-      "prenom": "GAEL",
-      "dateNaissance": "07/08/2011"
-    },
-    {
-      "nom": "PAREDE",
-      "prenom": "VICTOR",
-      "dateNaissance": "09/08/2011"
-    },
-    {
-      "nom": "LELOUP",
-      "prenom": "GAUTIER",
-      "dateNaissance": "13/02/2011"
-    },
-    {
-      "nom": "CANUEL",
-      "prenom": "ENZO",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "CAMUS",
+      "nom": "C.",
       "prenom": "LEO",
-      "dateNaissance": "40552"
+      "dateNaissance": "26/10/2011"
     },
     {
-      "nom": "MARC",
-      "prenom": "Nolan",
-      "dateNaissance": "01/04/2012"
-    },
-    {
-      "nom": "PUEYO",
-      "prenom": "MATHIS",
-      "dateNaissance": "04/10/2011"
-    },
-    {
-      "nom": "CANDELA",
+      "nom": "C.",
       "prenom": "Maxime",
       "dateNaissance": "30/05/2011"
     },
     {
-      "nom": "DETREZ",
+      "nom": "C.",
+      "prenom": "ENZO",
+      "dateNaissance": "09/01/2011"
+    },
+    {
+      "nom": "D.",
       "prenom": "MATHIS",
       "dateNaissance": "27/06/2012"
+    },
+    {
+      "nom": "D.",
+      "prenom": "BAPTISTE",
+      "dateNaissance": "25/09/2012"
+    },
+    {
+      "nom": "E.",
+      "prenom": "THOMAS",
+      "dateNaissance": "22/07/2011"
+    },
+    {
+      "nom": "G.",
+      "prenom": "GAEL",
+      "dateNaissance": "07/08/2011"
+    },
+    {
+      "nom": "J.",
+      "prenom": "LISSANDRE",
+      "dateNaissance": "31/12/2012"
+    },
+    {
+      "nom": "L.",
+      "prenom": "GAUTIER",
+      "dateNaissance": "13/02/2011"
+    },
+    {
+      "nom": "M.",
+      "prenom": "Nolan",
+      "dateNaissance": "01/04/2012"
+    },
+    {
+      "nom": "P.",
+      "prenom": "VICTOR",
+      "dateNaissance": "09/08/2011"
+    },
+    {
+      "nom": "P.",
+      "prenom": "MATHIS",
+      "dateNaissance": "04/10/2011"
+    },
+    {
+      "nom": "R.",
+      "prenom": "LIAM",
+      "dateNaissance": "11/12/2012"
     }
   ],
   "U18M": [
     {
-      "nom": "BOYE",
-      "prenom": "Léo",
-      "dateNaissance": "26/04/2010"
-    },
-    {
-      "nom": "DUFOUR",
-      "prenom": "Emile",
-      "dateNaissance": "04/01/2009"
-    },
-    {
-      "nom": "Ferrieu",
-      "prenom": "Jason",
-      "dateNaissance": "16/07/2010"
-    },
-    {
-      "nom": "TOURRENC",
-      "prenom": "ALEXIS",
-      "dateNaissance": "13/03/2009"
-    },
-    {
-      "nom": "Ennahal",
-      "prenom": "Ilyas",
-      "dateNaissance": "01/03/2009"
-    },
-    {
-      "nom": "ATIS",
+      "nom": "A.",
       "prenom": "Ayhan",
       "dateNaissance": "23/08/2009"
     },
     {
-      "nom": "Berthéas-Koch",
+      "nom": "B.",
       "prenom": "Sacha",
       "dateNaissance": "19/10/2010"
     },
     {
-      "nom": "Castanier",
+      "nom": "B.",
+      "prenom": "Léo",
+      "dateNaissance": "26/04/2010"
+    },
+    {
+      "nom": "C.",
       "prenom": "Alexandre",
       "dateNaissance": "25/08/2008"
     },
     {
-      "nom": "El amri",
+      "nom": "D.",
+      "prenom": "Emile",
+      "dateNaissance": "04/01/2009"
+    },
+    {
+      "nom": "E.",
       "prenom": "Mohamed",
       "dateNaissance": "20/03/2009"
     },
     {
-      "nom": "Fullenwarth",
+      "nom": "E.",
+      "prenom": "Ilyas",
+      "dateNaissance": "01/03/2009"
+    },
+    {
+      "nom": "F.",
+      "prenom": "Jason",
+      "dateNaissance": "16/07/2010"
+    },
+    {
+      "nom": "F.",
       "prenom": "Ewan",
       "dateNaissance": "18/06/2010"
     },
     {
-      "nom": "MERCIER",
-      "prenom": "Eliot",
-      "dateNaissance": "17/02/2009"
-    },
-    {
-      "nom": "GROSJEAN",
+      "nom": "G.",
       "prenom": "Loris",
       "dateNaissance": "20/02/2009"
     },
     {
-      "nom": "RUNQUIST",
-      "prenom": "Yvan",
-      "dateNaissance": "N/A"
-    },
-    {
-      "nom": "HADJ-BOUZIANE",
+      "nom": "H.",
       "prenom": "Malik",
-      "dateNaissance": "N/A"
+      "dateNaissance": "31/07/2010"
     },
     {
-      "nom": "PASSET",
-      "prenom": "Mathis",
-      "dateNaissance": "N/A"
+      "nom": "M.",
+      "prenom": "Eliot",
+      "dateNaissance": "17/02/2009"
     },
     {
-      "nom": "NIAKHATE",
+      "nom": "N.",
       "prenom": "Mahine",
       "dateNaissance": "17/03/2010"
+    },
+    {
+      "nom": "P.",
+      "prenom": "Mathis",
+      "dateNaissance": "24/01/2010"
+    },
+    {
+      "nom": "R.",
+      "prenom": "Yvan",
+      "dateNaissance": "20/08/2010"
+    },
+    {
+      "nom": "T.",
+      "prenom": "ALEXIS",
+      "dateNaissance": "13/03/2009"
     }
   ],
   "U9": [
     {
-      "nom": "ROUVIER",
-      "prenom": "Evan",
-      "dateNaissance": "21/02/2019"
-    },
-    {
-      "nom": "Jouanne",
-      "prenom": "Gabin",
-      "dateNaissance": "08/03/2018"
-    },
-    {
-      "nom": "Galleni",
-      "prenom": "Marco",
-      "dateNaissance": "02/05/2017"
-    },
-    {
-      "nom": "SAGUET",
-      "prenom": "Charles",
-      "dateNaissance": "08/07/2017"
-    },
-    {
-      "nom": "ESMOUNI",
-      "prenom": "INES",
-      "dateNaissance": "13/04/2019"
-    },
-    {
-      "nom": "Baboulin",
+      "nom": "B.",
       "prenom": "Chloé",
       "dateNaissance": "25/06/2017"
     },
     {
-      "nom": "CARIN PICHLOTA",
-      "prenom": "Anton",
-      "dateNaissance": "25/11/2017"
-    },
-    {
-      "nom": "Jaomanoro",
-      "prenom": "Ezekiah",
-      "dateNaissance": "18/03/2018"
-    },
-    {
-      "nom": "BARRAL",
+      "nom": "B.",
       "prenom": "Martin",
       "dateNaissance": "11/07/2018"
     },
     {
-      "nom": "GOSIO",
-      "prenom": "Liam",
-      "dateNaissance": "20/06/2017"
-    },
-    {
-      "nom": "MARTI",
-      "prenom": "Marvin",
-      "dateNaissance": "01/07/2017"
-    },
-    {
-      "nom": "BERDEU",
+      "nom": "B.",
       "prenom": "Ulysse",
       "dateNaissance": "13/12/2018"
     },
     {
-      "nom": "LEPINE Colas",
-      "prenom": "Ethan",
-      "dateNaissance": "14/10/2017"
-    },
-    {
-      "nom": "BRAHIER",
-      "prenom": "Luc",
-      "dateNaissance": "16/02/2018"
-    },
-    {
-      "nom": "BOUTHIR",
+      "nom": "B.",
       "prenom": "Safwan",
       "dateNaissance": "10/03/2017"
     },
     {
-      "nom": "LORHO FARNET",
-      "prenom": "Nino",
-      "dateNaissance": "18/01/2018"
-    },
-    {
-      "nom": "REVESSAT",
-      "prenom": "Noan",
-      "dateNaissance": "12/02/2019"
-    },
-    {
-      "nom": "VASSEUR",
-      "prenom": "Joshua",
-      "dateNaissance": "24/10/2017"
-    },
-    {
-      "nom": "ZEKER",
-      "prenom": "Aylin",
-      "dateNaissance": "28/04/2017"
-    },
-    {
-      "nom": "Surault",
-      "prenom": "Zaélia",
-      "dateNaissance": "07/11/2018"
-    },
-    {
-      "nom": "BOYER",
+      "nom": "B.",
       "prenom": "Louise",
       "dateNaissance": "12/12/2017"
     },
     {
-      "nom": "PLUMECOCQ",
-      "prenom": "Hugo",
-      "dateNaissance": "01/07/2018"
+      "nom": "B.",
+      "prenom": "Luc",
+      "dateNaissance": "16/02/2018"
     },
     {
-      "nom": "LAMY-AU-ROUSSEAU",
+      "nom": "C.",
+      "prenom": "Anton",
+      "dateNaissance": "25/11/2017"
+    },
+    {
+      "nom": "C.",
+      "prenom": "Marceau",
+      "dateNaissance": "03/01/2018"
+    },
+    {
+      "nom": "D.",
+      "prenom": "Elin",
+      "dateNaissance": "25/06/2018"
+    },
+    {
+      "nom": "E.",
+      "prenom": "Inès",
+      "dateNaissance": "13/04/2019"
+    },
+    {
+      "nom": "G.",
+      "prenom": "Marco",
+      "dateNaissance": "02/05/2017"
+    },
+    {
+      "nom": "G.",
+      "prenom": "Liam",
+      "dateNaissance": "20/06/2017"
+    },
+    {
+      "nom": "J.",
+      "prenom": "Ezekiah",
+      "dateNaissance": "18/03/2018"
+    },
+    {
+      "nom": "J.",
+      "prenom": "Gabin",
+      "dateNaissance": "08/03/2018"
+    },
+    {
+      "nom": "L.",
       "prenom": "Anahé",
       "dateNaissance": "25/05/2018"
     },
     {
-      "nom": "COISSIEUX",
-      "prenom": "Marceau",
-      "dateNaissance": "03/01/2018"
+      "nom": "L.",
+      "prenom": "Ethan",
+      "dateNaissance": "14/10/2017"
+    },
+    {
+      "nom": "L.",
+      "prenom": "Nino",
+      "dateNaissance": "18/01/2018"
+    },
+    {
+      "nom": "M.",
+      "prenom": "Marvin",
+      "dateNaissance": "01/07/2017"
+    },
+    {
+      "nom": "P.",
+      "prenom": "Hugo",
+      "dateNaissance": "01/07/2018"
+    },
+    {
+      "nom": "R.",
+      "prenom": "Noan",
+      "dateNaissance": "12/02/2019"
+    },
+    {
+      "nom": "R.",
+      "prenom": "Evan",
+      "dateNaissance": "21/02/2019"
+    },
+    {
+      "nom": "S.",
+      "prenom": "Charles",
+      "dateNaissance": "08/07/2017"
+    },
+    {
+      "nom": "S.",
+      "prenom": "Zaélia",
+      "dateNaissance": "07/11/2018"
+    },
+    {
+      "nom": "V.",
+      "prenom": "Joshua",
+      "dateNaissance": "24/10/2017"
+    },
+    {
+      "nom": "Z.",
+      "prenom": "Aylin",
+      "dateNaissance": "28/04/2017"
     }
   ]
 }

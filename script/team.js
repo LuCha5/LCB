@@ -2,22 +2,19 @@ document.addEventListener('DOMContentLoaded', async function() {
     console.log("Team.js chargé");
 
     const categoryMapping = {
-        'U9Mi': ['U7 /U9 M(2)', 'U9 M(1)', 'U7 /U9 Filles'],
-        'U11M': ['U11 Masculins'],
-        'U11F': ['U11 Féminines'],
-        'U13M': ['U13 MASCULINS'],
-        'U13F': ['U13 Féminines'],
-        'U15M': ['U15 Masculins'],
-        'U15F': ['U15 Féminines'],
-        'U18M': ['U18 Masculins'],
-        'Seniors_Compet_DF2': ['SENIORS FEMININES'],
-        'Seniors_Compet_DM3': ['SENIORS DM2'],
-        'Seniors_Compet_DM3': ['SENIORS DM3'],
-        'Seniors_Compet_RM3': ['SENIORS RM3'],
-        '3vs3': ['BASKET 3X3'],
-        'Loisirs': ['LOISIRS MIXTE'],
-        'Remise_en_forme': ['BASKET REMISE EN FORME']
-
+        'U9Mi': ['U9'],
+        'U11M': ['U11M'],
+        'U11F': ['U11F'],
+        'U13M': ['U13M'],
+        'U13F': ['U13F'],
+        'U15M': ['U15M'],
+        'U15F': ['U15F'],
+        'U18M': ['U18M'],
+        'Seniors_Compet_DF2': ['DF2'],
+        'Seniors_Compet_DM2': ['DM2'],
+        'Seniors_Compet_DM3': ['DM3'],
+        'Seniors_Compet_RM3': ['RM3'],
+        'Loisirs': ['Loisirs-']
     };
 
     //lien a update plus tard
@@ -158,13 +155,13 @@ document.addEventListener('DOMContentLoaded', async function() {
             teamContent.insertBefore(ffbbContainer, teamContent.firstChild);
 
             const [dataJoueurs, dataEntraineurs] = await Promise.all([
-                fetchData('data/joueurs.json'),
+                fetchData('data/joueurs_2025.json'),
                 fetchData('data/entraineurs.json')
             ]);
-
+            
             const categories = categoryMapping[teamId] || [];
             if (categories.length === 0) return;
-
+            
             // Mise à jour du titre
             document.getElementById('team-title').textContent = `Équipe ${teamId.replace(/_/g, ' ')}`;
             

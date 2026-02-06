@@ -25,7 +25,7 @@ def format_date(date_str):
     except:
         return None
 
-file_path = os.path.join(os.path.dirname(__file__), '../data/LICENSES.xlsx')
+file_path = os.path.join(os.path.dirname(__file__), '../data/LICENSES_2025.xlsx')
 
 try:
     # Lire le fichier Excel

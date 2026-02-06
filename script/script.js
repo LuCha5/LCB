@@ -59,7 +59,7 @@ function initBurgerMenu() {
 // Gestion Anniversaires
 async function checkBirthdays() {
   try {
-      const response = await fetch('data/joueurs.json');
+      const response = await fetch('data/joueurs_2025.json');
       const data = await response.json();
       const today = new Date();
       const todayString = today.toLocaleDateString('fr-FR').split('/').slice(0, 2).join('/');
@@ -118,16 +118,16 @@ function handleTeamDisplay() {
 
 async function loadTeamData(teamId) {
   try {
-      const response = await fetch('data/joueurs.json');
+      const response = await fetch('data/joueurs_2025.json');
       const data = await response.json();
 
       const categoryMap = {
-          'U15': 'U15 Masculins',
-          'U11': 'U11 Masculins',
-          'U13': 'U13 MASCULINS',
-          'U18': 'U18 Masculins',
+          'U15': 'U15M',
+          'U11': 'U11M',
+          'U13': 'U13M',
+          'U18': 'U18M',
           '3v3': 'BASKET 3X3',
-          'loisirs': 'LOISIRS MIXTE'
+          'loisirs': 'Loisirs-'
       };
 
       const category = categoryMap[teamId];
