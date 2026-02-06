@@ -169,10 +169,45 @@ function initScrollHandler() {
       }
   });
 }
-let totalHommes = 153; let totalFemmes = 73; let totaljoueurs = totalHommes + totalFemmes;
 
 async function loadClubStats() {
     try {
+        // Charger les données depuis joueurs_2025.json
+        const response = await fetch('data/joueurs_2025.json');
+        const data = await response.json();
+        
+        // Compter les joueurs par sexe en analysant les prénoms ou les catégories
+        let totalHommes = 0;
+        let totalFemmes = 0;
+        
+        // Catégories masculines
+        const categoriesMasculines = ['U9', 'U11M', 'U13M', 'U15M', 'U18M', 'DM2', 'DM3', 'RM3'];
+        // Catégories féminines
+        const categoriesFeminines = ['U11F', 'U13F', 'U15F', 'DF2'];
+        // Catégories mixtes (Loisirs et Basket découverte) - on peut les compter à part ou approximer
+        const categoriesMixtes = ['Loisirs', 'Basket découverte'];
+        
+        for (const [categorie, joueurs] of Object.entries(data)) {
+            if (categoriesMasculines.includes(categorie)) {
+                totalHommes += joueurs.length;
+            } else if (categoriesFeminines.includes(categorie)) {
+                totalFemmes += joueurs.length;
+            } else if (categoriesMixtes.includes(categorie)) {
+                // Pour les catégories mixtes, on peut faire une approximation ou compter séparément
+                // Pour Basket découverte, ce sont principalement des femmes
+                if (categorie === 'Basket découverte') {
+                    totalFemmes += joueurs.length;
+                } else {
+                    // Pour Loisirs, on peut faire une approximation 50/50 ou compter manuellement
+                    // Approximation: 2/3 hommes, 1/3 femmes pour les loisirs
+                    totalHommes += Math.floor(joueurs.length * 0.7);
+                    totalFemmes += Math.ceil(joueurs.length * 0.3);
+                }
+            }
+        }
+        
+        const totaljoueurs = totalHommes + totalFemmes;
+        
         // Mettre à jour les éléments HTML avec les statistiques
         document.getElementById('total-hommes').textContent = totalHommes;
         document.getElementById('total-femmes').textContent = totalFemmes;

@@ -130,10 +130,29 @@ document.addEventListener('DOMContentLoaded', async function() {
             ffbbLink.textContent = 'Voir le classement FFBB';
             ffbbContainer.appendChild(ffbbLink);
 
+            // Mapping des teamId vers les noms de fichiers d'images
+            const imageMapping = {
+                'U9Mi': 'U9',
+                'U11M': 'U11M',
+                'U11F': 'U11F',
+                'U13M': 'U13M',
+                'U13F': 'U13F',
+                'U15M': 'U15M',
+                'U15F': 'U15F',
+                'U18M': 'U18M',
+                'Seniors_Compet_DF2': 'DF2',
+                'Seniors_Compet_DM2': 'DM2',
+                'Seniors_Compet_DM3': 'DM3',
+                'Seniors_Compet_RM3': 'RM3',
+                'Loisirs': 'Loisirs',
+                'Basket_decouverte': 'Découverte'
+            };
+
             // Vérifier et afficher l'image de l'équipe
             const imageContainer = document.createElement('div');
             imageContainer.className = 'team-image-container';
-            const imagePath = `assets/equipes/${teamId}.jpg`;
+            const imageFileName = imageMapping[teamId] || teamId;
+            const imagePath = `assets/equipes/${imageFileName}.jpg`;
 
             // Obtenir la référence du conteneur principal
             const teamContent = document.getElementById('team-content');
