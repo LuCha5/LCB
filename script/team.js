@@ -166,6 +166,13 @@ document.addEventListener('DOMContentLoaded', async function() {
                     teamImage.className = 'team-image';
                     imageContainer.appendChild(teamImage);
                     
+                    // Ajouter le crédit photographe
+                    const photoCredit = document.createElement('p');
+                    photoCredit.className = 'photo-credit';
+                    photoCredit.style.cssText = 'text-align: center; font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;';
+                    photoCredit.innerHTML = 'Photo : <a href="https://www.oloart.com/" target="_blank">OloArt</a>';
+                    imageContainer.appendChild(photoCredit);
+                    
                     // Insérer l'image avant le conteneur principal
                     teamContent.parentNode.insertBefore(imageContainer, teamContent);
                 }
