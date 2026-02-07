@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', async function() {
   handleTeamDisplay();
   initScrollHandler();
   await loadClubStats();
+  handleActualites();
 });
 
 // Gestion Navbar et Footer
@@ -239,4 +240,54 @@ function animateValue(id, start, end, duration) {
         }
     };
     window.requestAnimationFrame(step);
+}
+
+// Gestion des actualités - Masquer les actualités dont les images n'existent pas
+function handleActualites() {
+    const section = document.getElementById('actualites-section');
+    const actualiteCards = document.querySelectorAll('.actualite-card');
+    
+    if (!section || actualiteCards.length === 0) return;
+    
+    actualiteCards.forEach(card => {
+        const img = card.querySelector('img[data-img]');
+        const link = card.querySelector('a.actualite-link');
+        const actualiteNumber = card.getAttribute('data-actualite');
+        
+        if (img && link) {
+            // Copier automatiquement le src de l'image vers le href du lien
+            link.href = img.src;
+            
+            // Marquer la carte comme chargée ou erreur
+            let imageLoaded = false;
+            
+            // Gérer le chargement réussi de l'image
+            img.onload = function() {
+                imageLoaded = true;
+            };
+            
+            // Gérer l'erreur de chargement de l'image
+            img.onerror = function() {
+                if (actualiteNumber === '1') {
+                    // Si l'image de l'actualité 1 n'existe pas, masquer toute la section
+                    section.style.display = 'none';
+                } else {
+                    // Pour les actualités 2 et 3, masquer uniquement la carte
+                    card.style.display = 'none';
+                }
+            };
+            
+            // Vérification supplémentaire après un court délai
+            setTimeout(() => {
+                // Si l'image n'est pas chargée et qu'elle n'a pas de dimensions naturelles
+                if (!imageLoaded && (!img.naturalWidth || img.naturalWidth === 0)) {
+                    if (actualiteNumber === '1') {
+                        section.style.display = 'none';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                }
+            }, 500);
+        }
+    });
 }
