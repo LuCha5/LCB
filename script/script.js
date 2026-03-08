@@ -249,21 +249,56 @@ function handleActualites() {
     
     if (!section || actualiteCards.length === 0) return;
     
+    let cardsProcessed = 0;
+    const totalCards = actualiteCards.length;
+    
+    // Fonction pour ajuster la taille des cartes selon le nombre visible
+    const adjustCardSizes = () => {
+        const visibleCards = Array.from(actualiteCards).filter(card => 
+            card.style.display !== 'none'
+        );
+        
+        const count = visibleCards.length;
+        
+        // Appliquer les nouvelles classes selon le nombre de cartes visibles
+        visibleCards.forEach(card => {
+            // Retirer toutes les classes de taille
+            card.classList.remove('col-lg-4', 'col-lg-6', 'col-lg-8');
+            
+            if (count === 1) {
+                card.classList.add('col-lg-8'); // 1 carte = 66% de largeur
+            } else if (count === 2) {
+                card.classList.add('col-lg-6'); // 2 cartes = 50% chacune
+            } else {
+                card.classList.add('col-lg-4'); // 3 cartes = 33% chacune
+            }
+        });
+    };
+    
     actualiteCards.forEach(card => {
         const img = card.querySelector('img[data-img]');
-        const link = card.querySelector('a.actualite-link');
         const actualiteNumber = card.getAttribute('data-actualite');
         
-        if (img && link) {
-            // Copier automatiquement le src de l'image vers le href du lien
-            link.href = img.src;
+        if (img) {
             
             // Marquer la carte comme chargée ou erreur
             let imageLoaded = false;
+            let processed = false;
+            
+            const processCard = () => {
+                if (processed) return;
+                processed = true;
+                cardsProcessed++;
+                
+                if (cardsProcessed === totalCards) {
+                    adjustCardSizes();
+                }
+            };
             
             // Gérer le chargement réussi de l'image
             img.onload = function() {
                 imageLoaded = true;
+                processCard();
             };
             
             // Gérer l'erreur de chargement de l'image
@@ -275,6 +310,7 @@ function handleActualites() {
                     // Pour les actualités 2 et 3, masquer uniquement la carte
                     card.style.display = 'none';
                 }
+                processCard();
             };
             
             // Vérification supplémentaire après un court délai
@@ -287,7 +323,8 @@ function handleActualites() {
                         card.style.display = 'none';
                     }
                 }
-            }, 500);
+                processCard();
+            }, 100);
         }
     });
 }
