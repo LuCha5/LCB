@@ -1,144 +1,73 @@
-/* Styles pour la section partenaire institutionnel */
+/* =====================================================================
+   Page Partenaires — modernisée (tokens design system).
+   ===================================================================== */
+
 .institutional-partner {
-    padding: 40px 0;
-    background-color: #f8f9fa;
+  padding: 3rem 0;
+  background: #eef3f8;
 }
 
 .partner-card {
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    max-width: 800px;
-    margin: 0 auto;
-    transition: transform 0.3s ease;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 2.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  transition: transform var(--t), box-shadow var(--t);
 }
+.partner-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+.partner-card h3 { color: var(--navy-700); }
 
-.partner-card:hover {
-    transform: translateY(-5px);
-}
+.partner-logo { max-width: 200px; height: auto; margin-bottom: 1.25rem; }
 
-.partner-logo {
-    max-width: 200px;
-    height: auto;
-    margin-bottom: 20px;
-}
+.partner-description { color: var(--color-muted); font-size: 1.1rem; line-height: 1.6; margin: 1.25rem 0; }
 
-.partner-description {
-    color: #666;
-    font-size: 1.1em;
-    line-height: 1.6;
-    margin: 20px 0;
-}
-
-/* Styles pour la liste des avantages */
+.partner-card ul { display: inline-block; text-align: left; margin: 0; }
 .partner-card ul li {
-    margin: 10px 0;
-    font-size: 1.1em;
-    color: #1a3955;
+  margin: .75rem 0;
+  font-size: 1.05rem;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: .65rem;
 }
+.partner-card ul li i { color: var(--orange-500); width: 1.4rem; text-align: center; }
 
-.partner-card ul li i {
-    color: #5ea1d5;
-    margin-right: 10px;
-}
-
-/* Styles pour les sponsors */
-.sponsor-section {
-    padding: 40px 0;
-}
-
+/* Sponsors */
 .sponsor-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; /* Ajout pour centrer verticalement */
-    width: 300px;
-    height: 300px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: all 0.3s ease;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform var(--t), box-shadow var(--t);
+  padding: 1.5rem;
 }
+.sponsor-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-lg); }
+.sponsor-card img { max-width: 90%; height: 90%; object-fit: contain; display: block; margin: auto; }
 
-.sponsor-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
-
-.sponsor-card img {
-    max-width: 90%;
-    height: 90%;
-    object-fit: contain;
-    display: block;
-    margin: auto;
-}
-
-/* Styles des titres de section */
+/* Titres de section */
 .section-title {
-    color: #1a3955;
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2.5em;
-    font-weight: bold;
-}
-.help-section .btn-blue {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: #1a3955;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    border: 2px solid #1a3955;
-}
-
-.help-section .btn-blue:hover {
-    background-color: #fff;
-    color: #1a3955;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  color: var(--navy-700);
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
-    .partner-card {
-        margin: 15px;
-        padding: 20px;
-    }
-
-    .partner-logo {
-        max-width: 150px;
-    }
-
-    .sponsor-card {
-        width: 250px;
-        height: 250px;
-    }
-
-    .mecene-card {
-        width: 200px;
-    }
-
-    .section-title {
-        font-size: 2em;
-    }
-
-    .partner-description {
-        font-size: 1em;
-    }
-    .btn-blue {
-        display: inline-block;
-        padding: 12px 30px;
-        background-color: #1a3955;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        border: 2px solid #1a3955;
-    }
+  .partner-card { margin: 15px; padding: 1.5rem; }
+  .partner-logo { max-width: 150px; }
+  .sponsor-card { width: 250px; height: 250px; }
+  .section-title { font-size: 2rem; }
+  .partner-description { font-size: 1rem; }
 }

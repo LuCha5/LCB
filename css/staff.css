@@ -1,35 +1,73 @@
-@media (resolution: 1.25dppx) {
-    .staff-page {
-        height: auto;
-        min-height: 100vh;
-        padding-top: 110px; /* Réduit le padding-top pour la navbar plus petite */
-        overflow: hidden;
-    }
+/* =====================================================================
+   Page Bureau / Staff
+   Objectif : tenir sur une seule fenêtre (footer entièrement visible,
+   sans scroll), sans grand vide en haut. Le titre se cale en haut et la
+   grille s'étire pour remplir la hauteur restante jusqu'au footer.
+   Style des cartes = design system (css/styles.css).
+   ===================================================================== */
 
-    .staff-card {
-        padding: 1rem;
-        transform: scale(0.9);
-    }
-
-    .staff-card h3 {
-        font-size: 1rem;
-    }
-
-    .staff-card h4 {
-        font-size: 0.9rem;
-    }
-
-    .staff-card p {
-        font-size: 0.8rem;
-    }
-
-    .container {
-        max-width: 90%;
-    }
+/* IMPORTANT : Bootstrap impose .min-vh-100 { min-height:100vh !important }.
+   On le surcharge (avec !important) en retirant la hauteur de la navbar,
+   sinon body(padding-top navbar) + wrapper(100vh) = 100vh + navbar
+   → ~78px débordent toujours et le bas du footer est coupé. */
+.staff-page .min-vh-100 {
+  min-height: calc(100vh - var(--nav-h)) !important;
 }
 
-#footer-container {
-    margin-top: auto;
-    width: 100%;
-    background-color: white;
+/* main remplit l'espace ; titre en haut, grille en dessous */
+.staff-page main {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  min-height: 0;            /* autorise le flex à se contraindre */
+}
+
+.staff-page .page-title {
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  margin: 0 0 1.25rem;
+}
+
+/* La grille prend toute la hauteur restante et répartit les 2 rangées */
+.staff-page main > .row {
+  flex: 1 1 auto;
+  align-content: stretch;
+  --bs-gutter-y: 1.1rem;
+  min-height: 0;
+}
+
+/* Cartes : occupent leur cellule, contenu centré verticalement, compactes */
+.staff-page .staff-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.4rem 1.2rem;
+}
+.staff-page .staff-card::before {
+  width: 46px;
+  height: 46px;
+  font-size: 1.15rem;
+  margin-bottom: .7rem;
+}
+.staff-page .staff-card h3 { font-size: .95rem; line-height: 1.3; margin-bottom: .4rem; }
+.staff-page .staff-card h4 { font-size: .9rem; }
+
+/* Footer ramassé sur cette page (gros gain de hauteur) */
+.staff-page footer { padding: 1.25rem 0 1rem; }
+.staff-page .rounded-social-buttons { margin-bottom: .55rem; }
+.staff-page .rounded-social-buttons .social-button {
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.05rem;
+}
+.staff-page footer p { font-size: .85rem; line-height: 1.5; }
+
+/* Écrans courts ou mobile : flux naturel + scroll autorisé
+   (jamais d'overflow:hidden qui bloquerait le défilement). */
+@media (max-height: 700px), (max-width: 860px) {
+  .staff-page main > .row { flex: 0 0 auto; }
+  .staff-page .staff-card { justify-content: flex-start; }
 }

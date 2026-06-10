@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', async function() {
   handleTeamDisplay();
   initScrollHandler();
   await loadClubStats();
-  handleActualites();
 });
 
 // Gestion Navbar et Footer
@@ -242,89 +241,3 @@ function animateValue(id, start, end, duration) {
     window.requestAnimationFrame(step);
 }
 
-// Gestion des actualités - Masquer les actualités dont les images n'existent pas
-function handleActualites() {
-    const section = document.getElementById('actualites-section');
-    const actualiteCards = document.querySelectorAll('.actualite-card');
-    
-    if (!section || actualiteCards.length === 0) return;
-    
-    let cardsProcessed = 0;
-    const totalCards = actualiteCards.length;
-    
-    // Fonction pour ajuster la taille des cartes selon le nombre visible
-    const adjustCardSizes = () => {
-        const visibleCards = Array.from(actualiteCards).filter(card => 
-            card.style.display !== 'none'
-        );
-        
-        const count = visibleCards.length;
-        
-        // Appliquer les nouvelles classes selon le nombre de cartes visibles
-        visibleCards.forEach(card => {
-            // Retirer toutes les classes de taille
-            card.classList.remove('col-lg-4', 'col-lg-6', 'col-lg-8');
-            
-            if (count === 1) {
-                card.classList.add('col-lg-8'); // 1 carte = 66% de largeur
-            } else if (count === 2) {
-                card.classList.add('col-lg-6'); // 2 cartes = 50% chacune
-            } else {
-                card.classList.add('col-lg-4'); // 3 cartes = 33% chacune
-            }
-        });
-    };
-    
-    actualiteCards.forEach(card => {
-        const img = card.querySelector('img[data-img]');
-        const actualiteNumber = card.getAttribute('data-actualite');
-        
-        if (img) {
-            
-            // Marquer la carte comme chargée ou erreur
-            let imageLoaded = false;
-            let processed = false;
-            
-            const processCard = () => {
-                if (processed) return;
-                processed = true;
-                cardsProcessed++;
-                
-                if (cardsProcessed === totalCards) {
-                    adjustCardSizes();
-                }
-            };
-            
-            // Gérer le chargement réussi de l'image
-            img.onload = function() {
-                imageLoaded = true;
-                processCard();
-            };
-            
-            // Gérer l'erreur de chargement de l'image
-            img.onerror = function() {
-                if (actualiteNumber === '1') {
-                    // Si l'image de l'actualité 1 n'existe pas, masquer toute la section
-                    section.style.display = 'none';
-                } else {
-                    // Pour les actualités 2 et 3, masquer uniquement la carte
-                    card.style.display = 'none';
-                }
-                processCard();
-            };
-            
-            // Vérification supplémentaire après un court délai
-            setTimeout(() => {
-                // Si l'image n'est pas chargée et qu'elle n'a pas de dimensions naturelles
-                if (!imageLoaded && (!img.naturalWidth || img.naturalWidth === 0)) {
-                    if (actualiteNumber === '1') {
-                        section.style.display = 'none';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                }
-                processCard();
-            }, 100);
-        }
-    });
-}

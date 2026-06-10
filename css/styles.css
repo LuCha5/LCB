@@ -1,1389 +1,724 @@
-/* General styles */
+/* =====================================================================
+   Le Crès Basket — Design System (refonte 2026)
+   Identité : bleu marine + orange "ballon". Style moderne, aéré, animé.
+   NB : tous les sélecteurs utilisés par le JS sont conservés.
+   ===================================================================== */
+
+/* ------------------------------------------------------------------ */
+/* 1. Tokens                                                          */
+/* ------------------------------------------------------------------ */
+:root {
+  /* Marque */
+  --navy-900: #0d1f31;
+  --navy-800: #122c44;
+  --navy-700: #1a3955;   /* primaire historique */
+  --navy-600: #244c70;
+  --sky-500:  #5ea1d5;   /* secondaire historique */
+  --sky-400:  #7bb4de;
+  --orange-500: #f47b20; /* accent ballon de basket */
+  --orange-600: #e0680f;
+
+  /* Sémantique */
+  --color-primary: var(--navy-700);
+  --color-accent:  var(--orange-500);
+  --color-bg:      #f4f7fb;
+  --color-surface: #ffffff;
+  --color-text:    #1c2b3a;
+  --color-muted:   #5e6f80;
+  --color-border:  #e4ebf2;
+
+  /* Typo */
+  --font-sans: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+
+  /* Rayons */
+  --radius-sm: 10px;
+  --radius:    16px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  /* Ombres */
+  --shadow-sm: 0 1px 3px rgba(13, 31, 49, .07), 0 1px 2px rgba(13, 31, 49, .05);
+  --shadow:    0 10px 28px rgba(13, 31, 49, .10);
+  --shadow-lg: 0 22px 48px rgba(13, 31, 49, .16);
+  --shadow-accent: 0 10px 24px rgba(244, 123, 32, .35);
+
+  /* Layout */
+  --nav-h: 78px;
+  --container: 1180px;
+
+  /* Motion */
+  --ease: cubic-bezier(.4, 0, .2, 1);
+  --t-fast: .2s var(--ease);
+  --t:      .35s var(--ease);
+}
+
+/* ------------------------------------------------------------------ */
+/* 2. Base                                                            */
+/* ------------------------------------------------------------------ */
+* { box-sizing: border-box; }
+
 body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding-top: 170px; /* Ajout du padding-top */
-    background-color: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    transition: padding-top 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-
-}
-body.scrolled {
-    padding-top: 100px;
+  font-family: var(--font-sans);
+  margin: 0;
+  padding-top: var(--nav-h);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.65;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
 }
 
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #1a3955;
-    color: white;
-    padding: 1em 0;
-    z-index: 1000;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-nav .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-nav .logo-container {
-    margin-bottom: 1em;
-}
-
-
-nav .logo {
-    height: 120px;
-    transition: height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-
-nav.scrolled .logo {
-    height: 50px;
-}
-
-nav.scrolled .logo-container {
-    margin-bottom: 0.5em;
-}
-
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    margin: 0;
-    justify-content: center; /* Centre les boutons de navigation */
-}
-
-nav ul li {
-    margin: 0 1em;
-    position: relative;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 0.5em 1em;
-    display: block;
-    position: relative;
-    transition: color 0.3s ease;
-}
-
-nav ul li a::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: white;
-    transition: width 0.3s;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-
-nav ul li a:hover::after {
-    width: 100%;
-}
-
-nav ul li a:hover {
-    color: #ddd;
-}
-
-/* Désactiver l'animation pour le bouton "Nous rejoindre" */
-nav ul li.ms-3 a::after,
-nav ul li .btn-icon::after {
-    display: none;
-}
-/* Espace supplémentaire pour les boutons "Boutique" et "Nous rejoindre" */
-nav ul li.ms-3 {
-    margin-left: 2em; /* Espace supplémentaire */
-}
-
-section {
-    scroll-margin-top: 100px;
-}
-
-
-/* Sections génériques */
-.main-content {
-    padding: 2rem 0;
-}
-/* Pages spécifiques */
+/* Pages internes : même offset que la home (navbar fixe et slim partout) */
 .allteams-page,
 .contact-page,
 .championnat-page,
 .staff-page,
 .partner-page,
-.team-page{
-    padding-top: 220px;
+.team-page { padding-top: var(--nav-h); }
+
+img { max-width: 100%; }
+
+h1, h2, h3, h4 { line-height: 1.2; color: var(--color-primary); }
+
+a { color: var(--navy-600); }
+
+section { scroll-margin-top: calc(var(--nav-h) + 12px); }
+
+.main-content { padding: 2rem 0; }
+
+::selection { background: var(--orange-500); color: #fff; }
+
+/* Titres de section réutilisables : trait orange centré sous les h2 */
+section > .container > h2,
+section > .container > .row h2 {
+  position: relative;
+  font-weight: 700;
+  margin-bottom: 2.25rem;
+}
+section > .container > h2::after,
+section > .container > .row h2::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 4px;
+  border-radius: var(--radius-pill);
+  background: var(--orange-500);
+  margin: .85rem auto 0;
 }
 
-@media screen and (max-width: 768px) {
-    .allteams-page,
-    .contact-page,
-    .championnat-page,
-    .staff-page,
-    .partner-page,
-    .team-page{
-        padding-top: 80px;
-        height: auto;
-    }
+/* Titre de page réutilisable (pages internes) */
+.page-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  margin: .5rem 0 2.5rem;
 }
-.header-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    width: 100%;
-    max-width: 800px; /* Ajusté pour plus d'espace */
-    margin: 0 auto;
-    padding: 0 20px; /* Réduit le padding */
+.page-title::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 4px;
+  border-radius: var(--radius-pill);
+  background: var(--orange-500);
+  margin: .9rem auto 0;
 }
 
-.header-content h1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centre le contenu */
-    gap: 10px;
-    font-size: 3em;
-    margin-top: 30px;
-    text-align: center;
+/* ------------------------------------------------------------------ */
+/* 3. Navbar (fixe, effet verre, slim)                                */
+/* ------------------------------------------------------------------ */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--nav-h);
+  background: rgba(20, 44, 68, .82);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border-bottom: 1px solid rgba(255, 255, 255, .08);
+  color: #fff;
+  z-index: 1000;
+  transition: height var(--t), background var(--t), box-shadow var(--t);
 }
 
-.header-content h1 .club-name {
-    font-weight: bold;
-    font-size: 2em; /* Augmenté pour plus de visibilité */
-    white-space: nowrap;
-    text-align: center;
-    text-transform: none;
+nav.scrolled {
+  height: 64px;
+  background: rgba(13, 31, 49, .94);
+  box-shadow: 0 8px 30px rgba(13, 31, 49, .28);
 }
 
-/* Style pour les valeurs */
-.values-line {
-    font-size: 1.8rem;
-    margin: 1.5rem auto; /* Ajout de auto pour centrer */
-    white-space: nowrap;
-    text-align: center;
-    display: block;
+nav .container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
 }
 
-/* Ajustement pour mobile */
-@media (max-width: 768px) {
-    .header-logo-left {
-        padding-left: 20px;
-    }
-    .header-logo-right {
-        padding-right: 20px;
-    }
-    .header-content {
-        padding: 0 15px;
-    }
+nav .logo-container { margin: 0; display: flex; }
 
-    .header-content h1 .club-name {
-        font-size: 1.6em;
-        padding-bottom: 15px;
-    }
+nav .logo {
+  height: 54px;
+  width: auto;
+  transition: height var(--t);
+}
+nav.scrolled .logo { height: 42px; }
 
-    .values-line {  
-        font-size: 1.2rem;
-        white-space: normal;
-        margin: 1rem auto;
-        max-width: 280px;
-    }
-}
-.header-content h1 .highlight {
-    color: #1a3955;
-    text-transform: uppercase; /* Met L, C et B en majuscules */
-}
-.bg-image-header {
-    position: relative;
-    background: url('../assets/images/diapo3.jpg') center 60%/cover no-repeat; /* Changé pour 40% de la hauteur au lieu de bottom */
-    height: 400px;
-    display: flex;
-    align-items: center;
+/* Liens */
+nav .nav-content { display: flex; align-items: center; }
+nav .main-menu { display: flex; align-items: center; }
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: .35rem;
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(116, 173, 217, 0.85); /* Couleur #74add9 avec opacité */
-}
-.header-content {
-    position: relative;
-    z-index: 2;
+nav ul li { margin: 0; position: relative; }
+
+nav ul li a {
+  color: rgba(255, 255, 255, .88);
+  text-decoration: none;
+  padding: .55rem .95rem;
+  display: block;
+  font-weight: 500;
+  font-size: .98rem;
+  border-radius: var(--radius-pill);
+  transition: color var(--t-fast), background var(--t-fast);
 }
 
-.header-logo-left,
-.header-logo-right {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 200px;
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: .25rem;
+  width: 0;
+  height: 2px;
+  background: var(--orange-500);
+  border-radius: var(--radius-pill);
+  transform: translateX(-50%);
+  transition: width var(--t);
+}
+nav ul li a:hover { color: #fff; }
+nav ul li a:hover::after { width: calc(100% - 1.9rem); }
+
+/* CTA "Boutique" éventuel dans la nav */
+nav ul li.Boutique a,
+nav .btn-blue {
+  background: var(--orange-500);
+  color: #fff;
+  padding: .55rem 1.25rem;
+  font-weight: 600;
+}
+nav ul li.Boutique a::after { display: none; }
+nav ul li.Boutique a:hover { background: var(--orange-600); }
+
+/* ------------------------------------------------------------------ */
+/* 4. Menu burger (mobile)                                            */
+/* ------------------------------------------------------------------ */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  padding: 8px;
+  background: transparent;
+  border: 0;
+  z-index: 1001;
+}
+.hamburger .line {
+  width: 26px;
+  height: 2.5px;
+  background: #fff;
+  margin: 6px 0;
+  border-radius: 2px;
+  transition: transform var(--t), opacity var(--t-fast);
+}
+.hamburger.active .line:nth-child(1) { transform: rotate(-45deg) translate(-6px, 6px); }
+.hamburger.active .line:nth-child(2) { opacity: 0; }
+.hamburger.active .line:nth-child(3) { transform: rotate(45deg) translate(-6px, -6px); }
+
+/* ------------------------------------------------------------------ */
+/* 5. Boutons                                                         */
+/* ------------------------------------------------------------------ */
+.btn {
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  transition: transform var(--t-fast), box-shadow var(--t-fast), background var(--t-fast), color var(--t-fast);
 }
 
-.header-logo-left {
-    left: 0;
+/* Bouton accent (CTA principal) — surcharge .btn-light du hero */
+.btn-light,
+.btn-accent {
+  background: var(--orange-500);
+  border: 2px solid var(--orange-500);
+  color: #fff !important;
+  padding: .8rem 2rem;
+  box-shadow: var(--shadow-accent);
 }
-
-.header-logo-right {
-    right: 0;
-}
-
-.header-content {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 0 120px;
-}
-
-/* Stats icons */
-.stat-item i {
-    font-size: 2.5rem;
-    color: #5ea1d5;
-    margin-bottom: 1rem;
-}
-/* Stats icons */
-.stat-item .fas {
-    font-size: 2.5rem;
-    color: #5ea1d5;
-    margin-bottom: 1rem;
-}
-
-.bg-lcb-primary {
-    background-color: #5ea1d5 !important;
-}
-
-.stats-container {
-    background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
-    border: 1px solid rgba(0,0,0,0.1);
-}
-
-.stat-item {
-    padding: 1rem;
-    transition: transform 0.3s ease;
-}
-
-.stat-item:hover {
-    transform: translateY(-5px);
-}
-
-.stat-item h4 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #1a3955;
-    margin: 0.5rem 0;
-}
-
-
-/* Bouton Bleu */
-.btn-blue-container {
-    margin-right: -5%;
-}
-
-.btn-blue {
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    padding: 0.8em 1.5em;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-    margin-left: 3rem; /* Espace avec les autres boutons */
-}
-
-.btn-blue:hover {
-    background-color: white;
-    color: #007bff;
-}
-
-/* Styles pour le tableau des tarifs */
-.table-responsive {
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    margin: 2em auto;
-    max-width: 800px;  /* Retour à 800px */
-    border: 3px solid #333;
-}
-
-.table-tarifs {
-    background-color: white;
-    margin-bottom: 0;
-    border-collapse: separate;
-    border-spacing: 0;
-    width: 100%;
-}
-
-.table-tarifs thead th {
-    background-color: #5ea1d5;
-    color: white;
-    font-weight: 600;
-    text-transform: uppercase;
-    padding: 1.8em 2.5em;
-    border: none;
-    border-bottom: 3px solid #333;
-}
-
-.table-tarifs tbody td {
-    padding: 1.5em 2.5em;  /* Augmenté le padding */
-    border: none;
-    border-bottom: 2px solid #dee2e6;
-    border-right: 1px solid #dee2e6;
-    vertical-align: middle;
-}
-
-.birthday-card {
-    background: linear-gradient(135deg, #3170a4, #1a3955);
-    color: white;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(49, 112, 164, 0.2);
-}
-
-.birthday-card h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    font-weight: 600;
-    color: #1a3955;
-}
-
-.birthday-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.birthday-item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-    background: rgba(49, 112, 164, 0.2);
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.birthday-item:hover {
-    transform: translateY(-3px);
-    background: rgba(49, 112, 164, 0.3);
-}
-
-.birthday-item i {
-    color: #fff;
-    font-size: 1.5rem;
-}
-
-.birthday-item span {
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: #1a3955
-    ;
-}
-
-
-/* Sponsor Section */
-.sponsor-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 300px;
-    height: 350px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    text-decoration: none;  /* Enlève le soulignement */
-}
-
-.sponsor-card:hover {
-    transform: translateY(-10px);
-}
-
-.sponsor-name {
-    width: 100%;
-    padding: 10px;
-    background: white;
-    color: black;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;  /* Assure qu'il n'y a pas de soulignement */
-}
-
-.sponsor-card img {
-    max-width: 100%;
-    height: calc(100% - 40px);
-    object-fit: contain;
-    padding: 10px;
-}
-/* Mecenes */
-.mecene-card {
-    background: white;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin: 10px;
-    max-width: 200px;
-}
-
-.mecene-card img {
-    max-width: 100%;
-    height: auto;
-}
-/* Championnat styles */
-#championnat-title {
-    text-align: center;
-    margin: 1em 0;
-    color: #333;
-}
-
-#championnat-content {
-    text-align: center;
-    margin: 0 0 2em 0;
-    color: #666;
-}
-
-#championnat-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1em;
-    padding: 1em;
-}
-
-.category-button {
-    display: inline-block;
-    padding: 1em 2em;
-    margin: 0.5em;
-    background-color: #3f8fd1;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 1.2em;
-    transition: background-color 0.3s ease;
-}
-
-.category-button:hover {
-    background-color: #555;
-}
-
-
-/* staff */
-
-.staff-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.staff-card:hover {
-    transform: translateY(-5px);
-}
-
-.staff-card h3 {
-    color: #1a3955;
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-}
-
-.staff-card h4 {
-    color: #5ea1d5;
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-}
-
-.staff-card p {
-    color: #666;
-    font-size: 0.9rem;
-    margin: 0;
-}
-.staff-page {
-    padding-top: 0;
-}
-
-@media screen and (max-width: 768px) {
-    .staff-page {
-        padding-top: 80px;
-        height: auto;
-        overflow-y: auto;
-    }
-}
-
-/* Contact */
-
-.contact-form-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 2rem;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-.help-section {
-    margin-top: 1rem !important;
-    text-align: center !important;
-    margin: 3rem 0;
-    padding: 2rem;
-    background: #f8f9fa;
-    border-radius: 10px;
-    box-sizing: border-box;
-
-}
-
-.help-section .help-card {
-    background: transparent;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 2rem;
-}
-.help-section .btn-blue {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: #1a3955;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    border: 2px solid #1a3955;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.help-section .btn-blue:hover {
-    background-color: #fff;
-    color: #1a3955;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.form-group label {
-    font-weight: 500;
-    margin-bottom: 0.5rem;
-}
-
-.form-control {
-    border: 2px solid #dee2e6;
-    border-radius: 4px;
-    padding: 0.75rem;
-    transition: border-color 0.3s ease;
-}
-
-.form-control:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+.btn-light:hover,
+.btn-accent:hover {
+  background: var(--orange-600);
+  border-color: var(--orange-600);
+  color: #fff !important;
+  transform: translateY(-2px);
 }
 
 .btn-primary {
-    background-color: #007bff;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    font-weight: 500;
-    transition: all 0.3s ease;
+  background: var(--navy-700);
+  border: none;
+  padding: .8rem 1.75rem;
+  font-weight: 600;
 }
-
 .btn-primary:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
-}
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 2em 0;
-    margin-top: auto;
+  background: var(--navy-800);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
 }
 
-.rounded-social-buttons {
-    margin: 1em 0;
+.btn-blue {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  background: var(--navy-700);
+  color: #fff;
+  text-decoration: none;
+  padding: .8rem 1.75rem;
+  border-radius: var(--radius-pill);
+  border: 2px solid var(--navy-700);
+  font-weight: 600;
+  transition: all var(--t-fast);
+}
+.btn-blue:hover {
+  background: #fff;
+  color: var(--navy-700);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
 }
 
-.social-button {
-    display: inline-block;
-    width: 3.125rem;
-    height: 3.125rem;
-    border-radius: 50%;
-    margin: 0 5px;
-    background: #fff;
-    color: #333;
-    text-align: center;
-    line-height: 3.125rem;
-    transition: all 0.3s ease;
+/* ------------------------------------------------------------------ */
+/* 6. Hero / en-tête                                                  */
+/* ------------------------------------------------------------------ */
+.bg-image-header {
+  position: relative;
+  background: url('../assets/images/diapo3.jpg') center 55% / cover no-repeat;
+  min-height: clamp(420px, 60vh, 560px);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(13, 31, 49, .92) 0%, rgba(26, 57, 85, .80) 45%, rgba(94, 161, 213, .55) 100%);
 }
 
-.social-button:hover {
-    transform: rotate(360deg);
+.header-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 20px;
+  color: #fff;
+  animation: heroIn .8s var(--ease) both;
 }
 
-    /* Styles pour les icônes de réseaux sociaux */
-    .rounded-social-buttons {
-        text-align: center;
-        margin: 1em 0;
-    }
-    
-    .rounded-social-buttons .social-button {
-        display: inline-block;
-        position: relative;
-        cursor: pointer;
-        width: 3.125rem;
-        height: 3.125rem;
-        border: 0.125rem solid transparent;
-        padding: 0;
-        text-decoration: none;
-        text-align: center;
-        color: #fefefe;
-        font-size: 1.5625rem;
-        font-weight: normal;
-        line-height: 2em;
-        border-radius: 1.6875rem;
-        transition: all 0.3s ease;
-        margin-right: 0.25rem;
-        margin-bottom: 0.25rem;
-    }
-    
-    .rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {
-        color: #333;
-        background-color: #fefefe;
-        border-color: #333;
-        transform: rotate(360deg);
-    }
-    
-    .rounded-social-buttons .social-button.facebook {
-        background: #3b5998;
-    }
-    
-    .rounded-social-buttons .social-button.instagram {
-        background: #e4405f;
-    }
+.header-content h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .25rem;
+  font-size: clamp(2rem, 5vw, 3.1rem);
+  margin: 0 0 1rem;
+  color: #fff;
+}
+.header-content h1 .welcome {
+  font-size: .42em;
+  font-weight: 500;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--sky-400);
+}
+.header-content h1 .club-name {
+  font-weight: 800;
+  font-size: 1em;
+  white-space: nowrap;
+}
+.header-content h1 .highlight { color: var(--orange-500); }
 
+.header-content .lead {
+  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+  font-weight: 400;
+  margin: .15rem 0;
+  color: rgba(255, 255, 255, .92);
+}
+.header-content .btn { margin-top: 1.75rem; }
 
-/* Team */
+/* Logos latéraux du hero */
+.header-logo-left,
+.header-logo-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: clamp(90px, 16vw, 180px);
+  z-index: 2;
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, .35));
+}
+.header-logo-left { left: 2%; }
+.header-logo-right { right: 2%; }
+
+@keyframes heroIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ------------------------------------------------------------------ */
+/* 7. Cartes génériques (Bootstrap .card)                             */
+/* ------------------------------------------------------------------ */
+.card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--t), box-shadow var(--t);
+}
+.card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+
+/* Images planning / actualités */
+.img-fluid.rounded { border-radius: var(--radius) !important; }
+section .img-fluid {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform var(--t);
+}
+section .img-fluid:hover { transform: scale(1.015); }
+
+/* ------------------------------------------------------------------ */
+/* 8. Statistiques du club                                            */
+/* ------------------------------------------------------------------ */
+.stats-container {
+  background: linear-gradient(150deg, var(--navy-800), var(--navy-700));
+  border: 1px solid rgba(255, 255, 255, .06);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem !important;
+  box-shadow: var(--shadow-lg);
+  color: #fff;
+}
+.stats-container h3 { color: #fff; font-weight: 700; }
+.stats-container h3::after {
+  content: "";
+  display: block;
+  width: 56px; height: 4px;
+  background: var(--orange-500);
+  border-radius: var(--radius-pill);
+  margin: .75rem auto 0;
+}
+
+.stat-item {
+  padding: 1rem .5rem;
+  border-radius: var(--radius);
+  transition: transform var(--t), background var(--t);
+}
+.stat-item:hover { transform: translateY(-6px); background: rgba(255, 255, 255, .05); }
+
+.stat-item i,
+.stat-item .fas {
+  font-size: 2.4rem;
+  color: var(--orange-500);
+  margin-bottom: .75rem;
+}
+.stat-item h4 {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 800;
+  color: #fff;
+  margin: .35rem 0;
+}
+.stat-item p {
+  color: rgba(255, 255, 255, .72);
+  font-weight: 500;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  font-size: .85rem;
+}
+
+/* ------------------------------------------------------------------ */
+/* 9. Tableau des tarifs                                              */
+/* ------------------------------------------------------------------ */
+.table-responsive {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  margin: 0 auto;
+  max-width: 820px;
+  border: 1px solid var(--color-border);
+}
+.table-tarifs {
+  background: var(--color-surface);
+  margin: 0;
+  width: 100%;
+  border-collapse: collapse;
+}
+.table-tarifs thead th {
+  background: var(--navy-700);
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  font-size: .9rem;
+  padding: 1.15rem 1.75rem;
+  border: none;
+}
+.table-tarifs tbody td {
+  padding: 1.05rem 1.75rem;
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: middle;
+}
+.table-tarifs tbody tr:last-child td { border-bottom: none; }
+.table-tarifs tbody tr:nth-child(even) { background: #fafcfe; }
+.table-tarifs tbody tr:hover { background: #eef5fb; }
+.table-tarifs tbody td:last-child { font-weight: 700; color: var(--orange-600); }
+
+/* ------------------------------------------------------------------ */
+/* 10. Anniversaires                                                  */
+/* ------------------------------------------------------------------ */
+.birthday-card {
+  background: linear-gradient(135deg, var(--orange-500), var(--orange-600));
+  color: #fff;
+  padding: 2.25rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-accent);
+}
+.birthday-card h3 { color: #fff; font-weight: 700; margin-bottom: 1.5rem; }
+
+.birthday-list { display: flex; flex-direction: column; gap: .85rem; }
+.birthday-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: .95rem 1.15rem;
+  background: rgba(255, 255, 255, .16);
+  border: 1px solid rgba(255, 255, 255, .22);
+  border-radius: var(--radius-sm);
+  transition: transform var(--t), background var(--t);
+}
+.birthday-item:hover { transform: translateY(-3px); background: rgba(255, 255, 255, .26); }
+.birthday-item i { color: #fff; font-size: 1.4rem; }
+.birthday-item span { color: #fff; font-size: 1.1rem; font-weight: 500; }
+
+/* Les styles « Sponsors/mécènes » et « Championnat » ont été retirés d'ici :
+   ils ne servaient qu'aux pages partenaires et équipes, où ils sont définis
+   localement (css/partenaire.css et css/allteams.css). */
+
+/* ------------------------------------------------------------------ */
+/* 13. Staff / bureau                                                 */
+/* ------------------------------------------------------------------ */
+.staff-card {
+  position: relative;
+  height: 100%;
+  background: var(--color-surface);
+  padding: 2.5rem 1.5rem 1.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform var(--t), box-shadow var(--t);
+}
+/* Badge avatar (icône utilisateur) en haut de chaque carte */
+.staff-card::before {
+  content: "\f007";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1.1rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--navy-700), var(--sky-500));
+  color: #fff;
+  font-size: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+.staff-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.staff-card h3 { color: var(--navy-700); font-size: 1.15rem; line-height: 1.35; margin-bottom: .85rem; }
+.staff-card h4 { color: var(--orange-600); font-weight: 600; font-size: 1.05rem; margin: 0 0 .35rem; }
+.staff-card h4:last-child { margin-bottom: 0; }
+.staff-card p { color: var(--color-muted); font-size: .92rem; margin: 0; }
+
+/* ------------------------------------------------------------------ */
+/* 14. Formulaire de contact                                          */
+/* ------------------------------------------------------------------ */
+.contact-form-container {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+.contact-form { display: flex; flex-direction: column; gap: 1.1rem; }
+.form-group label { font-weight: 500; margin-bottom: .4rem; color: var(--color-text); }
+.form-control {
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: .85rem 1rem;
+  font-family: inherit;
+  transition: border-color var(--t-fast), box-shadow var(--t-fast);
+}
+.form-control:focus {
+  outline: none;
+  border-color: var(--orange-500);
+  box-shadow: 0 0 0 4px rgba(244, 123, 32, .15);
+}
+.help-section {
+  text-align: center;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  max-width: 720px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+.help-section .help-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ------------------------------------------------------------------ */
+/* 15. Équipes (tableau joueurs)                                      */
+/* ------------------------------------------------------------------ */
 .team-page .table-players {
-    width: 100% !important;
-    background-color: white !important;
-    margin-bottom: 0 !important;
-    table-layout: fixed !important;
+  width: 100%;
+  background: var(--color-surface);
+  margin: 0 auto;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border-collapse: collapse;
 }
-
 .team-page .table-players thead th {
-    background-color: #5ea1d5 !important;
-    color: white !important;
-    font-weight: 600 !important;
-    padding: 1rem !important;
-    text-align: center !important;
-    border: none !important;
-    width: 100% !important;
+  background: var(--navy-700);
+  color: #fff;
+  font-weight: 600;
+  padding: 1rem;
+  text-align: center;
+  border: none;
 }
-
 .team-page .table-players tbody td {
-    padding: 1rem !important;
-    text-align: center !important;
-    border-bottom: 1px solid #dee2e6 !important;
-    width: 100% !important;
+  padding: .9rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid var(--color-border);
 }
-/* Media Queries */
-@media (max-width: 768px) {
-    .nav-content {
-        flex-direction: column;
-        align-items: center;
-    }
+.team-page .table-players tbody tr:hover { background: #eef5fb; }
 
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-        gap: 1em;
-    }
+/* ------------------------------------------------------------------ */
+/* 16. Footer                                                         */
+/* ------------------------------------------------------------------ */
+/* Le conteneur du footer est un enfant flex du body (ou du wrapper) :
+   margin-top auto le colle en bas, quelle que soit la hauteur du
+   contenu — sans hacks position:fixed par page. */
+#footer-container { margin-top: auto; }
 
-    .btn-blue-container {
-        margin: 1em 0;
-    }
-
-    @media (max-width: 768px) {
-        .stat-item h4 {
-            font-size: 1.5rem;
-        }
-    }
-
-    .table-responsive {
-        max-width: 95%;
-        margin: 1em auto;
-    }
-    
-    .table-tarifs {
-        font-size: 0.9rem;
-    }
-
-    .table-tarifs thead th {
-        padding: 0.8em;
-        white-space: nowrap;
-    }
-
-    .table-tarifs tbody td {
-        padding: 0.8em;
-        white-space: nowrap;
-    }
-   
-    .header-logo-left,
-    .header-logo-right {
-        height: 100px; /* Taille réduite pour mobile */
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-        
-    .header-logo-left {
-        left: 10px;
-    }
-        
-    .header-logo-right {
-        right: 10px;
-    }
-        
-    .header-content {
-        padding: 20 80px; /* Réduit le padding pour mobile */
-    }
-    
-    .header-content {
-        padding: 0 60px;
-        margin-top: 20px;
-    }
-
-    .header-content h1 {
-        font-size: 2em;
-        margin-top: 10px;
-        gap: 5px;
-    }
-
-    .header-content h1 .welcome {
-        font-size: 0.7em;
-    }
-
-    .header-content h1 .club-name {
-        font-size: 1.2em;
-    }
-
-    .header-content .lead {
-        font-size: 1rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .header-logo-left,
-    .header-logo-right {
-        height: 80px;
-    }
-
-    .bg-image-header {
-        height: 350px;
-    }
-    .header-content .lead {
-        font-size: 1.1rem;
-        line-height: 1.4;
-        margin: 1rem auto 1.5rem;
-        max-width: 250px;
-        word-wrap: break-word;
-        hyphens: auto;
-    }
-
-    .table-tarifs thead th:nth-child(2),
-    .table-tarifs tbody td:nth-child(2) {
-        display: none;
-    }
-
-    .table-tarifs thead th:first-child,
-    .table-tarifs tbody td:first-child {
-        width: 60%;
-    }
-
-    .table-tarifs thead th:last-child,
-    .table-tarifs tbody td:last-child {
-        width: 40%;
-    }
-
-    .table-tarifs {
-        font-size: 1rem;
-    }
-
-    .table-tarifs thead th,
-    .table-tarifs tbody td {
-        padding: 0.8em;
-    }
+footer {
+  background: var(--navy-900);
+  color: rgba(255, 255, 255, .85);
+  text-align: center;
+  padding: 2.5rem 0 2rem;
+  margin-top: auto;
 }
-    /* Contact Form Responsive */
-    .contact-form-container {
-        max-width: 95%;
-        margin: 1em auto;
-        padding: 1rem;
-    }
+footer p { margin: 0; }
+footer a { color: rgba(255, 255, 255, .7); transition: color var(--t-fast); }
+footer a:hover { color: var(--orange-500); }
 
-    .form-control {
-        padding: 0.5rem;
-    }
+.rounded-social-buttons { text-align: center; margin: 0 0 1.25rem; }
+.rounded-social-buttons .social-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  margin: 0 .35rem;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.25rem;
+  text-decoration: none;
+  transition: transform var(--t), box-shadow var(--t);
+}
+.rounded-social-buttons .social-button:hover { transform: translateY(-4px) scale(1.06); box-shadow: var(--shadow); }
+.rounded-social-buttons .social-button.facebook { background: #1877f2; }
+.rounded-social-buttons .social-button.instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
 
-    .btn-primary {
-        width: 100%;
-        padding: 0.5rem 1rem;
-    }
+/* ------------------------------------------------------------------ */
+/* 17. Responsive — menu mobile & ajustements                         */
+/* ------------------------------------------------------------------ */
+@media (max-width: 860px) {
+  .hamburger { display: block; }
 
-    /* Championnat Responsive */
-    #championnat-grid {
-        padding: 0.5em;
-        gap: 0.5em;
-    }
+  nav .container { justify-content: space-between; }
 
-    .category-button {
-        width: calc(100% - 2em);
-        margin: 0.25em 1em;
-        padding: 0.75em 1.5em;
-        font-size: 1em;
-        text-align: center;
-    }
-
-    #championnat-title {
-        font-size: 1.8em;
-        margin: 0.5em 0;
-    }
-
-    #championnat-content {
-        margin: 0 1em 1em;
-        font-size: 0.9em;
-    }
-
-/* Hamburger Menu */
-.hamburger {
-    display: none;
-    cursor: pointer;
+  /* Le menu glisse depuis le haut */
+  nav .nav-content {
     position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1001;
-    padding: 10px;
-}
-
-.hamburger .line {
-    width: 30px;
-    height: 3px;
-    background-color: white;
-    margin: 6px 0;
-    transition: 0.4s;
-}
-
-.hamburger.active .line:nth-child(1) {
-    transform: rotate(-45deg) translate(-7px, 6px);
-}
-
-.hamburger.active .line:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.active .line:nth-child(3) {
-    transform: rotate(45deg) translate(-7px, -6px);
-}
-
-@media (max-width: 768px) {
-    .main-menu {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .boutique {
-        order: 2;
-    }
-
-    .Boutique {
-        order: 1;
-    }
-}
-/* Menu Mobile */
-@media screen and (max-width: 768px), 
-       screen and (max-device-width: 768px) {
-    body {
-        padding-top: 50px;
-    }
-
-    nav {
-        padding: 10px 20px;
-        height: 100px;
-    }
-
-
-    nav .container {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0;
-    }
-
-    nav .logo {
-        height: 50px;
-    }
-    
-    nav .container {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0;
-    }
-    nav.scrolled {
-        height: 75px;
-    }
-    nav.scrolled .logo {
-        height: 40px;
-    }
-    nav .logo-container {
-        margin: 0;
-    }
-
-    .hamburger {
-        display: block;
-        position: relative;
-        top: 0;
-        right: 0;
-    }
-
-    nav ul {
-        position: fixed;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background-color: #1a3955;
-        display: none;
-        padding: 20px 0;
-        margin: 0;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-
-    nav.menu-open ul {
-        display: flex;
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin: 0;
-        width: 100%;
-        text-align: center;
-    }
-
-    nav ul li a {
-        padding: 15px;
-        width: 100%;
-        display: block;
-    }
-
-    .table-responsive {
-        border-radius: 10px;
-        overflow-x: auto;
-        box-shadow: 0 0 20px rgba(0,0,0,0.1);
-        margin: 1em auto;
-        max-width: 800px;
-        border: 3px solid #333;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .table {
-        font-size: 0.9rem;
-    }
-
-    .table thead th {
-        padding: 0.8em;
-        white-space: nowrap;
-    }
-
-    .table tbody td {
-        padding: 0.8em;
-        white-space: nowrap;
-    }
-
-    /* Permettre le scroll horizontal sur mobile */
-    .table-responsive::-webkit-scrollbar {
-        height: 6px;
-    }
-
-    .table-responsive::-webkit-scrollbar-track {
-        background: #f1f1f1;
-    }
-
-    .table-responsive::-webkit-scrollbar-thumb {
-        background: #888;
-        border-radius: 3px;
-    }
-    .staff-card {
-        padding: 1.5rem;
-    }
-}
-
-
-@media screen and (max-width: 768px) {
-    /* État fermé par défaut */
-    nav {
-        height: 80px;
-    }
-    nav .container {
-        height: 70px !important;
-    }
-
-    nav .main-menu,
-    nav .nav-buttons {
-        display: none !important;
-    }
-
-    /* État ouvert après clic */
-    nav.menu-open {
-        height: 100vh !important;
-    }
-
-    nav.menu-open .main-menu {
-        display: block !important;
-        position: fixed !important;
-        top: 100px !important;
-        left: 0 !important;
-        width: 100% !important;
-        background-color: #1a3955 !important;
-    }
-
-    nav.menu-open ul {
-        padding: 30px 0 80px !important;
-        width: 100% !important;
-    }
-
-    nav.menu-open .nav-buttons {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        width: 100% !important;
-    }
-
-    /* Éléments fixes */
-    .logo {
-        height: 40px !important;
-        position: fixed !important;
-        left: 15px !important;
-        top: 15px !important;
-    }
-
-    .hamburger {
-        position: fixed !important;
-        right: 15px !important;
-        top: 25px !important;
-    }
-}
-
-/* Ajustements pour la navigation et le bouton */
-.nav-content {
+    top: var(--nav-h);
+    left: 0;
     width: 100%;
-    position: relative;
-}
-.nav-content .main-menu {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Centre le menu */
-    width: 100%;
-    position: relative;
-}
-nav ul {
-    margin: 0;
-    justify-content: center; /* Garde les liens centrés */
-    width: auto; /* Empêche les liens de prendre toute la largeur */
-}
-/* Navigation principale */
-.nav-content .main-menu ul {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: center;
-}
-
-/* Liens de navigation centrés */
-.nav-content .main-menu ul > li:not(.boutique):not(.Boutique) {
-    flex: 0 1 auto;
-    margin: 0 10px;  /* Réduit de 2rem à 1rem */
-}
-
-/* Groupe des boutons */
-.nav-buttons {
-    display: flex;
-    gap: 1rem;
-    margin-left: auto;
-    padding-right: 2rem;
-}
-
-/* Style spécifique pour la boutique */
-.boutique {
-    order: 2;
-}
-
-/* Style spécifique pour nous rejoindre */
-.Boutique {
-    order: 1;
-}
-
-/* Style commun pour les boutons */
-.btn-icon, .btn-blue {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.8em 1.5em;
-    background-color: #007bff;
-    border: 2px solid #007bff;
-    border-radius: 4px;
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-.icon-shop {
-    width: 32px;  /* Ajustez la taille selon vos besoins */
-    height: 24px;
-    vertical-align: middle;
-}
-.btn-icon i {
-    margin-bottom: 0;
-}
-
-.btn-icon:hover {
-    color: #007bff;
-    background-color: white;
-    transform: scale(1.1);
-}
-
-/* Styles desktop */
-.main-menu ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.boutique, .Boutique {
-    display: inline-flex;
-    margin-left: 1rem;
-}
-
-
-nav ul {
-    display: flex;
-    justify-content: center; /* Centre les items du menu */
-    margin: 0 auto; /* Centre les items horizontalement */
-    padding: 0;
-    list-style: none;
-}
-
-.nav-content .main-menu ul > li:not(.boutique):not(.Boutique) {
-    flex: 1; /* Permet aux items de prendre l'espace disponible */
-    text-align: center; /* Centre le texte des items */
-}
-
-/* Styles communs aux deux boutons */
-.btn-blue, .btn-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.8em 1.5em;
-    background-color: #007bff;
-    color: white;
-    border-radius: 4px;
-    border: 1px solid #007bff;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-@media screen and (max-width: 768px) {
-    /* Supprimer les bordures et ombres */
-    nav, nav.menu-open, nav ul, nav ul li, nav ul li a,
-   .btn-blue, .btn-icon {
-        border: none !important;
-        box-shadow: none !important;
-    }
-
-    /* Rapprocher les éléments */
-    nav ul {
-        padding: 10px 0 !important;
-    }
-
-    nav ul li {
-        margin: 0 !important;
-        padding: 5px 0 !important;
-    }
-
-    .nav-buttons {
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-
-    .btn-blue, .btn-icon {
-        margin: 5px 0 !important;
-        padding: 8px 12px !important;
-    }
-
-    /* Ajuster la hauteur de la navbar */
-    nav {
-        height: 70px !important;
-    }
-
-    nav .container {
-        height: 60px !important;
-    }
-
-    nav .logo {
-        height: 45px !important;
-        
-    }
-
-    .hamburger {
-        top: 15px !important;
-    }
-
-    nav .main-menu {
-        top: 60px !important;
-        
-    }
-
-    /* Supprimer les débordements et les espaces inutiles */
-    nav ul {
-        width: 100% !important;
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-
-    .nav-buttons {
-        width: 100% !important;
-        padding: 0 !important;
-        margin: 0 !important;
-    }
-
-
-    .btn-blue, .btn-icon {
-        width: 100% !important;
-        margin: 2px 0 !important;
-        padding: 8px 12px !important;
-    }
-
-    /* Ajuster le contenu pour éviter le débordement */
-    nav ul li a {
-        font-size: 1,9rem !important;
-        line-height: 1.2 !important;
-    }
-
-    .btn-blue, .btn-icon {
-        width: 100% !important;
-        margin: 3px 0 !important;
-        padding: 12px 20px !important; /* Padding augmenté */
-        font-size: 1.1rem !important; /* Taille de police augmentée */
-        line-height: 1.4 !important; /* Hauteur de ligne augmentée */
-    }
-
-    
-}
-
-
-@media screen and (max-width: 768px) {
-    /* État de base */
-    nav {
-        transition: none !important;
-    }
-    
-}
-
-/* Styles du carrousel */
-#homeCarousel {
-    border-radius: 8px;
+    background: var(--navy-800);
+    border-top: 1px solid rgba(255, 255, 255, .08);
+    max-height: 0;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    margin: 0 auto;
-    max-width: 1200px;
-    background-color: #f4f4f4; /* Changé pour correspondre au fond de la page */
-}
+    transition: max-height var(--t);
+    box-shadow: var(--shadow-lg);
+  }
+  nav.menu-open .nav-content { max-height: calc(100vh - var(--nav-h)); }
 
-#homeCarousel .carousel-item img {
+  nav .main-menu { width: 100%; }
+  nav ul {
+    flex-direction: column;
     width: 100%;
-    max-height: 600px;
-    object-fit: contain;
+    gap: 0;
+    padding: .5rem 0 1.25rem;
+  }
+  nav ul li { width: 100%; text-align: center; }
+  nav ul li a { padding: .95rem; border-radius: 0; }
+  nav ul li a::after { display: none; }
+  nav ul li.Boutique a { margin: .75rem auto 0; max-width: 220px; }
+
+  /* Le hero garde de la place pour les logos */
+  .header-content { padding: 0 90px; }
 }
 
-#homeCarousel .carousel-control-prev,
-#homeCarousel .carousel-control-next {
-    opacity: 0.7;
+@media (max-width: 560px) {
+  .header-logo-left,
+  .header-logo-right { height: 64px; }
+  .header-content { padding: 0 72px; }
+  .header-content h1 .club-name { white-space: normal; }
+
+  .stats-container { padding: 1.75rem !important; }
+  .table-tarifs thead th,
+  .table-tarifs tbody td { padding: .8rem 1rem; }
+  .contact-form-container { padding: 1.5rem; }
 }
 
-#homeCarousel .carousel-indicators button {
-    background-color: rgba(0,0,0,0.3);
-    height: 3px;
-    width: 30px;
-    margin: 0 4px;
-}
-
-@media (max-width: 768px) {
-    #homeCarousel {
-        border-radius: 6px;
-        box-shadow: 0 1px 4px rgba(0,0,0,0.03);
-    }
-    
-    #homeCarousel .carousel-item img {
-        max-height: 400px;
-    }
-}
-
-@media (resolution: 1.25dppx) {
-    .staff-page{
-        overflow-y: auto;
-    }
-    .staff-page {
-        overflow-y: auto;
-    }
-
-    /* Réduction de la navbar */
-    nav {
-        padding: 0.5em 0;
-    }
-
-    nav .logo {
-        height: 80px; /* Réduit de 120px à 80px */
-    }
-
-    nav.scrolled .logo {
-        height: 40px; /* Réduit de 50px à 40px */
-    }
-
-    nav .logo-container {
-        margin-bottom: 0.5em; /* Réduit de 1em à 0.5em */
-    }
-
-    body {
-        padding-top: 120px; /* Réduit de 160px à 120px */
-    }
-
-    body.scrolled {
-        padding-top: 80px; /* Réduit de 100px à 80px */
-    }
-
-    /* Ajustement des pages spécifiques */
-    .allteams-page,
-    .contact-page,
-    .championnat-page,
-    .staff-page,
-    .partner-page,
-    .team-page {
-        padding-top: 160px; /* Réduit de 220px à 160px */
-    }
+/* Accessibilité : respect des préférences de mouvement */
+@media (prefers-reduced-motion: reduce) {
+  *, *::after, *::before {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
 }
