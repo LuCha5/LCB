@@ -140,11 +140,13 @@ nav {
   border-bottom: 1px solid rgba(255, 255, 255, .08);
   color: #fff;
   z-index: 1000;
-  transition: height var(--t), background var(--t), box-shadow var(--t);
+  transition: background var(--t), box-shadow var(--t);
 }
 
+/* Hauteur de la navbar CONSTANTE (= padding-top du body) : on ne change
+   que le fond + l'ombre au scroll, jamais la hauteur. Évite la bande
+   claire qui apparaissait sous la navbar pendant la transition. */
 nav.scrolled {
-  height: 64px;
   background: rgba(13, 31, 49, .94);
   box-shadow: 0 8px 30px rgba(13, 31, 49, .28);
 }
