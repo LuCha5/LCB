@@ -20,21 +20,8 @@ jobs:
           server:   ${{ secrets.FTP_SERVER }}     # ex : ftp.cluster0XX.hosting.ovh.net
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-
-          # OVH gère le FTP sécurisé. Si jamais le déploiement échoue à la
-          # connexion, remplace "ftps" par "ftp".
           protocol: ftps
-
-          # ⚠️ DOSSIER DU SITE SUR LE FTP — à vérifier !
-          # Ouvre FileZilla : le dossier qui contient l'index.html ACTUEL,
-          # c'est celui à mettre ici. Sur l'hébergement mutualisé OVH c'est
-          # presque toujours "/www/". Si ton FTP s'ouvre DÉJÀ directement
-          # dans le site (tu vois index.html à la racine), mets "./".
           server-dir: /www/
-
-          # Fichiers à NE PAS envoyer sur le serveur (config interne).
-          # BLOCS.md et .htaccess, eux, SONT envoyés (le .htaccess bloque
-          # l'accès web à BLOCS.md).
           exclude: |
             **/.git*
             **/.git*/**
