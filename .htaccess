@@ -1,0 +1,19 @@
+*RewriteEngine On
+RewriteCond %{ENV:HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteCond %{REQUEST_URI} !^/\.well-known/
+RewriteRule "(^|/)\." - [F]
+
+# --- 2. Bloquer la documentation et les scripts internes (.md, .py) ---
+<FilesMatch "\.(md|py)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# --- 3. Empêcher le listage des dossiers (ex. voir tout /assets/) ---
+Options -Indexes
